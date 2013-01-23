@@ -1,0 +1,11 @@
+package yei;
+
+struct imu_t
+{
+	int64_t utime;
+
+	double linear_acceleration[3];
+	double angular_velocity[3];
+        // wxyz orientation:
+	double orientation[4];
+}

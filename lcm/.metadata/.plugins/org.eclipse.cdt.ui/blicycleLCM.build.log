@@ -1,0 +1,21 @@
+
+**** Build of configuration Debug for project blicycleLCM ****
+
+make all 
+Building file: ../blicycle.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/glib-2.0 -I/home/blicycle/Desktop/blicycle/software/libbot2/bot2-core/src/bot_core -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"blicycle.d" -MT"blicycle.d" -o "blicycle.o" "../blicycle.cpp"
+../blicycle.cpp: In function ‘double costOfLine(CvPoint*)’:
+../blicycle.cpp:125:10: warning: variable ‘p1’ set but not used [-Wunused-but-set-variable]
+../blicycle.cpp:126:10: warning: variable ‘p2’ set but not used [-Wunused-but-set-variable]
+../blicycle.cpp: In function ‘int main(int, char**)’:
+../blicycle.cpp:264:36: warning: unused variable ‘sub’ [-Wunused-variable]
+Finished building: ../blicycle.cpp
+ 
+Building target: blicycleLCM
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "blicycleLCM"  ./blicycle.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: blicycleLCM
+ 
+
+**** Build Finished ****

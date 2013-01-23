@@ -1,0 +1,23 @@
+
+**** Build of configuration Debug for project ImageMerge ****
+
+make all 
+Building file: ../ImageMerge.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ImageMerge.d" -MT"ImageMerge.d" -o "ImageMerge.o" "../ImageMerge.cpp"
+../ImageMerge.cpp: In function ‘void on_image_frame1(const lcm_recv_buf_t*, const char*, const bot_core_image_t*, void*)’:
+../ImageMerge.cpp:40:8: warning: unused variable ‘self’ [-Wunused-variable]
+../ImageMerge.cpp: In function ‘void on_image_frame2(const lcm_recv_buf_t*, const char*, const bot_core_image_t*, void*)’:
+../ImageMerge.cpp:58:8: warning: unused variable ‘self’ [-Wunused-variable]
+../ImageMerge.cpp: In function ‘int main(int, char**)’:
+../ImageMerge.cpp:101:36: warning: unused variable ‘sub1’ [-Wunused-variable]
+../ImageMerge.cpp:102:36: warning: unused variable ‘sub2’ [-Wunused-variable]
+Finished building: ../ImageMerge.cpp
+ 
+Building target: ImageMerge
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "ImageMerge"  ./ImageMerge.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: ImageMerge
+ 
+
+**** Build Finished ****

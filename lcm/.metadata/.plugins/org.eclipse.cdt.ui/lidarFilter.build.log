@@ -1,0 +1,21 @@
+
+**** Build of configuration Debug for project lidarFilter ****
+
+make all 
+Building file: ../lidarFilter.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lidarFilter.d" -MT"lidarFilter.d" -o "lidarFilter.o" "../lidarFilter.cpp"
+../lidarFilter.cpp: In function ‘void on_frame(const lcm_recv_buf_t*, const char*, const bot_core_planar_lidar_t*, void*)’:
+../lidarFilter.cpp:40:8: warning: unused variable ‘self’ [-Wunused-variable]
+../lidarFilter.cpp: In function ‘int main(int, char**)’:
+../lidarFilter.cpp:66:8: warning: unused variable ‘lcmChannel2’ [-Wunused-variable]
+../lidarFilter.cpp:74:45: warning: unused variable ‘sub’ [-Wunused-variable]
+Finished building: ../lidarFilter.cpp
+ 
+Building target: lidarFilter
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "lidarFilter"  ./lidarFilter.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: lidarFilter
+ 
+
+**** Build Finished ****

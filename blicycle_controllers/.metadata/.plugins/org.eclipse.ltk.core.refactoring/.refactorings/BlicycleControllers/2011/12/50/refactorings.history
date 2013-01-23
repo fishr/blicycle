@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;velocity&apos; in &apos;controller.BaitedCarrotController&apos; to &apos;velocityMax&apos;&#x0A;- Original project: &apos;BlicycleControllers&apos;&#x0A;- Original element: &apos;controller.BaitedCarrotController.velocity&apos;&#x0A;- Renamed element: &apos;controller.BaitedCarrotController.velocityMax&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;velocity&apos;" flags="589830" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;controller{BaitedCarrotController.java[BaitedCarrotController^velocity" name="velocityMax" references="true" setter="false" stamp="1323545292030" textual="false" version="1.0"/>
+</session>

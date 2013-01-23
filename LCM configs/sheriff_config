@@ -1,0 +1,15 @@
+group "Sensors" {
+    cmd "IMU" {
+        exec = "yei_3_space_sensor /dev/ttyACM0";
+        host = "blicycle-Lenovo-Ideapad-S10-3t";
+    }
+    cmd "lidar" {
+        exec = "hokuyo /dev/ttyACM1";
+        host = "blicycle-Lenovo-Ideapad-S10-3t";
+    }
+}
+cmd "vision" {
+    exec = "blicycle capture 1";
+    host = "blicycle-Lenovo-Ideapad-S10-3t";
+}
+
