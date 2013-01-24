@@ -25,9 +25,11 @@ typedef struct _Comp {
 	lcm_t* publish_lcm;
 }Comp;
 
-int msgHeight = 0;
-int msgWidth = 0;
+int msg1Height = 0;
+int msg1Width = 0;
 
+int msg2Height = 0;
+int msg2Width = 0;
 
 Mat iOne;
 Mat iTwo;
@@ -42,13 +44,12 @@ void on_image_frame1(const lcm_recv_buf_t *rbuf, const char *channel,const bot_c
 
 	Mat img_lcm = Mat::zeros(msg->height, msg->width, CV_8UC3); // h,w
 	img_lcm.data = msg->data;
-
-	img_lcm.copyTo(iOne);//probs shouldnt copy  TODO
+	img_lcm.copyTo(iOne);
 	//self->iOne = img_lcm;
 	gotOne = true;
 
-	msgHeight = msg->height;
-	msgWidth = msg->width;
+	msg1Height = msg->height;
+	msg1Width = msg->width;
 
 	//printf("one!\n");
 
@@ -60,12 +61,15 @@ void on_image_frame2(const lcm_recv_buf_t *rbuf, const char *channel, const bot_
 
 	Mat img_lcm = Mat::zeros(msg->height, msg->width, CV_8UC3); // h,w
 	img_lcm.data = msg->data;
-
+;
 	img_lcm.copyTo(iTwo);
 	//self->iTwo = img_lcm;
 	gotTwo = true;
 
 	//printf("two!\n");
+
+	msg2Height = msg->height;
+	msg2Width = msg->width;
 
 }
 
@@ -98,6 +102,7 @@ int main(int argc, char** argv) {
 	self->publish_lcm = lcm_create(NULL);
 	self->subscribe_lcm = lcm_create(NULL);
 
+
 	bot_core_image_t_subscription_t * sub1 = bot_core_image_t_subscribe(self->subscribe_lcm, lcmChannel1, on_image_frame1, self);
 	bot_core_image_t_subscription_t * sub2 = bot_core_image_t_subscribe(self->subscribe_lcm, lcmChannel2, on_image_frame2, self);
 
@@ -108,45 +113,38 @@ int main(int argc, char** argv) {
 
 		if (gotOne&&gotTwo){
 			//printf("running stitch\n");
-			IplImage* stitch = cvCreateImage(cvSize(msgWidth*2, msgHeight), IPL_DEPTH_8U, 3);
+			Mat stitch = Mat::zeros(max(msg1Height,msg2Height), msg1Width+msg2Width, CV_8UC3);
 
-			cvSetImageROI(stitch, cvRect(0,0, msgWidth, msgHeight));
-			IplImage* iOnea = new IplImage(iOne);  //maybe I do have to copy but this seems unecessary TODO
-			cvCopy(iOnea, stitch, 0);
 
-			cvSetImageROI(stitch, cvRect(msgWidth,0, msgWidth, msgHeight));
-			IplImage* iTwoa = new IplImage(iTwo);
-			cvCopy(iTwoa, stitch, 0);
+			iOne.copyTo(stitch(Rect(0,0, msg1Width, msg1Height)));
+			iTwo.copyTo(stitch(Rect(msg1Width,0, msg2Width, msg2Height)));
 
-			cvResetImageROI(stitch);
-
-			cvCvtColor(stitch, stitch, CV_BGR2RGB);
-			//cvShowImage("testing", stitch);
+			//imshow("testing", stitch);
 
 			cvWaitKey(1);
 
 			bot_core_image_metadata_t fake;
 			fake.n = 1;
-			bot_image.width = stitch->width;
-			bot_image.height = stitch->height;
-			bot_image.row_stride = stitch->nChannels*stitch->width;
-			bot_image.pixelformat = BOT_CORE_IMAGE_T_PIXEL_FORMAT_BGR;
-			bot_image.data = (uchar*)stitch->imageData;
+			bot_image.width = stitch.cols;
+			bot_image.height = stitch.rows;
+			bot_image.row_stride = stitch.channels()*stitch.cols;
+			bot_image.pixelformat = BOT_CORE_IMAGE_T_PIXEL_FORMAT_RGB;
+			bot_image.data = stitch.data;
 			bot_image.utime = (long int) time(0);
-			bot_image.size = stitch->imageSize;
+			bot_image.size = stitch.total()*stitch.channels();
 			bot_image.nmetadata = 0;
 			bot_image.metadata = &fake;
 
 			bot_core_image_t_publish(self->publish_lcm, lcmChannel3, &bot_image);
 
 
-			//cvReleaseImage(&iOnea);
-			//cvReleaseImage(&iTwoa);
-			cvReleaseImage(&stitch);
+			stitch.~Mat();
 
 			gotOne = gotTwo = false;
 		}
 
 	}
+	iOne.~Mat();
+	iTwo.~Mat();
 }
 

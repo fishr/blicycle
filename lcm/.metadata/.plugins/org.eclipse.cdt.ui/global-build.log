@@ -1,46 +1,30 @@
 
-**** Build of configuration Debug for project lidarFilter ****
+**** Build of configuration Debug for project ImageMerge ****
+
+make all 
+Building file: ../ImageMerge.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ImageMerge.d" -MT"ImageMerge.d" -o "ImageMerge.o" "../ImageMerge.cpp"
+../ImageMerge.cpp: In function ‘void on_image_frame1(const lcm_recv_buf_t*, const char*, const bot_core_image_t*, void*)’:
+../ImageMerge.cpp:42:8: warning: unused variable ‘self’ [-Wunused-variable]
+../ImageMerge.cpp: In function ‘void on_image_frame2(const lcm_recv_buf_t*, const char*, const bot_core_image_t*, void*)’:
+../ImageMerge.cpp:59:8: warning: unused variable ‘self’ [-Wunused-variable]
+../ImageMerge.cpp: In function ‘int main(int, char**)’:
+../ImageMerge.cpp:106:36: warning: unused variable ‘sub1’ [-Wunused-variable]
+../ImageMerge.cpp:107:36: warning: unused variable ‘sub2’ [-Wunused-variable]
+Finished building: ../ImageMerge.cpp
+ 
+Building target: ImageMerge
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "ImageMerge"  ./ImageMerge.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: ImageMerge
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ImageMerge ****
 
 make all 
 make: Nothing to be done for `all'.
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project lidarFilter ****
-
-make all 
-make: Nothing to be done for `all'.
-
-**** Build Finished ****
-
-**** Clean-only build of configuration Debug for project ImageMerge ****
-
-make clean 
-rm -rf  ./ImageMerge.o  ./ImageMerge.d  ImageMerge
- 
-
-**** Build Finished ****
-
-**** Clean-only build of configuration Debug for project LCMPost ****
-
-make clean 
-rm -rf  ./LCMPost.o  ./LCMPost.d  LCMPost
- 
-
-**** Build Finished ****
-
-**** Clean-only build of configuration Debug for project blicycleLCM ****
-
-make clean 
-rm -rf  ./blicycle.o  ./blicycle.d  blicycleLCM
- 
-
-**** Build Finished ****
-
-**** Clean-only build of configuration Debug for project lidarFilter ****
-
-make clean 
-rm -rf  ./lidarFilter.o  ./lidarFilter.d  lidarFilter
- 
 
 **** Build Finished ****
