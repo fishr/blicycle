@@ -6,6 +6,13 @@ make: Nothing to be done for `all'.
 
 **** Build Finished ****
 
+**** Build of configuration Debug for project lidarFilter ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
 **** Clean-only build of configuration Debug for project ImageMerge ****
 
 make clean 
@@ -34,89 +41,6 @@ rm -rf  ./blicycle.o  ./blicycle.d  blicycleLCM
 
 make clean 
 rm -rf  ./lidarFilter.o  ./lidarFilter.d  lidarFilter
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project ImageMerge ****
-
-make all 
-Building file: ../ImageMerge.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ImageMerge.d" -MT"ImageMerge.d" -o "ImageMerge.o" "../ImageMerge.cpp"
-../ImageMerge.cpp: In function ‘void on_image_frame1(const lcm_recv_buf_t*, const char*, const bot_core_image_t*, void*)’:
-../ImageMerge.cpp:40:8: warning: unused variable ‘self’ [-Wunused-variable]
-../ImageMerge.cpp: In function ‘void on_image_frame2(const lcm_recv_buf_t*, const char*, const bot_core_image_t*, void*)’:
-../ImageMerge.cpp:58:8: warning: unused variable ‘self’ [-Wunused-variable]
-../ImageMerge.cpp: In function ‘int main(int, char**)’:
-../ImageMerge.cpp:101:36: warning: unused variable ‘sub1’ [-Wunused-variable]
-../ImageMerge.cpp:102:36: warning: unused variable ‘sub2’ [-Wunused-variable]
-Finished building: ../ImageMerge.cpp
- 
-Building target: ImageMerge
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "ImageMerge"  ./ImageMerge.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: ImageMerge
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project LCMPost ****
-
-make all 
-Building file: ../LCMPost.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LCMPost.d" -MT"LCMPost.d" -o "LCMPost.o" "../LCMPost.cpp"
-../LCMPost.cpp: In function ‘int main(int, char**)’:
-../LCMPost.cpp:160:9: warning: unused variable ‘c’ [-Wunused-variable]
-Finished building: ../LCMPost.cpp
- 
-Building target: LCMPost
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LCMPost"  ./LCMPost.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: LCMPost
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project blicycleLCM ****
-
-make all 
-Building file: ../blicycle.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/glib-2.0 -I/home/blicycle/Desktop/blicycle/software/libbot2/bot2-core/src/bot_core -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"blicycle.d" -MT"blicycle.d" -o "blicycle.o" "../blicycle.cpp"
-../blicycle.cpp: In function ‘double costOfLine(CvPoint*)’:
-../blicycle.cpp:125:10: warning: variable ‘p1’ set but not used [-Wunused-but-set-variable]
-../blicycle.cpp:126:10: warning: variable ‘p2’ set but not used [-Wunused-but-set-variable]
-../blicycle.cpp: In function ‘int main(int, char**)’:
-../blicycle.cpp:264:36: warning: unused variable ‘sub’ [-Wunused-variable]
-Finished building: ../blicycle.cpp
- 
-Building target: blicycleLCM
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "blicycleLCM"  ./blicycle.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: blicycleLCM
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project lidarFilter ****
-
-make all 
-Building file: ../lidarFilter.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lidarFilter.d" -MT"lidarFilter.d" -o "lidarFilter.o" "../lidarFilter.cpp"
-../lidarFilter.cpp: In function ‘void on_frame(const lcm_recv_buf_t*, const char*, const bot_core_planar_lidar_t*, void*)’:
-../lidarFilter.cpp:40:8: warning: unused variable ‘self’ [-Wunused-variable]
-../lidarFilter.cpp: In function ‘int main(int, char**)’:
-../lidarFilter.cpp:66:8: warning: unused variable ‘lcmChannel2’ [-Wunused-variable]
-../lidarFilter.cpp:74:45: warning: unused variable ‘sub’ [-Wunused-variable]
-Finished building: ../lidarFilter.cpp
- 
-Building target: lidarFilter
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "lidarFilter"  ./lidarFilter.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: lidarFilter
  
 
 **** Build Finished ****
