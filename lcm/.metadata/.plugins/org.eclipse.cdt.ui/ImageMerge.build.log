@@ -2,6 +2,10 @@
 **** Build of configuration Debug for project ImageMerge ****
 
 make all 
-make: Nothing to be done for `all'.
+Building target: ImageMerge
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "ImageMerge"  ./ImageMerge.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: ImageMerge
+ 
 
 **** Build Finished ****
