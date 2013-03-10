@@ -35,3 +35,255 @@ Finished building target: LineDetection
  
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project LineDetection ****
+
+make all 
+Building file: ../LineDetection.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
+Finished building: ../LineDetection.cpp
+ 
+Building target: LineDetection
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: LineDetection
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LineDetection ****
+
+make all 
+Building file: ../LineDetection.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
+Finished building: ../LineDetection.cpp
+ 
+Building target: LineDetection
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: LineDetection
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LineDetection ****
+
+make all 
+Building file: ../LineDetection.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
+Finished building: ../LineDetection.cpp
+ 
+Building target: LineDetection
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: LineDetection
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LineDetection ****
+
+make all 
+Building file: ../LineDetection.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
+Finished building: ../LineDetection.cpp
+ 
+Building target: LineDetection
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: LineDetection
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LineDetection ****
+
+make all 
+Building file: ../LineDetection.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
+Finished building: ../LineDetection.cpp
+ 
+Building target: LineDetection
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: LineDetection
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LineDetection ****
+
+make all 
+Building file: ../LineDetection.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
+Finished building: ../LineDetection.cpp
+ 
+Building target: LineDetection
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: LineDetection
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LineDetection ****
+
+make all 
+Building file: ../LineDetection.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
+Finished building: ../LineDetection.cpp
+ 
+Building target: LineDetection
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: LineDetection
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LineDetection ****
+
+make all 
+Building file: ../LineDetection.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
+Finished building: ../LineDetection.cpp
+ 
+Building target: LineDetection
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: LineDetection
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LineDetection ****
+
+make all 
+Building file: ../LineDetection.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
+Finished building: ../LineDetection.cpp
+ 
+Building target: LineDetection
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: LineDetection
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LineDetection ****
+
+make all 
+Building file: ../LineDetection.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
+Finished building: ../LineDetection.cpp
+ 
+Building target: LineDetection
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: LineDetection
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LineDetection ****
+
+make all 
+Building file: ../LineDetection.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
+../LineDetection.cpp: In function ‘int main(int, char**)’:
+../LineDetection.cpp:67:4: error: expected ‘;’ before ‘cvtColor’
+make: *** [LineDetection.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LineDetection ****
+
+make all 
+Building file: ../LineDetection.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
+Finished building: ../LineDetection.cpp
+ 
+Building target: LineDetection
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: LineDetection
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LineDetection ****
+
+make all 
+Building file: ../LineDetection.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
+Finished building: ../LineDetection.cpp
+ 
+Building target: LineDetection
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: LineDetection
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LineDetection ****
+
+make all 
+Building file: ../LineDetection.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
+Finished building: ../LineDetection.cpp
+ 
+Building target: LineDetection
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: LineDetection
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LineDetection ****
+
+make all 
+Building file: ../LineDetection.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
+Finished building: ../LineDetection.cpp
+ 
+Building target: LineDetection
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: LineDetection
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LineDetection ****
+
+make all 
+Building file: ../LineDetection.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
+Finished building: ../LineDetection.cpp
+ 
+Building target: LineDetection
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: LineDetection
+ 
+
+**** Build Finished ****
