@@ -112,23 +112,22 @@ void denoise(int, void*){
 	imshow("denoise", denoised_img);
 }
 
-void laneCenters(Mat rowIn, int* rowDeriv, int* rowLines){
-	Mat lowerRow = denoised_img.row(denoised_img.rows-10);
+void laneCenters(Mat rowIn, int y, int* rowDeriv, int* rowLines){
 		int lastPixel=0;
 		unsigned int nDeriv=0;
 		unsigned int nLines =0;
 		for(int i =0; i<rowIn.cols; i++){
-			uchar* pixel = lowerRow.ptr(0);
+			uchar* pixel = rowIn.ptr(0);
 			if(pixel[i]!=lastPixel){
 				lastPixel =  pixel[i];
 				nDeriv++;
 				rowDeriv[nDeriv]=i;
-				printf("got low transition!  %i, %i  \n", i, lastPixel);
+				//printf("got transition!  %i, %i  \n", i, lastPixel);
 
-				if((i!=0)&&(i-rowDeriv[nDeriv-1]>80)){
+				if((i!=0)&&(i-rowDeriv[nDeriv-1]>(sqrt(y)+50))){
 					nLines++;
 					rowLines[nLines]=(i+rowDeriv[nDeriv-1])/2;
-					circle(lanes, Point(rowLines[nLines], edges.rows-10),5,120);
+					circle(lanes, Point(rowLines[nLines], y),5,120);
 				}
 			}
 
@@ -137,53 +136,30 @@ void laneCenters(Mat rowIn, int* rowDeriv, int* rowLines){
 
 void findLanes(){
 	denoised_img.copyTo(lanes);
-	Mat lowerRow = denoised_img.row(denoised_img.rows-10);
+
+	int lowHeight = denoised_img.rows-10;
+	int midHeight = denoised_img.rows/3;
+	int highHeight = 40;
+
+
+	Mat lowerRow = denoised_img.row(lowHeight);
 	int lowerRowDeriv[lowerRow.cols];
-	int lastPixel=0;
-	unsigned int nDeriv=0;
 	int lowerRowLines[lowerRow.cols];
 
-	laneCenters(lowerRow, lowerRowDeriv, lowerRowLines);
+	laneCenters(lowerRow, lowHeight, lowerRowDeriv, lowerRowLines);
 
-	unsigned int nLines =0;
-	for(int i =0; i<lowerRow.cols; i++){
-		uchar* pixel = lowerRow.ptr(0);
-		if(pixel[i]!=lastPixel){
-			lastPixel =  pixel[i];
-			nDeriv++;
-			lowerRowDeriv[nDeriv]=i;
-			printf("got low transition!  %i, %i  \n", i, lastPixel);
 
-			if((i!=0)&&(i-lowerRowDeriv[nDeriv-1]>80)){
-				nLines++;
-				lowerRowLines[nLines]=(i+lowerRowDeriv[nDeriv-1])/2;
-				circle(lanes, Point(lowerRowLines[nLines], edges.rows-10),5,120);
-			}
-		}
-
-	}
-
-	Mat midRow = denoised_img.row(denoised_img.rows/3);
+	Mat midRow = denoised_img.row(midHeight);
 	int midRowDeriv[midRow.cols];
-	lastPixel=0;
-	nDeriv=0;
-	nLines=0;
 	int midRowLines[midRow.cols];
-	for(int i =0; i<midRow.cols; i++){
-		uchar* pixel = midRow.ptr(0);
-		if(pixel[i]!=lastPixel){
-			lastPixel =  pixel[i];
-			nDeriv++;
-			midRowDeriv[nDeriv]=i;
-			printf("got mid transition!  %i, %i  \n", i, lastPixel);
-			if((i!=0)&&(i-midRowDeriv[nDeriv-1]>60)){
-							nLines++;
-							midRowLines[nLines]=(i+midRowDeriv[nDeriv-1])/2;
-							circle(lanes, Point(midRowLines[nLines], edges.rows/2),5,120);
 
-						}
-		}
-	}
+	laneCenters(midRow, midHeight, midRowDeriv, midRowLines);
+
+	Mat highRow = denoised_img.row(highHeight);
+	int highRowDeriv[highRow.cols];
+	int highRowLines[highRow.cols];
+
+	laneCenters(highRow, highHeight, highRowDeriv, highRowLines);
 
 	namedWindow("lanes", CV_WINDOW_AUTOSIZE);
 	imshow("lanes", lanes);

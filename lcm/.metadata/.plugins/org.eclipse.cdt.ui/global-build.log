@@ -378,3 +378,131 @@ make all
 make: Nothing to be done for `all'.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
