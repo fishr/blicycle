@@ -1,289 +1,380 @@
 
-**** Build of configuration Debug for project LineDetection ****
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:117:6: warning: unused variable ‘step’ [-Wunused-variable]
+../src/BlobLanes.cpp:118:6: warning: variable ‘lowerRowDeriv’ set but not used [-Wunused-but-set-variable]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
 
 make all 
 make: Nothing to be done for `all'.
 
 **** Build Finished ****
 
-**** Build of configuration Debug for project LineDetection ****
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:117:6: warning: unused variable ‘step’ [-Wunused-variable]
+../src/BlobLanes.cpp:118:6: warning: variable ‘lowerRowDeriv’ set but not used [-Wunused-but-set-variable]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:117:6: warning: unused variable ‘step’ [-Wunused-variable]
+../src/BlobLanes.cpp:118:6: warning: variable ‘lowerRowDeriv’ set but not used [-Wunused-but-set-variable]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:117:6: warning: unused variable ‘step’ [-Wunused-variable]
+../src/BlobLanes.cpp:118:6: warning: variable ‘lowerRowDeriv’ set but not used [-Wunused-but-set-variable]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:117:6: warning: variable ‘lowerRowDeriv’ set but not used [-Wunused-but-set-variable]
+../src/BlobLanes.cpp:132:6: warning: variable ‘midRowDeriv’ set but not used [-Wunused-but-set-variable]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
 
 make all 
 make: Nothing to be done for `all'.
 
 **** Build Finished ****
 
-**** Build of configuration Debug for project LineDetection ****
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:120:6: warning: variable ‘lowerRowLines’ set but not used [-Wunused-but-set-variable]
+../src/BlobLanes.cpp:143:6: warning: variable ‘midRowLines’ set but not used [-Wunused-but-set-variable]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:120:6: warning: variable ‘lowerRowLines’ set but not used [-Wunused-but-set-variable]
+../src/BlobLanes.cpp:143:6: warning: variable ‘midRowLines’ set but not used [-Wunused-but-set-variable]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:145:6: warning: variable ‘midRowLines’ set but not used [-Wunused-but-set-variable]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:146:6: warning: variable ‘midRowLines’ set but not used [-Wunused-but-set-variable]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:146:6: warning: variable ‘midRowLines’ set but not used [-Wunused-but-set-variable]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:146:6: warning: variable ‘midRowLines’ set but not used [-Wunused-but-set-variable]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:146:6: warning: variable ‘midRowLines’ set but not used [-Wunused-but-set-variable]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:146:6: warning: variable ‘midRowLines’ set but not used [-Wunused-but-set-variable]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:146:6: warning: variable ‘midRowLines’ set but not used [-Wunused-but-set-variable]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:146:6: warning: variable ‘midRowLines’ set but not used [-Wunused-but-set-variable]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:145:6: warning: variable ‘midRowLines’ set but not used [-Wunused-but-set-variable]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
 
 make all 
 make: Nothing to be done for `all'.
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project LineDetection ****
-
-make all 
-Building file: ../LineDetection.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
-Finished building: ../LineDetection.cpp
- 
-Building target: LineDetection
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: LineDetection
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project LineDetection ****
-
-make all 
-Building file: ../LineDetection.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
-Finished building: ../LineDetection.cpp
- 
-Building target: LineDetection
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: LineDetection
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project LineDetection ****
-
-make all 
-Building file: ../LineDetection.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
-Finished building: ../LineDetection.cpp
- 
-Building target: LineDetection
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: LineDetection
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project LineDetection ****
-
-make all 
-Building file: ../LineDetection.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
-Finished building: ../LineDetection.cpp
- 
-Building target: LineDetection
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: LineDetection
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project LineDetection ****
-
-make all 
-Building file: ../LineDetection.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
-Finished building: ../LineDetection.cpp
- 
-Building target: LineDetection
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: LineDetection
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project LineDetection ****
-
-make all 
-Building file: ../LineDetection.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
-Finished building: ../LineDetection.cpp
- 
-Building target: LineDetection
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: LineDetection
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project LineDetection ****
-
-make all 
-Building file: ../LineDetection.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
-Finished building: ../LineDetection.cpp
- 
-Building target: LineDetection
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: LineDetection
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project LineDetection ****
-
-make all 
-Building file: ../LineDetection.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
-Finished building: ../LineDetection.cpp
- 
-Building target: LineDetection
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: LineDetection
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project LineDetection ****
-
-make all 
-Building file: ../LineDetection.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
-Finished building: ../LineDetection.cpp
- 
-Building target: LineDetection
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: LineDetection
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project LineDetection ****
-
-make all 
-Building file: ../LineDetection.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
-Finished building: ../LineDetection.cpp
- 
-Building target: LineDetection
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: LineDetection
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project LineDetection ****
-
-make all 
-Building file: ../LineDetection.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
-Finished building: ../LineDetection.cpp
- 
-Building target: LineDetection
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: LineDetection
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project LineDetection ****
-
-make all 
-Building file: ../LineDetection.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
-../LineDetection.cpp: In function ‘int main(int, char**)’:
-../LineDetection.cpp:67:4: error: expected ‘;’ before ‘cvtColor’
-make: *** [LineDetection.o] Error 1
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project LineDetection ****
-
-make all 
-Building file: ../LineDetection.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
-Finished building: ../LineDetection.cpp
- 
-Building target: LineDetection
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: LineDetection
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project LineDetection ****
-
-make all 
-Building file: ../LineDetection.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
-Finished building: ../LineDetection.cpp
- 
-Building target: LineDetection
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: LineDetection
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project LineDetection ****
-
-make all 
-Building file: ../LineDetection.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
-Finished building: ../LineDetection.cpp
- 
-Building target: LineDetection
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: LineDetection
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project LineDetection ****
-
-make all 
-Building file: ../LineDetection.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
-Finished building: ../LineDetection.cpp
- 
-Building target: LineDetection
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: LineDetection
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project LineDetection ****
-
-make all 
-Building file: ../LineDetection.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LineDetection.d" -MT"LineDetection.d" -o "LineDetection.o" "../LineDetection.cpp"
-Finished building: ../LineDetection.cpp
- 
-Building target: LineDetection
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LineDetection"  ./LineDetection.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: LineDetection
- 
 
 **** Build Finished ****
