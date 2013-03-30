@@ -28,7 +28,7 @@ int min_threshold = 50;
 int max_trackbar = 200;
 int blacktowhite = 0;
 
-typedef struct {
+typedef struct _BearingInformation{
 	int lock;
 	float rho;
 	float theta;
@@ -68,7 +68,6 @@ void updateLines(int, void*);
 void showLines(vector<Vec4i>, Mat);
 void findLanes();
 float findSlope();
-bool isZero(int);
 void fitLines(float, int, vector<int>&, vector<int>&, vector<int>&);
 void reduceVector(vector<int>&);
 
@@ -89,22 +88,14 @@ void on_image_frame(const lcm_recv_buf_t *rbuf, const char *channel,
 	/// Pass the image to gray
 	cvtColor( src, src_gray, CV_RGB2GRAY );
 
-	///blur for comedic effect
-	//blur( src, blurred, Size( 3, 5 ), Point(-1,-1) );
+	//downsample the image
 	pyrDown(src_gray, blurred);
 	imshow("blurred", blurred);
 
-
-	/// Apply Canny edge detector
-	//Canny( src_gray, edges, 100, 300, 3 );
 	threshold(blurred, edges, p_trackbar, 255, THRESH_BINARY );
 	imshow("gray", edges);
 
-	element = getStructuringElement(MORPH_RECT, Size(xup+1, yup+1), Point(-1,-1));
-	dilate(edges, denoised_img, element);
-	element = getStructuringElement(MORPH_RECT, Size(xdown+1, ydown+1), Point(-1,-1));
-	erode(denoised_img, denoised_img, element);
-	imshow("denoise", denoised_img);
+	denoise(0,0);
 
 	lowHeight = denoised_img.rows-10;
 	midHeight = denoised_img.rows/3;
@@ -193,6 +184,7 @@ void blacknwhite(int, void*){
 		threshold(blurred, edges, p_trackbar, 255, THRESH_BINARY_INV );
 		imshow("gray", edges);
 	}
+	denoise(0,0);
 }
 
 void updateLines(int, void*){
@@ -211,15 +203,23 @@ void denoise(int, void*){
 }
 
 void showLines(vector<Vec4i> reducedLines, Mat screen){
-	for( size_t i = 0; i < reducedLines.size(); i++)//p_lines.size(); i++ )
+	for( size_t i = 0; i < reducedLines.size(); i++)
 	{
-		Vec4i l = reducedLines[i];//p_lines[i];
+		Vec4i l = reducedLines[i];
 		line( screen, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(255,0,0), 3, CV_AA);
 	}
 }
 
-void laneCenters(Mat rowIn, int y, int* rowDeriv, vector<int> &rowLines){
-	int lastPixel=0;
+void laneCenters(Mat imgSrc, int y, vector<int> &rowLines){
+	//takes a b&w image row and processes each value to find transitions, then marks the middle
+	//of successive white to black -> black to white transitions and stores the x values in rowlines
+
+	//todo make this account both for image slant and adjust better for image height
+
+	Mat rowIn = imgSrc.row(y);
+	int rowDeriv[rowIn.cols];
+
+	int lastPixel=255;
 	unsigned int nDeriv=0;
 	for(int i =0; i<rowIn.cols; i++){
 		uchar* pixel = rowIn.ptr(0);
@@ -242,29 +242,22 @@ void findLanes(){
 	cvtColor(denoised_img, lanes, CV_GRAY2BGR);
 
 
+	unsigned int numCols = denoised_img.cols;
+	vector<int> lowerRowLines;
+	lowerRowLines.resize(numCols);
 
-	Mat lowerRow = denoised_img.row(lowHeight);
-	unsigned int numCols = lowerRow.cols;
-	int lowerRowDeriv[numCols];
-	std::vector<int> lowerRowLines;
-	lowerRowLines.assign(numCols, 0);
-
-	laneCenters(lowerRow, lowHeight, lowerRowDeriv, lowerRowLines);
+	laneCenters(denoised_img, lowHeight, lowerRowLines);
 
 
-	Mat midRow = denoised_img.row(midHeight);
-	int midRowDeriv[numCols];
 	vector<int> midRowLines;
-	midRowLines.assign(numCols, 0);
+	midRowLines.resize(numCols);
 
-	laneCenters(midRow, midHeight, midRowDeriv, midRowLines);
+	laneCenters(denoised_img, midHeight, midRowLines);
 
-	Mat highRow = denoised_img.row(highHeight);
-	int highRowDeriv[numCols];
-	std::vector<int> highRowLines;
-	highRowLines.assign(numCols, 0);
+	vector<int> highRowLines;
+	highRowLines.resize(numCols);
 
-	laneCenters(highRow, highHeight, highRowDeriv, highRowLines);
+	laneCenters(denoised_img, highHeight, highRowLines);
 
 	float rhoslope = findSlope();
 
@@ -280,6 +273,9 @@ void reduceVector(vector<int> &vec){
 }
 
 float findSlope(){
+
+	//todo could use this to evaluate slope then rotate image?
+
 	vector<Vec4i> p_lines;
 
 	int thresh = 385;
@@ -314,21 +310,21 @@ float findSlope(){
 			//printf("interslope is %f, numer is %d, denom is %d, i is %u of %d, p_lines %d, %d, %d, %d\n", slope, numer, denom, i, (int)p_lines.size(), p_lines[i][0], p_lines[i][1], p_lines[i][2], p_lines[i][3]);
 		}
 	}
-
-	slope = slope/(float) slopeCounter;
+	if(slopeCounter!=0)
+		slope = slope/(float) slopeCounter;
 	return slope;
 }
 
-bool isZero (int i)
-{
-	return i == 0;
-}
 
 void fitLines(float slope, int numcolumns, vector<int> &low, vector<int> &mid, vector<int> &high){
 
 	vector<Vec3i> lanesX;
 	lanesX.assign(high.size(), 0);
-	printf("slope is %f\n", slope);
+	printf("slope is %f, highpoints are %d\n", slope, (int)high.size());
+
+	if(high.size()==0){
+		printf("numlanes %d\n", (int)lanesX.size()-1);
+		return;}
 
 	int laneCounter=0;
 
@@ -339,7 +335,7 @@ void fitLines(float slope, int numcolumns, vector<int> &low, vector<int> &mid, v
 		bool gotx1=false;
 		bool gotx2=false;
 
-		//printf("high %d,  mid %f, low %f\n", x0, x1, x2);
+		printf("high %d,  mid %f, low %f\n", x0, x1, x2);
 
 		for(unsigned int x1i=0; x1i<(mid.size()); x1i++){
 			if (!gotx1){
@@ -347,7 +343,7 @@ void fitLines(float slope, int numcolumns, vector<int> &low, vector<int> &mid, v
 					lanesX[laneCounter][0]=x0;
 					lanesX[laneCounter][1]=mid.at(x1i);
 					gotx1=true;
-					//printf("middle match %d with %d\n", high.at(i), mid.at(x1i));
+					printf("middle match %d with %d\n", high.at(i), mid.at(x1i));
 
 				}
 			}else{
@@ -363,7 +359,7 @@ void fitLines(float slope, int numcolumns, vector<int> &low, vector<int> &mid, v
 					lanesX[laneCounter][0]=x0;
 					lanesX[laneCounter][2]=low.at(x2i);
 					gotx2=true;
-					//printf("lower match %d with %d\n", high.at(i), low.at(x2i));
+					printf("lower match %d with %d\n", high.at(i), low.at(x2i));
 				}
 			}else{
 				if(fabs(low.at(x2i)-x2)<fabs(lanesX[laneCounter][2]-x2)){
@@ -372,11 +368,13 @@ void fitLines(float slope, int numcolumns, vector<int> &low, vector<int> &mid, v
 			}
 		}
 		if(gotx1||gotx2){
+			printf("gotalane\n");
 			laneCounter++;
 		}
 	}
 
-	for(unsigned int foo=0; foo<(high.size()-(laneCounter+1));foo++){
+	for(int foo=0; foo<(((int)high.size())-(laneCounter+1));foo++){
+		printf("poof!\n");
 		lanesX.pop_back();
 	}
 
@@ -389,7 +387,7 @@ void fitLines(float slope, int numcolumns, vector<int> &low, vector<int> &mid, v
 		}
 	}
 
-	printf("numlanes %d\n", (int)lanesX.size());
+	printf("numlanes %d\n", (int)lanesX.size()-1);
 
 
 }
