@@ -2,12 +2,109 @@
 **** Build of configuration Debug for project BlobLanes ****
 
 make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
 Building file: ../src/BlobLanes.cpp
 Invoking: GCC C++ Compiler
 g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
-../src/BlobLanes.cpp: In function ‘void findLanes()’:
-../src/BlobLanes.cpp:117:6: warning: unused variable ‘step’ [-Wunused-variable]
-../src/BlobLanes.cpp:118:6: warning: variable ‘lowerRowDeriv’ set but not used [-Wunused-but-set-variable]
+../src/BlobLanes.cpp: In function ‘void findSlope()’:
+../src/BlobLanes.cpp:178:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘int main()’:
+../src/BlobLanes.cpp:93:12: error: ‘findSlope’ was not declared in this scope
+../src/BlobLanes.cpp: In function ‘void findSlope()’:
+../src/BlobLanes.cpp:183:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+make: *** [src/BlobLanes.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘int main()’:
+../src/BlobLanes.cpp:93:12: error: ‘findSlope’ was not declared in this scope
+make: *** [src/BlobLanes.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
 Finished building: ../src/BlobLanes.cpp
  
 Building target: BlobLanes
@@ -31,9 +128,6 @@ make all
 Building file: ../src/BlobLanes.cpp
 Invoking: GCC C++ Compiler
 g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
-../src/BlobLanes.cpp: In function ‘void findLanes()’:
-../src/BlobLanes.cpp:117:6: warning: unused variable ‘step’ [-Wunused-variable]
-../src/BlobLanes.cpp:118:6: warning: variable ‘lowerRowDeriv’ set but not used [-Wunused-but-set-variable]
 Finished building: ../src/BlobLanes.cpp
  
 Building target: BlobLanes
@@ -50,9 +144,6 @@ make all
 Building file: ../src/BlobLanes.cpp
 Invoking: GCC C++ Compiler
 g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
-../src/BlobLanes.cpp: In function ‘void findLanes()’:
-../src/BlobLanes.cpp:117:6: warning: unused variable ‘step’ [-Wunused-variable]
-../src/BlobLanes.cpp:118:6: warning: variable ‘lowerRowDeriv’ set but not used [-Wunused-but-set-variable]
 Finished building: ../src/BlobLanes.cpp
  
 Building target: BlobLanes
@@ -63,22 +154,10 @@ Finished building target: BlobLanes
 
 **** Build Finished ****
 
-**** Build of configuration Debug for project BlobLanes ****
+**** Build of configuration Debug for project LineDetection ****
 
 make all 
-Building file: ../src/BlobLanes.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
-../src/BlobLanes.cpp: In function ‘void findLanes()’:
-../src/BlobLanes.cpp:117:6: warning: unused variable ‘step’ [-Wunused-variable]
-../src/BlobLanes.cpp:118:6: warning: variable ‘lowerRowDeriv’ set but not used [-Wunused-but-set-variable]
-Finished building: ../src/BlobLanes.cpp
- 
-Building target: BlobLanes
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: BlobLanes
- 
+make: Nothing to be done for `all'.
 
 **** Build Finished ****
 
@@ -88,9 +167,19 @@ make all
 Building file: ../src/BlobLanes.cpp
 Invoking: GCC C++ Compiler
 g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
-../src/BlobLanes.cpp: In function ‘void findLanes()’:
-../src/BlobLanes.cpp:117:6: warning: variable ‘lowerRowDeriv’ set but not used [-Wunused-but-set-variable]
-../src/BlobLanes.cpp:132:6: warning: variable ‘midRowDeriv’ set but not used [-Wunused-but-set-variable]
+../src/BlobLanes.cpp: In function ‘int main()’:
+../src/BlobLanes.cpp:92:71: error: invalid conversion from ‘void (*)()’ to ‘cv::TrackbarCallback {aka void (*)(int, void*)}’ [-fpermissive]
+/home/blicycle/Desktop/blicycle/software/build/include/opencv2/highgui/highgui.hpp:118:16: error:   initializing argument 5 of ‘int cv::createTrackbar(const string&, const string&, int*, int, cv::TrackbarCallback, void*)’ [-fpermissive]
+make: *** [src/BlobLanes.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
 Finished building: ../src/BlobLanes.cpp
  
 Building target: BlobLanes
@@ -114,16 +203,9 @@ make all
 Building file: ../src/BlobLanes.cpp
 Invoking: GCC C++ Compiler
 g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
-../src/BlobLanes.cpp: In function ‘void findLanes()’:
-../src/BlobLanes.cpp:120:6: warning: variable ‘lowerRowLines’ set but not used [-Wunused-but-set-variable]
-../src/BlobLanes.cpp:143:6: warning: variable ‘midRowLines’ set but not used [-Wunused-but-set-variable]
-Finished building: ../src/BlobLanes.cpp
- 
-Building target: BlobLanes
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: BlobLanes
- 
+../src/BlobLanes.cpp: In function ‘void findSlope()’:
+../src/BlobLanes.cpp:190:41: error: invalid use of member (did you forget the ‘&’ ?)
+make: *** [src/BlobLanes.o] Error 1
 
 **** Build Finished ****
 
@@ -133,210 +215,9 @@ make all
 Building file: ../src/BlobLanes.cpp
 Invoking: GCC C++ Compiler
 g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
-../src/BlobLanes.cpp: In function ‘void findLanes()’:
-../src/BlobLanes.cpp:120:6: warning: variable ‘lowerRowLines’ set but not used [-Wunused-but-set-variable]
-../src/BlobLanes.cpp:143:6: warning: variable ‘midRowLines’ set but not used [-Wunused-but-set-variable]
-Finished building: ../src/BlobLanes.cpp
- 
-Building target: BlobLanes
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: BlobLanes
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project BlobLanes ****
-
-make all 
-Building file: ../src/BlobLanes.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
-../src/BlobLanes.cpp: In function ‘void findLanes()’:
-../src/BlobLanes.cpp:145:6: warning: variable ‘midRowLines’ set but not used [-Wunused-but-set-variable]
-Finished building: ../src/BlobLanes.cpp
- 
-Building target: BlobLanes
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: BlobLanes
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project BlobLanes ****
-
-make all 
-Building file: ../src/BlobLanes.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
-../src/BlobLanes.cpp: In function ‘void findLanes()’:
-../src/BlobLanes.cpp:146:6: warning: variable ‘midRowLines’ set but not used [-Wunused-but-set-variable]
-Finished building: ../src/BlobLanes.cpp
- 
-Building target: BlobLanes
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: BlobLanes
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project BlobLanes ****
-
-make all 
-Building file: ../src/BlobLanes.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
-../src/BlobLanes.cpp: In function ‘void findLanes()’:
-../src/BlobLanes.cpp:146:6: warning: variable ‘midRowLines’ set but not used [-Wunused-but-set-variable]
-Finished building: ../src/BlobLanes.cpp
- 
-Building target: BlobLanes
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: BlobLanes
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project BlobLanes ****
-
-make all 
-Building file: ../src/BlobLanes.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
-../src/BlobLanes.cpp: In function ‘void findLanes()’:
-../src/BlobLanes.cpp:146:6: warning: variable ‘midRowLines’ set but not used [-Wunused-but-set-variable]
-Finished building: ../src/BlobLanes.cpp
- 
-Building target: BlobLanes
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: BlobLanes
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project BlobLanes ****
-
-make all 
-Building file: ../src/BlobLanes.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
-../src/BlobLanes.cpp: In function ‘void findLanes()’:
-../src/BlobLanes.cpp:146:6: warning: variable ‘midRowLines’ set but not used [-Wunused-but-set-variable]
-Finished building: ../src/BlobLanes.cpp
- 
-Building target: BlobLanes
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: BlobLanes
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project BlobLanes ****
-
-make all 
-Building file: ../src/BlobLanes.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
-../src/BlobLanes.cpp: In function ‘void findLanes()’:
-../src/BlobLanes.cpp:146:6: warning: variable ‘midRowLines’ set but not used [-Wunused-but-set-variable]
-Finished building: ../src/BlobLanes.cpp
- 
-Building target: BlobLanes
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: BlobLanes
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project BlobLanes ****
-
-make all 
-Building file: ../src/BlobLanes.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
-../src/BlobLanes.cpp: In function ‘void findLanes()’:
-../src/BlobLanes.cpp:146:6: warning: variable ‘midRowLines’ set but not used [-Wunused-but-set-variable]
-Finished building: ../src/BlobLanes.cpp
- 
-Building target: BlobLanes
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: BlobLanes
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project BlobLanes ****
-
-make all 
-Building file: ../src/BlobLanes.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
-../src/BlobLanes.cpp: In function ‘void findLanes()’:
-../src/BlobLanes.cpp:146:6: warning: variable ‘midRowLines’ set but not used [-Wunused-but-set-variable]
-Finished building: ../src/BlobLanes.cpp
- 
-Building target: BlobLanes
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: BlobLanes
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project BlobLanes ****
-
-make all 
-Building file: ../src/BlobLanes.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
-../src/BlobLanes.cpp: In function ‘void findLanes()’:
-../src/BlobLanes.cpp:145:6: warning: variable ‘midRowLines’ set but not used [-Wunused-but-set-variable]
-Finished building: ../src/BlobLanes.cpp
- 
-Building target: BlobLanes
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: BlobLanes
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project BlobLanes ****
-
-make all 
-Building file: ../src/BlobLanes.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
-Finished building: ../src/BlobLanes.cpp
- 
-Building target: BlobLanes
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: BlobLanes
- 
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project BlobLanes ****
-
-make all 
-Building file: ../src/BlobLanes.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
-Finished building: ../src/BlobLanes.cpp
- 
-Building target: BlobLanes
-Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: BlobLanes
- 
+../src/BlobLanes.cpp: In function ‘void findSlope()’:
+../src/BlobLanes.cpp:190:42: error: invalid use of member (did you forget the ‘&’ ?)
+make: *** [src/BlobLanes.o] Error 1
 
 **** Build Finished ****
 
@@ -456,6 +337,1201 @@ Invoking: GCC C++ Linker
 g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
 Finished building target: BlobLanes
  
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:189:61: error: too many arguments to function ‘void fitLines()’
+../src/BlobLanes.cpp:48:6: note: declared here
+make: *** [src/BlobLanes.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘float findSlope()’:
+../src/BlobLanes.cpp:213:3: error: expected ‘,’ or ‘;’ before ‘if’
+../src/BlobLanes.cpp:215:4: error: ‘else’ without a previous ‘if’
+../src/BlobLanes.cpp:212:7: warning: unused variable ‘denom’ [-Wunused-variable]
+make: *** [src/BlobLanes.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int*, int*, int*)’:
+../src/BlobLanes.cpp:245:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:244:7: warning: unused variable ‘x0’ [-Wunused-variable]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int*, int*, int*)’:
+../src/BlobLanes.cpp:243:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:242:7: warning: unused variable ‘x0’ [-Wunused-variable]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int*, int*, int*)’:
+../src/BlobLanes.cpp:247:7: warning: unused variable ‘deviator’ [-Wunused-variable]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int*, int*, int*)’:
+../src/BlobLanes.cpp:240:8: error: invalid use of ‘cv::Mat::Mat’
+../src/BlobLanes.cpp:240:55: error: expected primary-expression before ‘)’ token
+../src/BlobLanes.cpp:254:23: error: no match for ‘operator[]’ in ‘lanes[laneCounter]’
+../src/BlobLanes.cpp:255:23: error: no match for ‘operator[]’ in ‘lanes[laneCounter]’
+../src/BlobLanes.cpp:265:23: error: no match for ‘operator[]’ in ‘lanes[laneCounter]’
+../src/BlobLanes.cpp:266:23: error: no match for ‘operator[]’ in ‘lanes[laneCounter]’
+make: *** [src/BlobLanes.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int*, int*, int*)’:
+../src/BlobLanes.cpp:240:8: error: invalid use of ‘cv::Mat::Mat’
+../src/BlobLanes.cpp:240:47: error: expected primary-expression before ‘)’ token
+../src/BlobLanes.cpp:254:23: error: no match for ‘operator[]’ in ‘lanes[laneCounter]’
+../src/BlobLanes.cpp:255:23: error: no match for ‘operator[]’ in ‘lanes[laneCounter]’
+../src/BlobLanes.cpp:265:23: error: no match for ‘operator[]’ in ‘lanes[laneCounter]’
+../src/BlobLanes.cpp:266:23: error: no match for ‘operator[]’ in ‘lanes[laneCounter]’
+make: *** [src/BlobLanes.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, int*, int*, int*)’:
+../src/BlobLanes.cpp:247:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:255:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:266:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, int*, int*, int*)’:
+../src/BlobLanes.cpp:247:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:255:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:266:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, int*, int*, int*)’:
+../src/BlobLanes.cpp:247:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:255:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:266:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, int*, int*, int*)’:
+../src/BlobLanes.cpp:247:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:255:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:266:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, int*, int*, int*)’:
+../src/BlobLanes.cpp:247:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:255:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:266:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:180:63: error: could not convert ‘(std::vector<int>*)(& lowerRowLines)’ from ‘std::vector<int>*’ to ‘std::vector<int>’
+../src/BlobLanes.cpp:187:57: error: could not convert ‘(std::vector<int>*)(& midRowLines)’ from ‘std::vector<int>*’ to ‘std::vector<int>’
+../src/BlobLanes.cpp:193:61: error: could not convert ‘(std::vector<int>*)(& highRowLines)’ from ‘std::vector<int>*’ to ‘std::vector<int>’
+../src/BlobLanes.cpp:199:70: error: cannot convert ‘std::vector<int>*’ to ‘int*’ for argument ‘3’ to ‘void fitLines(float, int, int*, int*, int*)’
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, int*, int*, int*)’:
+../src/BlobLanes.cpp:249:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:257:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:268:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+make: *** [src/BlobLanes.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void laneCenters(cv::Mat, int, int*, std::vector<int>*)’:
+../src/BlobLanes.cpp:162:46: error: no match for ‘operator=’ in ‘*(rowLines + ((long unsigned int)(((long unsigned int)nLines) * 24ul))) = (((*(rowDeriv + ((long unsigned int)(((long unsigned int)(nDeriv + 4294967295u)) * 4ul)))) + i) / 2)’
+../src/BlobLanes.cpp:162:46: note: candidate is:
+/usr/include/c++/4.6/bits/vector.tcc:161:5: note: std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = int, _Alloc = std::allocator<int>]
+/usr/include/c++/4.6/bits/vector.tcc:161:5: note:   no known conversion for argument 1 from ‘int’ to ‘const std::vector<int>&’
+../src/BlobLanes.cpp:163:45: error: no matching function for call to ‘cv::Point_<int>::Point_(std::vector<int>&, int&)’
+../src/BlobLanes.cpp:163:45: note: candidates are:
+/home/blicycle/Desktop/blicycle/software/build/include/opencv2/core/core.hpp:725:5: note: cv::Point_<_Tp>::Point_(const cv::Vec<_Tp, 2>&) [with _Tp = int]
+/home/blicycle/Desktop/blicycle/software/build/include/opencv2/core/core.hpp:725:5: note:   candidate expects 1 argument, 2 provided
+/home/blicycle/Desktop/blicycle/software/build/include/opencv2/core/core.hpp:724:5: note: cv::Point_<_Tp>::Point_(const cv::Size_<_Tp>&) [with _Tp = int]
+/home/blicycle/Desktop/blicycle/software/build/include/opencv2/core/core.hpp:724:5: note:   candidate expects 1 argument, 2 provided
+/home/blicycle/Desktop/blicycle/software/build/include/opencv2/core/core.hpp:723:5: note: cv::Point_<_Tp>::Point_(const CvPoint2D32f&) [with _Tp = int, CvPoint2D32f = CvPoint2D32f]
+/home/blicycle/Desktop/blicycle/software/build/include/opencv2/core/core.hpp:723:5: note:   candidate expects 1 argument, 2 provided
+/home/blicycle/Desktop/blicycle/software/build/include/opencv2/core/core.hpp:722:5: note: cv::Point_<_Tp>::Point_(const CvPoint&) [with _Tp = int, CvPoint = CvPoint]
+/home/blicycle/Desktop/blicycle/software/build/include/opencv2/core/core.hpp:722:5: note:   candidate expects 1 argument, 2 provided
+/home/blicycle/Desktop/blicycle/software/build/include/opencv2/core/core.hpp:721:5: note: cv::Point_<_Tp>::Point_(const cv::Point_<_Tp>&) [with _Tp = int, cv::Point_<_Tp> = cv::Point_<int>]
+/home/blicycle/Desktop/blicycle/software/build/include/opencv2/core/core.hpp:721:5: note:   candidate expects 1 argument, 2 provided
+/home/blicycle/Desktop/blicycle/software/build/include/opencv2/core/core.hpp:720:5: note: cv::Point_<_Tp>::Point_(_Tp, _Tp) [with _Tp = int]
+/home/blicycle/Desktop/blicycle/software/build/include/opencv2/core/core.hpp:720:5: note:   no known conversion for argument 1 from ‘std::vector<int>’ to ‘int’
+/home/blicycle/Desktop/blicycle/software/build/include/opencv2/core/core.hpp:719:5: note: cv::Point_<_Tp>::Point_() [with _Tp = int]
+/home/blicycle/Desktop/blicycle/software/build/include/opencv2/core/core.hpp:719:5: note:   candidate expects 0 arguments, 2 provided
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:199:70: error: cannot convert ‘std::vector<int>*’ to ‘int*’ for argument ‘3’ to ‘void fitLines(float, int, int*, int*, int*)’
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, int*, int*, int*)’:
+../src/BlobLanes.cpp:249:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:257:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:268:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+make: *** [src/BlobLanes.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:180:63: error: could not convert ‘(std::vector<int>*)(& lowerRowLines)’ from ‘std::vector<int>*’ to ‘std::vector<int>’
+../src/BlobLanes.cpp:187:57: error: could not convert ‘(std::vector<int>*)(& midRowLines)’ from ‘std::vector<int>*’ to ‘std::vector<int>’
+../src/BlobLanes.cpp:193:61: error: could not convert ‘(std::vector<int>*)(& highRowLines)’ from ‘std::vector<int>*’ to ‘std::vector<int>’
+../src/BlobLanes.cpp:199:70: error: cannot convert ‘std::vector<int>*’ to ‘int*’ for argument ‘3’ to ‘void fitLines(float, int, int*, int*, int*)’
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, int*, int*, int*)’:
+../src/BlobLanes.cpp:249:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:257:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:268:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+make: *** [src/BlobLanes.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:180:77: error: invalid conversion from ‘std::vector<int> (*)[(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’ to ‘long unsigned int’ [-fpermissive]
+/usr/include/c++/4.6/bits/stl_vector.h:263:7: error:   initializing argument 1 of ‘std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>::size_type, const value_type&, const allocator_type&) [with _Tp = int, _Alloc = std::allocator<int>, std::vector<_Tp, _Alloc>::size_type = long unsigned int, std::vector<_Tp, _Alloc>::value_type = int, std::vector<_Tp, _Alloc>::allocator_type = std::allocator<int>]’ [-fpermissive]
+../src/BlobLanes.cpp:187:57: error: could not convert ‘(std::vector<int>*)(& midRowLines)’ from ‘std::vector<int>*’ to ‘std::vector<int>’
+../src/BlobLanes.cpp:193:61: error: could not convert ‘(std::vector<int>*)(& highRowLines)’ from ‘std::vector<int>*’ to ‘std::vector<int>’
+../src/BlobLanes.cpp:199:70: error: cannot convert ‘std::vector<int>*’ to ‘int*’ for argument ‘3’ to ‘void fitLines(float, int, int*, int*, int*)’
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, int*, int*, int*)’:
+../src/BlobLanes.cpp:249:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:257:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:268:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+make: *** [src/BlobLanes.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:180:86: error: invalid conversion from ‘std::vector<int>*’ to ‘long unsigned int’ [-fpermissive]
+/usr/include/c++/4.6/bits/stl_vector.h:263:7: error:   initializing argument 1 of ‘std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>::size_type, const value_type&, const allocator_type&) [with _Tp = int, _Alloc = std::allocator<int>, std::vector<_Tp, _Alloc>::size_type = long unsigned int, std::vector<_Tp, _Alloc>::value_type = int, std::vector<_Tp, _Alloc>::allocator_type = std::allocator<int>]’ [-fpermissive]
+../src/BlobLanes.cpp:187:57: error: could not convert ‘(std::vector<int>*)(& midRowLines)’ from ‘std::vector<int>*’ to ‘std::vector<int>’
+../src/BlobLanes.cpp:193:61: error: could not convert ‘(std::vector<int>*)(& highRowLines)’ from ‘std::vector<int>*’ to ‘std::vector<int>’
+../src/BlobLanes.cpp:199:70: error: cannot convert ‘std::vector<int>*’ to ‘int*’ for argument ‘3’ to ‘void fitLines(float, int, int*, int*, int*)’
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, int*, int*, int*)’:
+../src/BlobLanes.cpp:249:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:257:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:268:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+make: *** [src/BlobLanes.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:199:70: error: cannot convert ‘std::vector<int>*’ to ‘int*’ for argument ‘3’ to ‘void fitLines(float, int, int*, int*, int*)’
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, int*, int*, int*)’:
+../src/BlobLanes.cpp:249:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:257:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:268:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+make: *** [src/BlobLanes.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, std::vector<int>*, std::vector<int>*, std::vector<int>*)’:
+../src/BlobLanes.cpp:249:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:257:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:268:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, std::vector<int>*, std::vector<int>*, std::vector<int>*)’:
+../src/BlobLanes.cpp:247:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:255:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/BlobLanes.cpp:266:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:195:62: error: request for member ‘begin’ in ‘lowerRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:195:86: error: request for member ‘end’ in ‘lowerRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:195:94: error: ‘isZero’ was not declared in this scope
+../src/BlobLanes.cpp:196:19: error: request for member ‘resize’ in ‘lowerRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:196:52: error: request for member ‘begin’ in ‘lowerRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:198:43: error: request for member ‘begin’ in ‘midRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:198:65: error: request for member ‘end’ in ‘midRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:199:17: error: request for member ‘resize’ in ‘midRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:199:48: error: request for member ‘begin’ in ‘midRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:201:44: error: request for member ‘begin’ in ‘highRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:201:67: error: request for member ‘end’ in ‘highRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:202:18: error: request for member ‘resize’ in ‘highRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:202:50: error: request for member ‘begin’ in ‘highRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+make: *** [src/BlobLanes.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:195:67: error: request for member ‘begin’ in ‘lowerRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:195:91: error: request for member ‘end’ in ‘lowerRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:195:99: error: ‘isZero’ was not declared in this scope
+../src/BlobLanes.cpp:196:19: error: request for member ‘resize’ in ‘lowerRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:196:52: error: request for member ‘begin’ in ‘lowerRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:198:43: error: request for member ‘begin’ in ‘midRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:198:65: error: request for member ‘end’ in ‘midRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:199:17: error: request for member ‘resize’ in ‘midRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:199:48: error: request for member ‘begin’ in ‘midRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:201:44: error: request for member ‘begin’ in ‘highRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:201:67: error: request for member ‘end’ in ‘highRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:202:18: error: request for member ‘resize’ in ‘highRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:202:50: error: request for member ‘begin’ in ‘highRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+make: *** [src/BlobLanes.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:195:72: error: request for member ‘begin’ in ‘lowerRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:195:96: error: request for member ‘end’ in ‘lowerRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:195:104: error: ‘isZero’ was not declared in this scope
+../src/BlobLanes.cpp:196:19: error: request for member ‘resize’ in ‘lowerRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:196:52: error: request for member ‘begin’ in ‘lowerRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:198:43: error: request for member ‘begin’ in ‘midRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:198:65: error: request for member ‘end’ in ‘midRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:199:17: error: request for member ‘resize’ in ‘midRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:199:48: error: request for member ‘begin’ in ‘midRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:201:44: error: request for member ‘begin’ in ‘highRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:201:67: error: request for member ‘end’ in ‘highRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:202:18: error: request for member ‘resize’ in ‘highRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:202:50: error: request for member ‘begin’ in ‘highRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+make: *** [src/BlobLanes.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:196:72: error: request for member ‘begin’ in ‘lowerRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:196:96: error: request for member ‘end’ in ‘lowerRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:197:19: error: request for member ‘resize’ in ‘lowerRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:197:52: error: request for member ‘begin’ in ‘lowerRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:199:43: error: request for member ‘begin’ in ‘midRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:199:65: error: request for member ‘end’ in ‘midRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:200:17: error: request for member ‘resize’ in ‘midRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:200:48: error: request for member ‘begin’ in ‘midRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:202:44: error: request for member ‘begin’ in ‘highRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:202:67: error: request for member ‘end’ in ‘highRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:203:18: error: request for member ‘resize’ in ‘highRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+../src/BlobLanes.cpp:203:50: error: request for member ‘begin’ in ‘highRowLines’, which is of non-class type ‘std::vector<int> [(((long unsigned int)(((long int)numCols) + -0x00000000000000001)) + 1)]’
+make: *** [src/BlobLanes.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, std::vector<int>, std::vector<int>, std::vector<int>)’:
+../src/BlobLanes.cpp:267:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:279:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, std::vector<int>, std::vector<int>, std::vector<int>)’:
+../src/BlobLanes.cpp:268:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:280:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, std::vector<int>, std::vector<int>, std::vector<int>)’:
+../src/BlobLanes.cpp:259:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:270:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:282:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:203:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, std::vector<int>, std::vector<int>, std::vector<int>)’:
+../src/BlobLanes.cpp:259:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:270:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:282:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:198:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:204:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, std::vector<int>, std::vector<int>, std::vector<int>)’:
+../src/BlobLanes.cpp:260:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:271:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:283:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:198:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:205:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, std::vector<int>, std::vector<int>, std::vector<int>)’:
+../src/BlobLanes.cpp:261:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:272:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:284:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:198:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:204:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, std::vector<int>, std::vector<int>, std::vector<int>)’:
+../src/BlobLanes.cpp:260:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:271:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:283:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:198:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:204:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, std::vector<int>, std::vector<int>, std::vector<int>)’:
+../src/BlobLanes.cpp:260:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:271:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:283:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:198:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:204:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, std::vector<int>&, std::vector<int>&, std::vector<int>&)’:
+../src/BlobLanes.cpp:269:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:281:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+./src/BlobLanes.o: In function `findLanes()':
+/home/blicycle/Desktop/blicycle/lcm/BlobLanes/Debug/../src/BlobLanes.cpp:206: undefined reference to `fitLines(float, int, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> >)'
+collect2: ld returned 1 exit status
+make: *** [BlobLanes] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:198:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:204:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:206:70: error: cannot convert ‘std::vector<int>’ to ‘std::vector<int>*’ for argument ‘3’ to ‘void fitLines(float, int, std::vector<int>*, std::vector<int>*, std::vector<int>*)’
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, std::vector<int>&, std::vector<int>&, std::vector<int>&)’:
+../src/BlobLanes.cpp:269:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:281:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+make: *** [src/BlobLanes.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:198:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:204:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, std::vector<int>&, std::vector<int>&, std::vector<int>&)’:
+../src/BlobLanes.cpp:269:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:281:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:198:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:204:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, std::vector<int>&, std::vector<int>&, std::vector<int>&)’:
+../src/BlobLanes.cpp:269:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:281:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:198:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:204:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, std::vector<int>&, std::vector<int>&, std::vector<int>&)’:
+../src/BlobLanes.cpp:269:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:281:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:198:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:204:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, std::vector<int>&, std::vector<int>&, std::vector<int>&)’:
+../src/BlobLanes.cpp:271:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:283:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:198:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:204:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+../src/BlobLanes.cpp: In function ‘void findLanes()’:
+../src/BlobLanes.cpp:198:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp:204:46: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘std::vector<int>::size_type {aka long unsigned int}’ [-Wformat]
+../src/BlobLanes.cpp: In function ‘void fitLines(float, int, std::vector<int>&, std::vector<int>&, std::vector<int>&)’:
+../src/BlobLanes.cpp:270:36: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘double’ [-Wformat]
+../src/BlobLanes.cpp:270:36: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘double’ [-Wformat]
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+Building file: ../src/BlobLanes.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanes.d" -MT"src/BlobLanes.d" -o "src/BlobLanes.o" "../src/BlobLanes.cpp"
+Finished building: ../src/BlobLanes.cpp
+ 
+Building target: BlobLanes
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanes.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanes
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanes ****
+
+make all 
+make: Nothing to be done for `all'.
 
 **** Build Finished ****
 
