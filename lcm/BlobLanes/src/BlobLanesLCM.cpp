@@ -12,7 +12,13 @@
 #include "opencv/cvaux.h"
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
+
+#include <lcm/lcm.h>
+#include <lcmtypes/bot_core.h>
+
 #include <stdio.h>
+
+
 using namespace std;
 using namespace cv;
 
@@ -22,11 +28,21 @@ int min_threshold = 50;
 int max_trackbar = 200;
 int blacktowhite = 0;
 
-const char* standard_name = "Standard Hough Lines Demo";
+typedef struct {
+	int lock;
+	float rho;
+	float theta;
+} BearingInformation;
+
+typedef struct _Comp {
+  lcm_t* subscribe_lcm;
+  lcm_t* publish_lcm;
+  BearingInformation b;
+}Comp;
+
 const char* probabilistic_name = "Probabilistic Hough Lines Demo";
 
 int p_trackbar = 116;
-
 int smoothfactor=20;
 
 int xup =16;
@@ -55,10 +71,16 @@ bool isZero(int);
 void fitLines(float, int, vector<int>&, vector<int>&, vector<int>&);
 void reduceVector(vector<int>&);
 
-int main() {
+void on_image_frame(const lcm_recv_buf_t *rbuf, const char *channel,
+		const bot_core_image_t *msg, void *user_data) {
 
-	/// Read the image
-	src = imread( "/home/blicycle/Desktop/blicycle/lcm/LineDetection/Debug/track_curved_hash.jpg", 1 );
+
+	Comp *self = (Comp*) user_data;
+
+	BearingInformation* bearings = &(self->b);
+
+	src.create(msg->height, msg->width, CV_8UC3);
+	src.data = msg->data;
 
 	src.adjustROI(-300, 0, 0, 0 );
 
@@ -69,33 +91,64 @@ int main() {
 	///blur for comedic effect
 	//blur( src, blurred, Size( 3, 5 ), Point(-1,-1) );
 	pyrDown(src_gray, blurred);
-	namedWindow("blurred", CV_WINDOW_AUTOSIZE);
 	imshow("blurred", blurred);
 
 
 	/// Apply Canny edge detector
 	//Canny( src_gray, edges, 100, 300, 3 );
 	threshold(blurred, edges, p_trackbar, 255, THRESH_BINARY );
-	namedWindow("gray", CV_WINDOW_AUTOSIZE);
 	imshow("gray", edges);
 
 	element = getStructuringElement(MORPH_RECT, Size(xup+1, yup+1), Point(-1,-1));
 	dilate(edges, denoised_img, element);
 	element = getStructuringElement(MORPH_RECT, Size(xdown+1, ydown+1), Point(-1,-1));
 	erode(denoised_img, denoised_img, element);
-	namedWindow("denoise", CV_WINDOW_AUTOSIZE);
 	imshow("denoise", denoised_img);
 
 	lowHeight = denoised_img.rows-10;
 	midHeight = denoised_img.rows/3;
-	highHeight = 40;
+	highHeight = min(40, denoised_img.rows/4);
+
+	waitKey(1);
+}
+
+// Print help information
+void print_help() {
+	printf("** Invalid syntax!\n"
+			"   Usage: blicycle  <source>\n"
+			"       source: the LCM channel to use\n");
+}
+
+
+int main(int argc, char** argv) {
+
+	// Print a welcome message
+	printf("Blicycle CV v2.0\n");
+
+	if (argc!=2){
+		print_help();
+		exit(1);
+	}
+
+	char* lcmChannel = argv[1];
+
+	//setup lcm
+	Comp *self = (Comp*) calloc(1, sizeof(Comp));
+
+	//self->publish_lcm = lcm_create(NULL);
+	self->subscribe_lcm = lcm_create(NULL);
+
+
+	bot_core_image_t_subscription_t * sub = bot_core_image_t_subscribe(self->subscribe_lcm, lcmChannel, on_image_frame, self);
+
+	// Create a window to display processed images (useful for debugging)
+	namedWindow("blurred", CV_WINDOW_AUTOSIZE);
+	namedWindow("gray", CV_WINDOW_AUTOSIZE);
+	namedWindow("denoise", CV_WINDOW_AUTOSIZE);
 
 	/// Create Trackbars for Thresholds
 	char thresh_label[50];
 	sprintf( thresh_label, "Thres: %d + input", min_threshold );
-
-	//namedWindow( standard_name, CV_WINDOW_AUTOSIZE );
-	//createTrackbar( thresh_label, standard_name, &s_trackbar, max_trackbar, Standard_Hough);
 
 	createTrackbar( thresh_label, "gray", &p_trackbar, max_trackbar, &blacknwhite);
 	createTrackbar( "Inv?", "gray", &blacktowhite, 1, &blacknwhite);
@@ -106,10 +159,25 @@ int main() {
 	createTrackbar("Update Lines", "denoise", &pointless, 1, &updateLines);
 
 
+	while (1) {
+		lcm_handle(self->subscribe_lcm);
 
-	waitKey(0);
+		// Send over the data!
+		//publishLCM(self->b.lock, self->b.rho, self->b.theta);
+	}
 
-	return 0;
+	destroyWindow("blurred");
+	destroyWindow("gray");
+	destroyWindow("denoise");
+
+}
+
+/**
+ * A helper method to publish data over a socket.
+ */
+void publishLCM(int lock, double rho, double theta) {
+	//TODO  make the type needed here to send these things via LCM
+
 }
 
 void blacknwhite(int, void*){
