@@ -58,6 +58,7 @@ int highHeight;
 
 int pointless;
 
+int cropHeight=0;
 
 int expectedLaneWidth = 40;
 
@@ -82,7 +83,7 @@ void on_image_frame(const lcm_recv_buf_t *rbuf, const char *channel,
 	src.create(msg->height, msg->width, CV_8UC3);
 	src.data = msg->data;
 
-	src.adjustROI(-300, 0, 0, 0 );
+	src.adjustROI(-cropHeight, 0, 0, 0 );
 
 
 	/// Pass the image to gray
@@ -149,14 +150,16 @@ int main(int argc, char** argv) {
 	/// Create Trackbars for Thresholds
 	char thresh_label[50];
 	sprintf( thresh_label, "Thres: %d + input", min_threshold );
-
 	createTrackbar( thresh_label, "gray", &p_trackbar, max_trackbar, &blacknwhite);
+
+	createTrackbar("crop", "blurred", &cropHeight, 500, &updateLines);
+
 	createTrackbar( "Inv?", "gray", &blacktowhite, 1, &blacknwhite);
 	createTrackbar( "xup", "denoise", &xup, smoothfactor, &denoise);
 	createTrackbar( "yup", "denoise", &yup, smoothfactor, &denoise);
 	createTrackbar( "xdown", "denoise", &xdown, smoothfactor, &denoise);
 	createTrackbar( "ydown", "denoise", &ydown, smoothfactor, &denoise);
-	createTrackbar("Update Lines", "denoise", &pointless, 1, &updateLines);
+	createTrackbar("Update Lines", "denoise", &pointless, 1, &blacknwhite);
 
 
 	while (1) {
@@ -282,7 +285,7 @@ float findSlope(){
 	int thresh = 385;
 
 	double slope=0;
-
+/*
 	while((p_lines.size()<4)||(p_lines.size()>20)){
 		p_lines.clear();
 		if(p_lines.size()<4){
@@ -290,8 +293,9 @@ float findSlope(){
 		}else{
 			thresh+=10;
 		}
+		*/
 		HoughLinesP( denoised_img, p_lines, 1, CV_PI/180, thresh, 30, 200);
-	}
+	//}
 	//smooth by slope and use identified slope as seed for lines in lanes
 
 	showLines(p_lines, lanes);
@@ -385,7 +389,7 @@ void fitLines(float slope, int numcolumns, vector<int> &low, vector<int> &mid, v
 		}
 	}
 
-	printf("numlanes %d\n", lanesX.size());
+	printf("numlanes %d\n", (int)lanesX.size());
 
 
 }

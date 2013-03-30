@@ -75,14 +75,13 @@ int main( int argc, char** argv ) {
 
 	char* lcmChannel1 = argv[3];
 
-	CvCapture* capture;
-	IplImage* image = NULL;
+	VideoCapture capture;
+	Mat image;
 
 	if (!strcasecmp(argv[1], "CAPTURE")) {
 		// Capture live video
 		int video_source = atoi(argv[2]);
-		capture = cvCaptureFromCAM(video_source);
-		if (!capture) {
+		if (!capture.open(video_source)) {
 			printf("Couldn't capture video!\n");
 		}
 
@@ -90,8 +89,7 @@ int main( int argc, char** argv ) {
 	} else if (!strcasecmp(argv[1], "VIDEOFILE")) {
 		// Play from a file
 		printf("   Mode: File playback\n   File: %s\n\n", argv[2]);
-		capture = cvCaptureFromFile(argv[2]);
-		if (!capture) {
+		if (!capture.open(argv[2])) {
 			printf("Invalid video file name!\n");
 			exit(1);
 		}
@@ -99,13 +97,12 @@ int main( int argc, char** argv ) {
 	} else if (!strcasecmp(argv[1], "IMAGEFILE")) {
 		// Play from a file
 		printf("   Mode: Image process\n   File: %s\n\n", argv[2]);
-		image = cvLoadImage(argv[2], CV_LOAD_IMAGE_COLOR);
-		if (!image) {
+		image = imread(argv[2]);
+		if (image.empty()) {
 			printf("Invalid image file name!\n");
 			exit(1);
 		}
-		// Convert to the HSV color space
-		//cvCvtColor(image, image, CV_RGB2BGR);
+		cvtColor(image, image, CV_RGB2BGR);
 
 
 	} else {
@@ -124,25 +121,24 @@ int main( int argc, char** argv ) {
 
 	//printf("   Capturing at:\n      Width: %d\n      Height:%d\n", width, height);
 
-
 	while(1) {
-		IplImage* frame;
-		if (!image) {
-			frame = cvQueryFrame(capture);
-			if( !frame ) break;
+		Mat frame;
+		if (image.empty()) {
+			capture>>frame;
+			if(frame.empty()) break;
 		} else {
 			frame = image;
 		}
 
 		bot_core_image_metadata_t fake;
 		fake.n = 1;
-		bot_image.width = frame->width;
-		bot_image.height = frame->height;
-		bot_image.row_stride = frame->nChannels*frame->width;
+		bot_image.width = frame.cols;
+		bot_image.height = frame.rows;
+		bot_image.row_stride = frame.channels()*frame.cols;
 		bot_image.pixelformat = BOT_CORE_IMAGE_T_PIXEL_FORMAT_RGB;
-		bot_image.data = (uchar*)frame->imageData;
+		bot_image.data = frame.data;
 		bot_image.utime = (long int) time(0);
-		bot_image.size = frame->imageSize;
+		bot_image.size = frame.rows*frame.channels()*frame.cols;
 		bot_image.nmetadata = 0;
 		bot_image.metadata = &fake;
 
@@ -150,15 +146,10 @@ int main( int argc, char** argv ) {
 		// Send over the data!
 		bot_core_image_t_publish(self->publish_lcm,lcmChannel1, &bot_image);
 
-		if (!image) {
-			char c = cvWaitKey(33);
-			if( c == 27 ) {
-				cvReleaseCapture(&capture);
-				break;
-			}
+		if (image.empty()) {
+			char c = cvWaitKey(1);
 		} else {
 			char c = cvWaitKey(500);
-			//break;
 		}
 	}
 
