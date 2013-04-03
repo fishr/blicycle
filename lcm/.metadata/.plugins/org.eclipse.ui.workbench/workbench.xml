@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="21" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1016" x="114" y="46">
+<window height="768" maximized="true" width="929" x="114" y="46">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -14,12 +14,12 @@
 <coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="82" y="30"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="120" y="30"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="68" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="96" y="30"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -32,26 +32,21 @@
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
-<part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="blicycle.cpp" partName="blicycle.cpp" path="/home/blicycle/Desktop/blicycle/lcm/blicycleLCM/blicycle.cpp" title="blicycle.cpp" tooltip="blicycleLCM/blicycle.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/blicycleLCM/blicycle.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6164" selectionTopPixel="4332"/>
-</editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="blicycle.c" partName="blicycle.c" title="blicycle.c" tooltip="/home/blicycle/Desktop/blicycle/blicycle_cv/blicycle.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/home/blicycle/Desktop/blicycle/blicycle_cv/blicycle.c"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3668" selectionTopPixel="3689"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="lidarFilter.cpp" partName="lidarFilter.cpp" path="/home/blicycle/Desktop/blicycle/lcm/lidarFilter/lidarFilter.cpp" title="lidarFilter.cpp" tooltip="lidarFilter/lidarFilter.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lidarFilter/lidarFilter.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1173" selectionTopPixel="57"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="BlobLanes.cpp" partName="BlobLanes.cpp" path="/home/blicycle/Desktop/blicycle/lcm/BlobLanes/src/BlobLanes.cpp" title="BlobLanes.cpp" tooltip="BlobLanes/src/BlobLanes.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlobLanes/src/BlobLanes.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="77" selectionOffset="1338" selectionTopPixel="421"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.ui.DefaultTextEditor" name="LineDetection" partName="LineDetection" path="/home/blicycle/Desktop/blicycle/lcm/LineDetection/LineDetection" title="LineDetection" tooltip="LineDetection/LineDetection" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LineDetection/LineDetection"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3199" selectionTopPixel="1408"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="BlobLanesLCM.cpp" partName="BlobLanesLCM.cpp" path="/home/blicycle/Desktop/blicycle/lcm/BlobLanes/src/BlobLanesLCM.cpp" title="BlobLanesLCM.cpp" tooltip="BlobLanes/src/BlobLanesLCM.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlobLanes/src/BlobLanesLCM.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1104" selectionTopPixel="670"/>
 </editor>
 </editors>
 <views>
@@ -69,6 +64,12 @@
 <child filterId="org.eclipse.cdt.ui.CView_patternFilterId_RemoteSystemsConnections" isEnabled="true"/>
 </xmlDefinedFilters>
 </customFilters>
+</viewState>
+</view>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="org.eclipse.cdt.ui.pdomSearchViewPage" definitionColumnWidth="150" locationColumnWidth="300" matchColumnWidth="300" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" showEnclosingDefinitions="true"/>
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
 </viewState>
 </view>
 <view id="org.eclipse.debug.ui.DebugView" partName="Debug">
@@ -109,6 +110,10 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.pathField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings"/>
+</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="834" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="657"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -124,7 +129,7 @@
 <viewState disassembly.syncActiveContext="true" disassembly.trackExpression="false"/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.ui.DefaultTextEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
+<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
@@ -160,30 +165,43 @@
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.ui.views.TaskList"/>
 <fastViewBars/>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="topLeft">&#x0A;<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<layout>
+<mainWindow>
+<info folder="true" part="topLeft">
+<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.team.ccvs.ui.RepositoriesView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@695e0163" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="topLeft">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@695e0163" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="topLeft">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25940594" ratioLeft="262" ratioRight="748" relationship="2" relative="topLeft"/>
-<info folder="true" part="bottomRight" ratio="0.6599064" ratioLeft="423" ratioRight="218" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.TaskList" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<info folder="true" part="bottomRight" ratio="0.6599064" ratioLeft="423" ratioRight="218" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.TaskList" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.team.ui.GenericHistoryView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="bottomLeft" ratio="0.49921995" ratioLeft="320" ratioRight="321" relationship="4" relative="topLeft">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="bottomLeft" ratio="0.49921995" ratioLeft="320" ratioRight="321" relationship="4" relative="topLeft">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
@@ -244,6 +262,7 @@
 <view id="org.eclipse.ui.views.TaskList"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.PropertySheet"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.cdt.make.ui.views.MakeView"/>
 <fastViewBars/>
@@ -268,18 +287,20 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.2456616" ratioLeft="453" ratioRight="1391" relationship="2" relative="topLeft"/>
+<info part="org.eclipse.ui.editorss" ratio="0.14154013" ratioLeft="261" ratioRight="1583" relationship="2" relative="topLeft"/>
 <info folder="true" part="bottom" ratio="0.74930364" ratioLeft="807" ratioRight="270" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
 </presentation>
 </folder>
 </info>
@@ -348,20 +369,29 @@
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.cdt.dsf.debug.ui.disassembly.view"/>
 <fastViewBars/>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.74986464" ratioLeft="1385" ratioRight="462" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.74986464" ratioLeft="1385" ratioRight="462" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.74930364" ratioLeft="807" ratioRight="270" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.74930364" ratioLeft="807" ratioRight="270" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.cdt.debug.ui.executablesView" label="Executables"/>
@@ -371,7 +401,8 @@
 <page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
 <page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.MemoryView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
@@ -379,22 +410,28 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.44981414" ratioLeft="363" ratioRight="444" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.74986464" ratioLeft="1385" ratioRight="462" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.cdt.dsf.debug.ui.disassembly.view" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.74986464" ratioLeft="1385" ratioRight="462" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.cdt.dsf.debug.ui.disassembly.view" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="Disassembly"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.dsf.gdb.ui.tracecontrol.view" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.4997293" ratioLeft="923" ratioRight="924" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.BreakpointView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.4997293" ratioLeft="923" ratioRight="924" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.BreakpointView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.debug.ui.SignalsView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.ModuleView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
@@ -406,167 +443,153 @@
 <workingSets/>
 <navigationHistory>
 <editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlobLanes/src/BlobLanesLCM.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/LCMPost/LCMPost.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ImageMerge/ImageMerge.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/LineDetection/LineDetection.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/blicycleLCM/blicycle.cpp"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" uri="file:/home/blicycle/Desktop/blicycle/blicycle_cv/blicycle.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lidarFilter/lidarFilter.cpp"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" uri="file:/home/blicycle/Desktop/blicycle/blicycle_cv/blicycle.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ImageMerge/ImageMerge.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lidarFilter/lidarFilter.cpp"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" uri="file:/home/blicycle/Desktop/blicycle/blicycle_cv/blicycle.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/blicycleLCM/blicycle.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/LineDetection/LineDetection"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlobLanes/src/blicycle_packet_t.hpp"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle_packet_t.hpp" project="BlobLanes"/>
 </editors>
-<item historyLabel="ImageMerge.cpp" index="1">
-<position/>
+<item historyLabel="LCMPost.cpp" index="1">
+<position info="not_deleted" x="3828" y="0"/>
 </item>
-<item historyLabel="LCMPost.cpp" index="0">
-<position/>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="1910" y="0"/>
 </item>
-<item historyLabel="ImageMerge.cpp" index="1">
-<position/>
+<item historyLabel="LCMPost.cpp" index="1">
+<position info="not_deleted" x="3828" y="0"/>
 </item>
-<item historyLabel="LCMPost.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="ImageMerge.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="ImageMerge.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="blicycle.cpp" index="2">
-<position info="not_deleted" x="5744" y="448"/>
-</item>
-<item historyLabel="ImageMerge.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="ImageMerge.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="ImageMerge.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="LCMPost.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="LCMPost.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="ImageMerge.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="LCMPost.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="ImageMerge.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="ImageMerge.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="LCMPost.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="ImageMerge.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="blicycle.cpp" index="2">
-<position info="not_deleted" x="5744" y="448"/>
-</item>
-<item historyLabel="blicycle.cpp" index="2">
-<position info="not_deleted" x="6364" y="0"/>
-</item>
-<item historyLabel="blicycle.cpp" index="2">
-<position info="not_deleted" x="6364" y="0"/>
-</item>
-<item historyLabel="blicycle.c" index="3">
-<position info="not_deleted" x="3668" y="0"/>
-</item>
-<item historyLabel="blicycle.cpp" index="2">
-<position info="not_deleted" x="6364" y="0"/>
-</item>
-<item historyLabel="blicycle.cpp" index="2">
-<position info="not_deleted" x="6364" y="0"/>
-</item>
-<item historyLabel="LCMPost.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="blicycle.cpp" index="2">
-<position info="not_deleted" x="6364" y="0"/>
-</item>
-<item historyLabel="ImageMerge.cpp" index="1">
+<item historyLabel="LineDetection.cpp" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="ImageMerge.cpp" index="1">
-<position info="not_deleted" x="1581" y="2"/>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="1910" y="0"/>
 </item>
-<item historyLabel="LCMPost.cpp" index="0">
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="1728" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="4192" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="4192" y="0"/>
+</item>
+<item historyLabel="LCMPost.cpp" index="1">
+<position/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="4192" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="1867" y="0"/>
+</item>
+<item historyLabel="LCMPost.cpp" index="1">
+<position info="not_deleted" x="1722" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="4192" y="0"/>
+</item>
+<item historyLabel="LCMPost.cpp" index="1">
+<position info="not_deleted" x="1722" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="4192" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="4192" y="0"/>
+</item>
+<item historyLabel="LineDetection.cpp" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="ImageMerge.cpp" index="1">
-<position info="not_deleted" x="1581" y="2"/>
+<item historyLabel="LCMPost.cpp" index="1">
+<position info="not_deleted" x="1722" y="0"/>
 </item>
-<item historyLabel="blicycle.cpp" index="2">
-<position info="not_deleted" x="6364" y="0"/>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="2195" y="0"/>
 </item>
-<item historyLabel="blicycle.cpp" index="2">
-<position info="not_deleted" x="6362" y="0"/>
+<item historyLabel="LCMPost.cpp" index="1">
+<position info="not_deleted" x="1722" y="0"/>
 </item>
-<item historyLabel="lidarFilter.cpp" index="4">
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="2327" y="0"/>
+</item>
+<item historyLabel="LCMPost.cpp" index="1">
+<position/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="2327" y="0"/>
+</item>
+<item historyLabel="LCMPost.cpp" index="1">
+<position info="not_deleted" x="3828" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="2327" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="3524" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="3599" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="3740" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="3669" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="3738" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="799" y="0"/>
+</item>
+<item historyLabel="LCMPost.cpp" index="1">
+<position info="not_deleted" x="3828" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="799" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="10378" y="0"/>
+</item>
+<item historyLabel="blicycle.cpp" index="3">
+<position info="not_deleted" x="1236" y="20"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="556" y="0"/>
+</item>
+<item historyLabel="blicycle_packet_t.hpp" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="lidarFilter.cpp" index="4">
-<position info="not_deleted" x="1664" y="0"/>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="556" y="0"/>
 </item>
-<item historyLabel="lidarFilter.cpp" index="4">
-<position/>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="0" y="78"/>
 </item>
-<item historyLabel="blicycle.c" index="5">
-<position info="not_deleted" x="3668" y="0"/>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="116" y="0"/>
 </item>
-<item historyLabel="ImageMerge.cpp" index="6">
-<position/>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="0" y="78"/>
 </item>
-<item historyLabel="lidarFilter.cpp" index="7">
-<position info="not_deleted" x="1173" y="0"/>
+<item historyLabel="blicycle_packet_t.hpp" index="5">
+<position info="not_deleted" x="215" y="17"/>
 </item>
-<item historyLabel="ImageMerge.cpp" index="6">
-<position/>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="0" y="78"/>
 </item>
-<item historyLabel="ImageMerge.cpp" index="6">
-<position info="not_deleted" x="2637" y="0"/>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="512" y="0"/>
 </item>
-<item historyLabel="ImageMerge.cpp" index="6">
-<position info="not_deleted" x="2449" y="0"/>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="533" y="21"/>
 </item>
-<item historyLabel="ImageMerge.cpp" index="6">
-<position info="not_deleted" x="2391" y="0"/>
+<item historyLabel="blicycle_packet_t.hpp" index="5">
+<position info="not_deleted" x="215" y="17"/>
 </item>
-<item historyLabel="ImageMerge.cpp" index="6">
-<position info="not_deleted" x="2577" y="0"/>
-</item>
-<item historyLabel="ImageMerge.cpp" index="6">
-<position info="not_deleted" x="2577" y="0"/>
-</item>
-<item historyLabel="ImageMerge.cpp" index="6">
-<position info="not_deleted" x="2973" y="0"/>
-</item>
-<item historyLabel="ImageMerge.cpp" index="6">
-<position info="not_deleted" x="1955" y="0"/>
-</item>
-<item historyLabel="lidarFilter.cpp" index="7">
-<position info="not_deleted" x="1173" y="0"/>
-</item>
-<item historyLabel="blicycle.c" index="8">
-<position info="not_deleted" x="3668" y="0"/>
-</item>
-<item historyLabel="blicycle.cpp" index="9">
-<position info="not_deleted" x="6164" y="0"/>
-</item>
-<item active="true" historyLabel="LineDetection" index="10">
-<position info="not_deleted" x="1466" y="0"/>
+<item active="true" historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="533" y="21"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -585,6 +608,24 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="blicycle_packet_t.hpp" tooltip="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle_packet_t.hpp">
+<persistable path="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle_packet_t.hpp" project="BlobLanes"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="blicycle_packet_t.hpp" tooltip="BlobLanes/src/blicycle_packet_t.hpp">
+<persistable path="/BlobLanes/src/blicycle_packet_t.hpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="LCMPost.cpp" tooltip="LCMPost/LCMPost.cpp">
+<persistable path="/LCMPost/LCMPost.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="BlobLanesLCM.cpp" tooltip="BlobLanes/src/BlobLanesLCM.cpp">
+<persistable path="/BlobLanes/src/BlobLanesLCM.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="LineDetection.cpp" tooltip="LineDetection/LineDetection.cpp">
+<persistable path="/LineDetection/LineDetection.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="BlobLanes.cpp" tooltip="BlobLanes/src/BlobLanes.cpp">
+<persistable path="/BlobLanes/src/BlobLanes.cpp"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="LineDetection" tooltip="LineDetection/LineDetection">
 <persistable path="/LineDetection/LineDetection"/>
 </file>
@@ -593,9 +634,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="lidarFilter.cpp" tooltip="lidarFilter/lidarFilter.cpp">
 <persistable path="/lidarFilter/lidarFilter.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="LCMPost.cpp" tooltip="LCMPost/LCMPost.cpp">
-<persistable path="/LCMPost/LCMPost.cpp"/>
 </file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="blicycle.c" tooltip="/home/blicycle/Desktop/blicycle/blicycle_cv/blicycle.c">
 <persistable uri="file:/home/blicycle/Desktop/blicycle/blicycle_cv/blicycle.c"/>

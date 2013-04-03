@@ -15,6 +15,7 @@
 
 #include <lcm/lcm.h>
 #include <lcmtypes/bot_core.h>
+#include <blicycle_packet_t.h>
 
 #include <stdio.h>
 
@@ -22,11 +23,17 @@
 using namespace std;
 using namespace cv;
 
-Mat src, blurred, src_gray, edges, element, denoised_img, lanes;
+Mat srcCopy, blurred, src_gray, edges, element, denoised_img, lanes;
+vector<Vec3i> lanesX;
+
 
 int min_threshold = 50;
 int max_trackbar = 200;
 int blacktowhite = 0;
+int thresh = 118;
+int minLineLength = 90;
+int maxLineGap = 127;
+int cannyBool =1;
 
 typedef struct _BearingInformation{
 	int lock;
@@ -39,6 +46,8 @@ typedef struct _Comp {
   lcm_t* publish_lcm;
   BearingInformation b;
 }Comp;
+
+//blicycle_packet_t packet;
 
 const char* probabilistic_name = "Probabilistic Hough Lines Demo";
 
@@ -67,8 +76,8 @@ void denoise(int, void*);
 void updateLines(int, void*);
 void showLines(vector<Vec4i>, Mat);
 void findLanes();
-float findSlope();
-void fitLines(float, int, vector<int>&, vector<int>&, vector<int>&);
+void findSlope(vector<Vec2f>&);
+void fitLines(vector<Vec2f>, int, vector<int>&, vector<int>&, vector<int>&);
 void reduceVector(vector<int>&);
 
 void on_image_frame(const lcm_recv_buf_t *rbuf, const char *channel,
@@ -79,28 +88,27 @@ void on_image_frame(const lcm_recv_buf_t *rbuf, const char *channel,
 
 	BearingInformation* bearings = &(self->b);
 
-	src.create(msg->height, msg->width, CV_8UC3);
+	Mat src(msg->height, msg->width, CV_8UC3);
 	src.data = msg->data;
 
-	src.adjustROI(-cropHeight, 0, 0, 0 );
+	src.copyTo(srcCopy);
+	srcCopy.adjustROI(-cropHeight, 0, 0, 0 );
 
 
 	/// Pass the image to gray
-	cvtColor( src, src_gray, CV_RGB2GRAY );
+	cvtColor( srcCopy, src_gray, CV_RGB2GRAY );
 
 	//downsample the image
 	pyrDown(src_gray, blurred);
-	imshow("blurred", blurred);
+	//imshow("blurred", blurred);
 
-	threshold(blurred, edges, p_trackbar, 255, THRESH_BINARY );
-	imshow("gray", edges);
-
-	denoise(0,0);
+	blacknwhite(0,0);
 
 	lowHeight = denoised_img.rows-10;
 	midHeight = denoised_img.rows/3;
 	highHeight = min(40, denoised_img.rows/4);
 
+	updateLines(0,0);
 	waitKey(1);
 }
 
@@ -134,43 +142,53 @@ int main(int argc, char** argv) {
 	bot_core_image_t_subscription_t * sub = bot_core_image_t_subscribe(self->subscribe_lcm, lcmChannel, on_image_frame, self);
 
 	// Create a window to display processed images (useful for debugging)
-	namedWindow("blurred", CV_WINDOW_AUTOSIZE);
+	//namedWindow("blurred", CV_WINDOW_AUTOSIZE);
 	namedWindow("gray", CV_WINDOW_AUTOSIZE);
-	namedWindow("denoise", CV_WINDOW_AUTOSIZE);
+	//namedWindow("denoise", CV_WINDOW_AUTOSIZE);
+	namedWindow("lanes", CV_WINDOW_AUTOSIZE);
 
 	/// Create Trackbars for Thresholds
 	char thresh_label[50];
 	sprintf( thresh_label, "Thres: %d + input", min_threshold );
 	createTrackbar( thresh_label, "gray", &p_trackbar, max_trackbar, &blacknwhite);
 
-	createTrackbar("crop", "blurred", &cropHeight, 500, &updateLines);
+	createTrackbar("crop", "gray", &cropHeight, 500, &blacknwhite);
+
+	createTrackbar("lineGap", "lanes", &maxLineGap, 500, &updateLines);
+	createTrackbar("lineLength", "lanes", &minLineLength, 200, &updateLines);
+	createTrackbar("Hough Thresh", "lanes", &thresh, 500, &updateLines);
+	createTrackbar("Use Canny?", "lanes", &cannyBool, 1, &updateLines);
 
 	createTrackbar( "Inv?", "gray", &blacktowhite, 1, &blacknwhite);
-	createTrackbar( "xup", "denoise", &xup, smoothfactor, &denoise);
-	createTrackbar( "yup", "denoise", &yup, smoothfactor, &denoise);
-	createTrackbar( "xdown", "denoise", &xdown, smoothfactor, &denoise);
-	createTrackbar( "ydown", "denoise", &ydown, smoothfactor, &denoise);
-	createTrackbar("Update Lines", "denoise", &pointless, 1, &blacknwhite);
+	createTrackbar( "xup", "lanes", &xup, smoothfactor, &denoise);
+	createTrackbar( "yup", "lanes", &yup, smoothfactor, &denoise);
+	createTrackbar( "xdown", "lanes", &xdown, smoothfactor, &denoise);
+	createTrackbar( "ydown", "lanes", &ydown, smoothfactor, &denoise);
+	createTrackbar("Update Lines", "lanes", &pointless, 1, &blacknwhite);
 
 
 	while (1) {
 		lcm_handle(self->subscribe_lcm);
-
-		// Send over the data!
-		//publishLCM(self->b.lock, self->b.rho, self->b.theta);
 	}
 
-	destroyWindow("blurred");
+	//destroyWindow("blurred");
 	destroyWindow("gray");
-	destroyWindow("denoise");
+	//destroyWindow("denoise");
+	destroyWindow("lanes");
 
 }
 
 /**
  * A helper method to publish data over a socket.
  */
-void publishLCM(int lock, double rho, double theta) {
-	//TODO  make the type needed here to send these things via LCM
+void publishLCM(int32_t lock, double rho, double theta) {
+/*
+	packet->lock=lock;
+	packet->phi = 0;
+	packet->lane = 3;
+	packet->totalLanes = 5;
+	packet->delta = 0;
+	*/
 
 }
 
@@ -190,7 +208,6 @@ void blacknwhite(int, void*){
 void updateLines(int, void*){
 	findLanes();
 
-	namedWindow("lanes", CV_WINDOW_AUTOSIZE);
 	imshow("lanes", lanes);
 }
 
@@ -199,7 +216,7 @@ void denoise(int, void*){
 	dilate(edges, denoised_img, element);
 	element = getStructuringElement(MORPH_RECT, Size(xdown+1, ydown+1), Point(-1,-1));
 	erode(denoised_img, denoised_img, element);
-	imshow("denoise", denoised_img);
+	//imshow("denoise", denoised_img);
 }
 
 void showLines(vector<Vec4i> reducedLines, Mat screen){
@@ -259,28 +276,29 @@ void findLanes(){
 
 	laneCenters(denoised_img, highHeight, highRowLines);
 
-	float rhoslope = findSlope();
+	vector<Vec2f> slopes;
+	findSlope(slopes);
 
 	reduceVector(lowerRowLines);
 	reduceVector(midRowLines);
 	reduceVector(highRowLines);
 
-	fitLines(rhoslope, numCols, lowerRowLines, midRowLines, highRowLines);
+	fitLines(slopes, numCols, lowerRowLines, midRowLines, highRowLines);
 }
 
 void reduceVector(vector<int> &vec){
 	vec.erase(std::remove(vec.begin(), vec.end(), 0), vec.end());
 }
 
-float findSlope(){
+void findSlope(vector<Vec2f> &laneSlopes){
 
 	//todo could use this to evaluate slope then rotate image?
 
+	//todo also could find the slopes around sets of points to better account for local slope
+
 	vector<Vec4i> p_lines;
 
-	int thresh = 385;
-
-	double slope=0;
+	//double slope=0;
 /*
 	while((p_lines.size()<4)||(p_lines.size()>20)){
 		p_lines.clear();
@@ -290,12 +308,14 @@ float findSlope(){
 			thresh+=10;
 		}
 		*/
-		HoughLinesP( denoised_img, p_lines, 1, CV_PI/180, thresh, 30, 200);
+	if(cannyBool)
+		Canny(denoised_img, denoised_img, 100, 200);
+	HoughLinesP( denoised_img, p_lines, 1, CV_PI/180, thresh, minLineLength, maxLineGap);
 	//}
 	//smooth by slope and use identified slope as seed for lines in lanes
 
 	showLines(p_lines, lanes);
-	unsigned int slopeCounter = 0;
+	/*unsigned int slopeCounter = 0;
 	for(unsigned int i=0; i<p_lines.size();i++){
 		int numer = (p_lines[i][1]-p_lines[i][3]);
 		if (numer!=0){
@@ -310,17 +330,36 @@ float findSlope(){
 			//printf("interslope is %f, numer is %d, denom is %d, i is %u of %d, p_lines %d, %d, %d, %d\n", slope, numer, denom, i, (int)p_lines.size(), p_lines[i][0], p_lines[i][1], p_lines[i][2], p_lines[i][3]);
 		}
 	}
+
 	if(slopeCounter!=0)
 		slope = slope/(float) slopeCounter;
 	return slope;
+	*/
+	if(p_lines.size()!=0){
+		laneSlopes.resize((int)p_lines.size());
+		for(int r=0;r<(int)p_lines.size();r++){
+			laneSlopes[r][0] = (p_lines[r][0]+p_lines[r][2])/2;
+			float slope = 0.000001;
+			int numer = (p_lines[r][1]-p_lines[r][3]);
+			if (numer!=0){
+				int denom = (p_lines[r][0]-p_lines[r][2]);
+				if (denom != 0){
+					slope = (numer)/((float)denom);
+				}else{
+					slope = 9999999;
+				}
+			}
+			laneSlopes[r][1] = slope;
+		}
+	}
+
 }
 
 
-void fitLines(float slope, int numcolumns, vector<int> &low, vector<int> &mid, vector<int> &high){
-
-	vector<Vec3i> lanesX;
+void fitLines(vector<Vec2f> slopes, int numcolumns, vector<int> &low, vector<int> &mid, vector<int> &high){
+	float slope = 99999999;
 	lanesX.assign(high.size(), 0);
-	printf("slope is %f, highpoints are %d\n", slope, (int)high.size());
+	//printf("slope is %f, highpoints are %d\n", slope, (int)high.size());
 
 	if(high.size()==0){
 		printf("numlanes %d\n", (int)lanesX.size()-1);
@@ -330,12 +369,19 @@ void fitLines(float slope, int numcolumns, vector<int> &low, vector<int> &mid, v
 
 	for (unsigned int i=0; i<(high.size()); i++){
 		int x0 = high.at(i);
-		float x1 = ((midHeight-highHeight)/slope)+x0;
-		float x2 = ((lowHeight-highHeight)/slope)+x0;
 		bool gotx1=false;
 		bool gotx2=false;
+		int index=0;
+		for(int r = 0; r<(int)slopes.size(); r++){
+			if(min(abs(x0-slopes[index][0]),abs(x0-slopes[r][0]))==abs(x0-slopes[r][0])){
+				index =r;
+			}
+		}
+		slope = slopes[index][1];
+		float x1 = ((midHeight-highHeight)/slope)+x0;
+		float x2 = ((lowHeight-highHeight)/slope)+x0;
 
-		printf("high %d,  mid %f, low %f\n", x0, x1, x2);
+		//printf("high %d,  mid %f, low %f\n", x0, x1, x2);
 
 		for(unsigned int x1i=0; x1i<(mid.size()); x1i++){
 			if (!gotx1){
@@ -343,7 +389,7 @@ void fitLines(float slope, int numcolumns, vector<int> &low, vector<int> &mid, v
 					lanesX[laneCounter][0]=x0;
 					lanesX[laneCounter][1]=mid.at(x1i);
 					gotx1=true;
-					printf("middle match %d with %d\n", high.at(i), mid.at(x1i));
+					//printf("middle match %d with %d\n", high.at(i), mid.at(x1i));
 
 				}
 			}else{
@@ -359,7 +405,7 @@ void fitLines(float slope, int numcolumns, vector<int> &low, vector<int> &mid, v
 					lanesX[laneCounter][0]=x0;
 					lanesX[laneCounter][2]=low.at(x2i);
 					gotx2=true;
-					printf("lower match %d with %d\n", high.at(i), low.at(x2i));
+					//printf("lower match %d with %d\n", high.at(i), low.at(x2i));
 				}
 			}else{
 				if(fabs(low.at(x2i)-x2)<fabs(lanesX[laneCounter][2]-x2)){
@@ -368,13 +414,13 @@ void fitLines(float slope, int numcolumns, vector<int> &low, vector<int> &mid, v
 			}
 		}
 		if(gotx1||gotx2){
-			printf("gotalane\n");
+			//printf("gotalane\n");
 			laneCounter++;
 		}
 	}
 
 	for(int foo=0; foo<(((int)high.size())-(laneCounter+1));foo++){
-		printf("poof!\n");
+		//printf("poof!\n");
 		lanesX.pop_back();
 	}
 
@@ -387,7 +433,8 @@ void fitLines(float slope, int numcolumns, vector<int> &low, vector<int> &mid, v
 		}
 	}
 
-	printf("numlanes %d\n", (int)lanesX.size()-1);
+	//printf("numlanes %d\n", (int)lanesX.size()-1);
 
-
+	// Send over the data!
+	publishLCM((int)lanesX.size(), 2, slope);
 }

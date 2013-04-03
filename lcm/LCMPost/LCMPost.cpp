@@ -81,7 +81,8 @@ int main( int argc, char** argv ) {
 	if (!strcasecmp(argv[1], "CAPTURE")) {
 		// Capture live video
 		int video_source = atoi(argv[2]);
-		if (!capture.open(video_source)) {
+		capture.open(video_source);
+		if (!capture.isOpened()) {
 			printf("Couldn't capture video!\n");
 		}
 
@@ -89,7 +90,8 @@ int main( int argc, char** argv ) {
 	} else if (!strcasecmp(argv[1], "VIDEOFILE")) {
 		// Play from a file
 		printf("   Mode: File playback\n   File: %s\n\n", argv[2]);
-		if (!capture.open(argv[2])) {
+		capture.open(argv[2]);
+		if (!capture.isOpened()) {
 			printf("Invalid video file name!\n");
 			exit(1);
 		}
@@ -102,7 +104,6 @@ int main( int argc, char** argv ) {
 			printf("Invalid image file name!\n");
 			exit(1);
 		}
-		cvtColor(image, image, CV_RGB2BGR);
 
 
 	} else {
@@ -125,10 +126,18 @@ int main( int argc, char** argv ) {
 		Mat frame;
 		if (image.empty()) {
 			capture>>frame;
-			if(frame.empty()) break;
+			if(frame.empty()) {
+				capture.release();
+				frame.~Mat();
+				printf("looping\n");
+				capture.open(argv[2]);
+				capture>>frame;
+			}
 		} else {
 			frame = image;
 		}
+		cvtColor(frame, frame, CV_RGB2BGR);
+
 
 		bot_core_image_metadata_t fake;
 		fake.n = 1;
@@ -147,7 +156,7 @@ int main( int argc, char** argv ) {
 		bot_core_image_t_publish(self->publish_lcm,lcmChannel1, &bot_image);
 
 		if (image.empty()) {
-			char c = cvWaitKey(1);
+			char c = cvWaitKey(33);
 		} else {
 			char c = cvWaitKey(500);
 		}
