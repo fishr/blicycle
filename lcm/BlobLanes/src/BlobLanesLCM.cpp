@@ -51,7 +51,7 @@ typedef struct _Comp {
 
 const char* probabilistic_name = "Probabilistic Hough Lines Demo";
 
-int p_trackbar = 116;
+int p_trackbar = 178;
 int smoothfactor=20;
 
 int xup =16;
@@ -59,7 +59,7 @@ int yup =0;
 int xdown =3;
 int ydown =3;
 
-int spreadError = 30;
+int spreadError = 50;
 
 int lowHeight;
 int midHeight;

@@ -1,67 +1,25 @@
 
-**** Build of configuration LCM for project BlobLanes ****
+**** Build of configuration Debug for project BlobLanesLCM ****
 
 make all 
 Building file: ../src/BlobLanesLCM.cpp
 Invoking: GCC C++ Compiler
 g++ -I/home/blicycle/Desktop/blicycle/software/build/include -I/home/blicycle/Desktop/blicycle/LCM_configs -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanesLCM.d" -MT"src/BlobLanesLCM.d" -o "src/BlobLanesLCM.o" "../src/BlobLanesLCM.cpp"
 ../src/BlobLanesLCM.cpp: In function ‘void on_image_frame(const lcm_recv_buf_t*, const char*, const bot_core_image_t*, void*)’:
-../src/BlobLanesLCM.cpp:89:22: warning: unused variable ‘bearings’ [-Wunused-variable]
+../src/BlobLanesLCM.cpp:90:22: warning: unused variable ‘bearings’ [-Wunused-variable]
 ../src/BlobLanesLCM.cpp: In function ‘int main(int, char**)’:
-../src/BlobLanesLCM.cpp:142:36: warning: unused variable ‘sub’ [-Wunused-variable]
+../src/BlobLanesLCM.cpp:143:36: warning: unused variable ‘sub’ [-Wunused-variable]
 Finished building: ../src/BlobLanesLCM.cpp
  
-Building target: BlobLanes
+Building target: BlobLanesLCM
 Invoking: GCC C++ Linker
-g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanes"  ./src/BlobLanesLCM.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
-Finished building target: BlobLanes
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanesLCM"  ./src/BlobLanesLCM.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanesLCM
  
 
 **** Build Finished ****
 
-**** Build of configuration Debug for project LCMPost ****
-
-make all 
-make: Nothing to be done for `all'.
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project BlobLanes ****
-
-make all 
-make: Nothing to be done for `all'.
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project BlobLanes ****
-
-make all 
-make: Nothing to be done for `all'.
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project BlobLanes ****
-
-make all 
-make: Nothing to be done for `all'.
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project BlobLanes ****
-
-make all 
-make: Nothing to be done for `all'.
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project LCMPost ****
-
-make all 
-make: Nothing to be done for `all'.
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project BlobLanes ****
+**** Build of configuration Debug for project BlobLanesLCM ****
 
 make all 
 make: Nothing to be done for `all'.
