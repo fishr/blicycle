@@ -13,9 +13,9 @@
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
 
-#include <lcm/lcm.h>
-#include <lcmtypes/bot_core.h>
-#include <blicycle_packet_t.hpp>
+#include <lcm/lcm-cpp.hpp>
+#include <lcmtypes/bot_core.hpp>
+#include <blicycle/blicycle_packet_t.hpp>
 
 #include <stdio.h>
 
@@ -41,16 +41,13 @@ typedef struct _BearingInformation{
 	float theta;
 } BearingInformation;
 
-typedef struct _Comp {
-  lcm_t* subscribe_lcm;
-  lcm_t* publish_lcm;
-  BearingInformation b;
-}Comp;
 
-blicycle_packet_t bikepacket;
-lcm_t* globalLCM;
+blicycle::blicycle_packet_t bikepacket;
+lcm::LCM globalLCM;
 
 const char* probabilistic_name = "Probabilistic Hough Lines Demo";
+char* lcmChannelIn;
+char* lcmChannelOut;
 
 int p_trackbar = 178;
 int smoothfactor=20;
@@ -81,43 +78,46 @@ void findSlope(vector<Vec2f>&);
 void fitLines(vector<Vec2f>, int, vector<int>&, vector<int>&, vector<int>&);
 void reduceVector(vector<int>&);
 
-void on_image_frame(const lcm_recv_buf_t *rbuf, const char *channel,
-		const bot_core_image_t *msg, void *user_data) {
+
+class Handler{
+public:
+	~Handler() {}
+
+	void handleMessage(const lcm::ReceiveBuffer* rbuf, const std::string& chan, const bot_core::image_t* msg) {
+
+		Mat src(msg->height, msg->width, CV_8UC3);
+		src.data = (uchar*)&msg->data[0];
+
+		src.copyTo(srcCopy);
+		srcCopy.adjustROI(-cropHeight, 0, 0, 0 );
 
 
-	Comp *self = (Comp*) user_data;
+		/// Pass the image to gray
+		cvtColor( srcCopy, src_gray, CV_RGB2GRAY );
 
-	BearingInformation* bearings = &(self->b);
+		//downsample the image
+		pyrDown(src_gray, blurred);
+		//imshow("blurred", blurred);
 
-	Mat src(msg->height, msg->width, CV_8UC3);
-	src.data = msg->data;
+		blacknwhite(0,0);
 
-	src.copyTo(srcCopy);
-	srcCopy.adjustROI(-cropHeight, 0, 0, 0 );
+		lowHeight = denoised_img.rows-10;
+		midHeight = denoised_img.rows/3;
+		highHeight = min(40, denoised_img.rows/4);
 
+		updateLines(0,0);
+		waitKey(1);
+	}
 
-	/// Pass the image to gray
-	cvtColor( srcCopy, src_gray, CV_RGB2GRAY );
+};
 
-	//downsample the image
-	pyrDown(src_gray, blurred);
-	//imshow("blurred", blurred);
-
-	blacknwhite(0,0);
-
-	lowHeight = denoised_img.rows-10;
-	midHeight = denoised_img.rows/3;
-	highHeight = min(40, denoised_img.rows/4);
-
-	updateLines(0,0);
-	waitKey(1);
-}
 
 // Print help information
 void print_help() {
 	printf("** Invalid syntax!\n"
-			"   Usage: blicycle  <source>\n"
-			"       source: the LCM channel to use\n");
+			"   Usage: blicycle  <source> <output>\n"
+			"       source: the LCM channel to use\n"
+			"		output: the LCM channel to use\n");
 }
 
 
@@ -126,21 +126,22 @@ int main(int argc, char** argv) {
 	// Print a welcome message
 	printf("Blicycle CV v2.0\n");
 
-	if (argc!=2){
+	if (argc!=3){
 		print_help();
 		exit(1);
 	}
 
-	char* lcmChannel = argv[1];
+	lcmChannelIn = argv[1];
+	lcmChannelOut = argv[2];
 
-	//setup lcm
-	Comp *self = (Comp*) calloc(1, sizeof(Comp));
+	if(!globalLCM.good()){
+		return 1;
+	}
 
-	//self->publish_lcm = lcm_create(NULL);
-	self->subscribe_lcm = lcm_create(NULL);
-	globalLCM = self->subscribe_lcm;
+	Handler imagehandler;
 
-	bot_core_image_t_subscription_t * sub = bot_core_image_t_subscribe(self->subscribe_lcm, lcmChannel, on_image_frame, self);
+	globalLCM.subscribe(lcmChannelIn, &Handler::handleMessage, &imagehandler);
+	//bot_core_image_t_subscription_t sub = bot_core_image_t_subscribe(self->subscribe_lcm, lcmChannel, on_image_frame, self);
 
 	// Create a window to display processed images (useful for debugging)
 	//namedWindow("blurred", CV_WINDOW_AUTOSIZE);
@@ -169,7 +170,7 @@ int main(int argc, char** argv) {
 
 
 	while (1) {
-		lcm_handle(self->subscribe_lcm);
+		globalLCM.handle();
 	}
 
 	//destroyWindow("blurred");
@@ -182,15 +183,17 @@ int main(int argc, char** argv) {
 /**
  * A helper method to publish data over a socket.
  */
-void publishLCM(int32_t lock, double rho, double theta, lcm_t* lcm) {
+void publishLCM(int32_t lock, double rho, double theta) {
 
+	bikepacket.timestamp = 0;
 	bikepacket.lock=lock;   //effectively a boolean if current lane is know, may actually return some relevant value as well, but zero if unsure
 	bikepacket.phi = theta;    //rotational error
 	bikepacket.lane = 3;    //current lane
 	bikepacket.totalLanes = 5; //total lanes in view
 	bikepacket.delta = 0;  //lateral error from center of lane
 
-	lcm_publish(lcm, "bikedata", &bikepacket, sizeof(blicycle_packet_t));
+	globalLCM.publish(lcmChannelOut, &bikepacket);
+
 }
 
 void blacknwhite(int, void*){
@@ -437,5 +440,5 @@ void fitLines(vector<Vec2f> slopes, int numcolumns, vector<int> &low, vector<int
 	//printf("numlanes %d\n", (int)lanesX.size()-1);
 
 	// Send over the data!
-	publishLCM((int)lanesX.size(), 0, slope, globalLCM);
+	publishLCM((int)lanesX.size(), 0, slope);
 }

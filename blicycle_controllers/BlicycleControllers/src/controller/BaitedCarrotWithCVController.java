@@ -135,12 +135,12 @@ public class BaitedCarrotWithCVController extends BaitedCarrotController {
 		})).start();
 	}
 	
-	
+	/*
 	public void updateState(double deltaX, double deltaTheta) {
 		synchronized(this) {
 			this.setState(deltaX, deltaTheta);
 		}	
 	}
-	
+	*/
 	
 }

@@ -11,7 +11,7 @@ import java.util.List;
  * @author Steve
  *
  */
-public class CVMapper {
+public class CVMapper{
 
 	
 	protected double[][] rhoData;

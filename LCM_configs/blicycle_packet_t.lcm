@@ -1,0 +1,12 @@
+package blicycle;
+
+struct blicycle_packet_t
+{
+	int64_t timestamp;
+	int32_t lock;      //indicates whether the bike location is well-known
+	double delta;      //gives current deviation from center of lane
+	int8_t lane;	   //gives current lane number
+	int8_t totalLanes; //gives number of lanes seen
+	double phi;        //gives angle of line parallel to current lane relative to 
+			   //vertical (and bikes centerline)
+}

@@ -31,7 +31,7 @@ public class BaitedCarrotController implements Controller {
 	// State information
 	protected double x;
 	protected double y;
-	protected double theta;
+	protected double theta;  //the normal polar kind of theta, w.r.t x-axis
 	
 	// More state information - computed
 	double dx_dt;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="22" version="2.0">
+<workbench progressCount="23" version="2.0">
 <workbenchAdvisor/>
-<window height="768" width="925" x="766" y="223">
+<window height="768" maximized="true" width="921" x="114" y="46">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -13,8 +13,8 @@
 <coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="156" y="30"/>
 <coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="82" y="30"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="120" y="30"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="121" y="30"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="104" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="40" y="30"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -23,7 +23,7 @@
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
-<page aggregateWorkingSetId="Aggregate for window 1358039901886" focus="true" label="Workspace - C/C++">
+<page aggregateWorkingSetId="Aggregate for window 1358039901886" focus="true" label="Workspace - Debug">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
@@ -41,17 +41,17 @@
 <input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/home/blicycle/Desktop/blicycle/blicycle_cv/blicycle.c"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3668" selectionTopPixel="3689"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="BlobLanes.cpp" partName="BlobLanes.cpp" path="/home/blicycle/Desktop/blicycle/lcm/BlobLanes/src/BlobLanes.cpp" title="BlobLanes.cpp" tooltip="BlobLanes/src/BlobLanes.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlobLanes/src/BlobLanes.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="77" selectionOffset="1338" selectionTopPixel="421"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="BlobLanesLCM.cpp" partName="BlobLanesLCM.cpp" path="/home/blicycle/Desktop/blicycle/lcm/BlobLanes/src/BlobLanesLCM.cpp" title="BlobLanesLCM.cpp" tooltip="BlobLanes/src/BlobLanesLCM.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlobLanes/src/BlobLanesLCM.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="11144" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="BlobLanesLCM.cpp" partName="BlobLanesLCM.cpp" path="/home/blicycle/Desktop/blicycle/lcm/BlobLanesLCM/src/BlobLanesLCM.cpp" title="BlobLanesLCM.cpp" tooltip="BlobLanesLCM/src/BlobLanesLCM.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlobLanesLCM/src/BlobLanesLCM.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3684" selectionTopPixel="2598"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4787" selectionTopPixel="2764"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="lcm.h" partName="lcm.h" title="lcm.h" tooltip="/home/blicycle/Desktop/blicycle/software/build/include/lcm/lcm.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" path="/home/blicycle/Desktop/blicycle/software/build/include/lcm/lcm.h" project="BlobLanesLCM"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="4193"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="blicycle_packet_t.hpp" partName="blicycle_packet_t.hpp" title="blicycle_packet_t.hpp" tooltip="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle/blicycle_packet_t.hpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" path="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle/blicycle_packet_t.hpp" project="BlobLanesLCM"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -133,7 +133,7 @@
 <viewState disassembly.syncActiveContext="true" disassembly.trackExpression="false"/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
+<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="org.eclipse.debug.ui.DebugPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
@@ -434,163 +434,166 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlobLanes/src/BlobLanesLCM.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/LCMPost/LCMPost.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/LineDetection/LineDetection.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/blicycleLCM/blicycle.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlobLanes/src/blicycle_packet_t.hpp"/>
-<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle_packet_t.hpp" project="BlobLanes"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlobLanesLCM/src/BlobLanesLCM.cpp"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle_packet_t.h" project="BlobLanesLCM"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle_packet_t.hpp" project="BlobLanesLCM"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/blicycle/Desktop/blicycle/software/build/include/lcm/lcm_coretypes.h" project="BlobLanesLCM"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/blicycle/Desktop/blicycle/software/build/include/lcm/lcm.h" project="BlobLanesLCM"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle_packet_t.hpp" project="BlobLanesLCM"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle/blicycle_packet_t.hpp" project="BlobLanesLCM"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/blicycle/Desktop/blicycle/software/build/include/lcm/lcm-cpp.hpp" project="BlobLanesLCM"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/blicycle/Desktop/blicycle/software/build/include/lcmtypes/bot_core.hpp" project="BlobLanesLCM"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/blicycle/Desktop/blicycle/software/build/include/lcmtypes/bot_core/image_t.hpp" project="BlobLanesLCM"/>
 </editors>
-<item historyLabel="LCMPost.cpp" index="1">
-<position info="not_deleted" x="3828" y="0"/>
+<item historyLabel="blicycle_packet_t.hpp" index="2">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="1910" y="0"/>
+<item historyLabel="blicycle_packet_t.h" index="1">
+<position info="not_deleted" x="276" y="0"/>
 </item>
-<item historyLabel="LCMPost.cpp" index="1">
-<position info="not_deleted" x="3828" y="0"/>
+<item historyLabel="blicycle_packet_t.hpp" index="2">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="LineDetection.cpp" index="2">
+<item historyLabel="blicycle_packet_t.h" index="1">
+<position info="not_deleted" x="276" y="0"/>
+</item>
+<item historyLabel="blicycle_packet_t.h" index="1">
+<position info="not_deleted" x="156" y="19"/>
+</item>
+<item historyLabel="lcm_coretypes.h" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="blicycle_packet_t.h" index="1">
+<position info="not_deleted" x="156" y="19"/>
+</item>
+<item historyLabel="blicycle_packet_t.h" index="1">
+<position info="not_deleted" x="187" y="9"/>
+</item>
+<item historyLabel="lcm.h" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="1910" y="0"/>
+<position info="not_deleted" x="4897" y="0"/>
+</item>
+<item historyLabel="lcm.h" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="blicycle_packet_t.hpp" index="2">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="1728" y="0"/>
+<position info="not_deleted" x="4897" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="4192" y="0"/>
+<position info="not_deleted" x="4858" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="4192" y="0"/>
+<position info="not_deleted" x="644" y="5"/>
 </item>
-<item historyLabel="LCMPost.cpp" index="1">
+<item historyLabel="blicycle_packet_t.hpp" index="5">
 <position/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="4192" y="0"/>
+<position/>
 </item>
-<item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="1867" y="0"/>
-</item>
-<item historyLabel="LCMPost.cpp" index="1">
-<position info="not_deleted" x="1722" y="0"/>
-</item>
-<item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="4192" y="0"/>
-</item>
-<item historyLabel="LCMPost.cpp" index="1">
-<position info="not_deleted" x="1722" y="0"/>
-</item>
-<item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="4192" y="0"/>
-</item>
-<item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="4192" y="0"/>
-</item>
-<item historyLabel="LineDetection.cpp" index="2">
+<item historyLabel="blicycle_packet_t.hpp" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="LCMPost.cpp" index="1">
-<position info="not_deleted" x="1722" y="0"/>
-</item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="2195" y="0"/>
-</item>
-<item historyLabel="LCMPost.cpp" index="1">
-<position info="not_deleted" x="1722" y="0"/>
-</item>
-<item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="2327" y="0"/>
-</item>
-<item historyLabel="LCMPost.cpp" index="1">
 <position/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="2327" y="0"/>
-</item>
-<item historyLabel="LCMPost.cpp" index="1">
-<position info="not_deleted" x="3828" y="0"/>
+<position info="not_deleted" x="971" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="2327" y="0"/>
+<position info="not_deleted" x="533" y="30"/>
 </item>
-<item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="3524" y="0"/>
-</item>
-<item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="3599" y="0"/>
-</item>
-<item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="3740" y="0"/>
-</item>
-<item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="3669" y="0"/>
-</item>
-<item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="3738" y="0"/>
-</item>
-<item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="799" y="0"/>
-</item>
-<item historyLabel="LCMPost.cpp" index="1">
-<position info="not_deleted" x="3828" y="0"/>
-</item>
-<item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="799" y="0"/>
-</item>
-<item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="10378" y="0"/>
-</item>
-<item historyLabel="blicycle.cpp" index="3">
-<position info="not_deleted" x="1236" y="20"/>
-</item>
-<item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="556" y="0"/>
-</item>
-<item historyLabel="blicycle_packet_t.hpp" index="4">
+<item historyLabel="blicycle_packet_t.hpp" index="6">
 <position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="556" y="0"/>
+<position info="not_deleted" x="533" y="30"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="0" y="78"/>
+<position info="not_deleted" x="4476" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="116" y="0"/>
+<position info="not_deleted" x="533" y="30"/>
 </item>
-<item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="0" y="78"/>
+<item historyLabel="blicycle_packet_t.hpp" index="6">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="blicycle_packet_t.hpp" index="5">
-<position info="not_deleted" x="215" y="17"/>
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="0" y="78"/>
-</item>
-<item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="512" y="0"/>
-</item>
-<item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="533" y="21"/>
-</item>
-<item historyLabel="blicycle_packet_t.hpp" index="5">
-<position info="not_deleted" x="215" y="17"/>
-</item>
-<item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="533" y="21"/>
-</item>
-<item historyLabel="BlobLanesLCM.cpp" index="6">
+<item historyLabel="blicycle_packet_t.hpp" index="6">
 <position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="0" y="11144"/>
+<position info="not_deleted" x="440" y="0"/>
 </item>
-<item active="true" historyLabel="BlobLanesLCM.cpp" index="6">
+<item historyLabel="lcm-cpp.hpp" index="7">
 <position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="440" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="2729" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="2883" y="0"/>
+</item>
+<item historyLabel="bot_core.hpp" index="8">
+<position info="not_deleted" x="120" y="20"/>
+</item>
+<item historyLabel="image_t.hpp" index="9">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="bot_core.hpp" index="8">
+<position info="not_deleted" x="120" y="20"/>
+</item>
+<item historyLabel="image_t.hpp" index="9">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="2848" y="0"/>
+</item>
+<item historyLabel="image_t.hpp" index="9">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="2848" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="1691" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="1886" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="1874" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="2590" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="1885" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="1872" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="1873" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="4198" y="1"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="2705" y="0"/>
+</item>
+<item active="true" historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="2482" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -609,11 +612,32 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="BlobLanesLCM.cpp" tooltip="BlobLanesLCM/src/BlobLanesLCM.cpp">
-<persistable path="/BlobLanesLCM/src/BlobLanesLCM.cpp"/>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="image_t.hpp" tooltip="/home/blicycle/Desktop/blicycle/software/build/include/lcmtypes/bot_core/image_t.hpp">
+<persistable path="/home/blicycle/Desktop/blicycle/software/build/include/lcmtypes/bot_core/image_t.hpp" project="BlobLanesLCM"/>
+</file>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="bot_core.hpp" tooltip="/home/blicycle/Desktop/blicycle/software/build/include/lcmtypes/bot_core.hpp">
+<persistable path="/home/blicycle/Desktop/blicycle/software/build/include/lcmtypes/bot_core.hpp" project="BlobLanesLCM"/>
+</file>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="lcm-cpp.hpp" tooltip="/home/blicycle/Desktop/blicycle/software/build/include/lcm/lcm-cpp.hpp">
+<persistable path="/home/blicycle/Desktop/blicycle/software/build/include/lcm/lcm-cpp.hpp" project="BlobLanesLCM"/>
+</file>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="blicycle_packet_t.hpp" tooltip="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle/blicycle_packet_t.hpp">
+<persistable path="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle/blicycle_packet_t.hpp" project="BlobLanesLCM"/>
 </file>
 <file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="blicycle_packet_t.hpp" tooltip="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle_packet_t.hpp">
-<persistable path="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle_packet_t.hpp" project="BlobLanes"/>
+<persistable path="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle_packet_t.hpp" project="BlobLanesLCM"/>
+</file>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="lcm.h" tooltip="/home/blicycle/Desktop/blicycle/software/build/include/lcm/lcm.h">
+<persistable path="/home/blicycle/Desktop/blicycle/software/build/include/lcm/lcm.h" project="BlobLanesLCM"/>
+</file>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="lcm_coretypes.h" tooltip="/home/blicycle/Desktop/blicycle/software/build/include/lcm/lcm_coretypes.h">
+<persistable path="/home/blicycle/Desktop/blicycle/software/build/include/lcm/lcm_coretypes.h" project="BlobLanesLCM"/>
+</file>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="blicycle_packet_t.h" tooltip="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle_packet_t.h">
+<persistable path="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle_packet_t.h" project="BlobLanesLCM"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="BlobLanesLCM.cpp" tooltip="BlobLanesLCM/src/BlobLanesLCM.cpp">
+<persistable path="/BlobLanesLCM/src/BlobLanesLCM.cpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="blicycle_packet_t.hpp" tooltip="BlobLanes/src/blicycle_packet_t.hpp">
 <persistable path="/BlobLanes/src/blicycle_packet_t.hpp"/>
@@ -632,27 +656,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="LineDetection" tooltip="LineDetection/LineDetection">
 <persistable path="/LineDetection/LineDetection"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ImageMerge.cpp" tooltip="ImageMerge/ImageMerge.cpp">
-<persistable path="/ImageMerge/ImageMerge.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="lidarFilter.cpp" tooltip="lidarFilter/lidarFilter.cpp">
-<persistable path="/lidarFilter/lidarFilter.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="blicycle.c" tooltip="/home/blicycle/Desktop/blicycle/blicycle_cv/blicycle.c">
-<persistable uri="file:/home/blicycle/Desktop/blicycle/blicycle_cv/blicycle.c"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="lcm.c" tooltip="/home/blicycle/Desktop/blicycle/software/lcm/lcm/lcm/lcm.c">
-<persistable uri="file:/home/blicycle/Desktop/blicycle/software/lcm/lcm/lcm/lcm.c"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="lcm_udp.c" tooltip="/home/blicycle/Desktop/blicycle/software/lcm/lcm/lcm/lcm_udp.c">
-<persistable uri="file:/home/blicycle/Desktop/blicycle/software/lcm/lcm/lcm/lcm_udp.c"/>
-</file>
-<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="core_c.h" tooltip="/home/blicycle/Desktop/blicycle/software/build/include/opencv2/core/core_c.h">
-<persistable path="/home/blicycle/Desktop/blicycle/software/build/include/opencv2/core/core_c.h" project="blicycleLCM"/>
-</file>
-<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="cv.h" tooltip="/home/blicycle/Desktop/blicycle/software/build/include/opencv/cv.h">
-<persistable path="/home/blicycle/Desktop/blicycle/software/build/include/opencv/cv.h" project="blicycleLCM"/>
 </file>
 </mruList>
 </workbench>

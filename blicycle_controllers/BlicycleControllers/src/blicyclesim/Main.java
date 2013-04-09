@@ -1,6 +1,7 @@
 package blicyclesim;
 
 import controller.BaitedCarrotController;
+import controller.BaitedCarrotWithLCMController;
 import controller.BaitedCarrotWithCVController;
 import controller.DesiredAngleProportionalController;
 import controller.RoadFollowerController;
@@ -15,8 +16,7 @@ import gui.HandlebarMonitor;
 public class Main {
 	
 	public static void main(String[] args) {
-		System.out.println("Blicycle Simulator v 1.0!");
-		System.out.println(" Team Brian - PPAT 2011");
+		System.out.println("Blicycle Simulator v 1.5!");
 		
 		// Select which angular steering data source to use
 		//SineDataSource steering = new SineDataSource(-40.0, Math.PI/24);
@@ -33,18 +33,7 @@ public class Main {
 //			e.printStackTrace();
 //		}
 		
-		
-		
-		/*******************************************************************************************
-		 * *****************************************************************************************
-		 * *****************************************************************************************
-		 * 
-		 * 		Start editing here!
-		 * 
-		 * *****************************************************************************************
-		 * *****************************************************************************************
-		 * *****************************************************************************************
-		 */
+
 		
 		
 		// Log file information
@@ -71,8 +60,8 @@ public class Main {
 		// RoadFollowerController controller = new RoadFollowerController(0.0, -3.0, 4.0, 0.0, Math.PI/2);		// Just angle (bad)
 		// RoadFollowerController controller = new RoadFollowerController(-1.0, -1.0, 4.0, 0.0, Math.PI/2);		// Angle and position
 		
-		BaitedCarrotWithCVController controller = new BaitedCarrotWithCVController(3.0, 4.0, 2.0, Math.PI / 4);
-		
+		//BaitedCarrotWithCVController controller = new BaitedCarrotWithCVController(3.0, 4.0, 2.0, Math.PI / 4);
+		BaitedCarrotWithLCMController controller = new BaitedCarrotWithLCMController(3.0, 4.0, 2.0, Math.PI/4);
 		
 		/*******************************************************************************************
 		 * *****************************************************************************************
