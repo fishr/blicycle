@@ -86,6 +86,8 @@ void fitLines(vector<Vec3f>, int, vector<int>&, vector<int>&, vector<int>&);
 void reduceVector(vector<int>&);
 vector<int> stripVectorRow(vector<Vec3i>, int);
 int nearestElementIndex(vector<int>, int);
+vector<float> stripVectorRow(vector<Vec3f>, int);
+int nearestElementIndex(vector<float>, float);
 
 
 class Handler{
@@ -208,7 +210,7 @@ int main(int argc, char** argv) {
  */
 void publishLCM(int32_t lock, double rho, double theta) {
 
-	bikepacket.timestamp = 0;
+	bikepacket.timestamp = (int64_t)time(NULL);
 	bikepacket.lock=lock;   //effectively a boolean if current lane is know, may actually return some relevant value as well, but zero if unsure
 	bikepacket.phi = theta;    //rotational error
 	bikepacket.lane = 3;    //current lane
@@ -457,19 +459,35 @@ void fitLines(vector<Vec3f> slopes, int numcolumns, vector<int> &low, vector<int
 		//printf("poof!\n");
 		lanesX.pop_back();
 	}
-
+	int xdiff = 99999;
+	int probableLane=0;
+	bool goodLanes=false;
 	for (unsigned int i=0; i<lanesX.size(); i++){
 		if(lanesX[i][1]!=0){
 			line(lanes, Point(lanesX[i][0], highHeight), Point(lanesX[i][1], midHeight), Scalar(0,0,255), 10);
 		}
 		if(lanesX[i][2]!=0){
 			line(lanes, Point(lanesX[i][1], midHeight), Point(lanesX[i][2], lowHeight), Scalar(0,0,255), 10);
+			if ((abs(lanesX[i][2]-xsize/2)<xdiff)&&(lanesX[i][1]!=0)){
+				xdiff=abs(lanesX[i][2]-xsize/2);
+				probableLane = i;  //check zero indexing
+				goodLanes = true;
+			}
 		}
 	}
 	double nearestTheta=3.1415/2;
-	int nearestLane = nearestElementIndex(stripVectorRow(lanesX,3), xsize/2);
-	nearestTheta = abs(atan((midHeight-lowHeight)/((float)(lanesX[nearestLane][1]-lanesX[nearestLane][2]))));
-	//printf("numlanes %d, slope %f, current index %d\n", (int)lanesX.size()-1, nearestTheta, nearestLane );
+	//int nearestLane = nearestElementIndex(stripVectorRow(lanesX,3), xsize/2); //accomplished in above if statement
+	int nearestLaneLine = nearestElementIndex(stripVectorRow(slopes,3), xsize/2);
+	//if((abs(lanesX[probableLane][2]-xsize/2)<abs(slopes[nearestLaneLine][2]-xsize/2))&&(lanesX.size()!=0)){
+	float run = ((float)(lanesX[probableLane][1]-lanesX[probableLane][2]));
+	if((probableLane!=0)&&(lanesX.size()!=0)){
+		nearestTheta = atan2((lowHeight-midHeight),run);
+		printf("lanes");
+	}else if(slopes.size()!=0){
+		nearestTheta = atan2((lowHeight-midHeight),run);
+		printf("slopes");
+	}
+	printf("numlanes %d, angle %f, current denom %f, x1 %d x2 %d\n", lowHeight-midHeight, nearestTheta, run,lanesX[probableLane][2],lanesX[probableLane][1]);
 
 	// Send over the data!
 	publishLCM((int)lanesX.size(), 0, nearestTheta);
@@ -492,6 +510,25 @@ vector<int> stripVectorRow(vector<Vec3i> fullVector, int row){
 }
 
 int nearestElementIndex(vector<int> searchThis, int findThis){
+	int bestFit = 0;
+	for(unsigned int i =0; i<searchThis.size(); i++){
+		if(abs(searchThis[i]-findThis)<abs(searchThis[bestFit]-findThis)){
+			bestFit = i;
+		}
+	}
+	return bestFit;
+}
+
+vector<float> stripVectorRow(vector<Vec3f> fullVector, int row){
+	vector<float> output;
+	output.resize(fullVector.size());
+	for(unsigned int i =0; i< fullVector.size(); i++){
+		output[i]=fullVector[row][i];
+	}
+	return output;
+}
+
+int nearestElementIndex(vector<float> searchThis, float findThis){
 	int bestFit = 0;
 	for(unsigned int i =0; i<searchThis.size(); i++){
 		if(abs(searchThis[i]-findThis)<abs(searchThis[bestFit]-findThis)){

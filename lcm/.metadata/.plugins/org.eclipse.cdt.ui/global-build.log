@@ -357,3 +357,237 @@ make all
 make: Nothing to be done for `all'.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanesLCM ****
+
+make all 
+Building file: ../src/BlobLanesLCM.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -I/home/blicycle/Desktop/blicycle/LCM_configs -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanesLCM.d" -MT"src/BlobLanesLCM.d" -o "src/BlobLanesLCM.o" "../src/BlobLanesLCM.cpp"
+Finished building: ../src/BlobLanesLCM.cpp
+ 
+Building target: BlobLanesLCM
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanesLCM"  ./src/BlobLanesLCM.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanesLCM
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanesLCM ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanesLCM ****
+
+make all 
+Building file: ../src/BlobLanesLCM.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -I/home/blicycle/Desktop/blicycle/LCM_configs -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanesLCM.d" -MT"src/BlobLanesLCM.d" -o "src/BlobLanesLCM.o" "../src/BlobLanesLCM.cpp"
+Finished building: ../src/BlobLanesLCM.cpp
+ 
+Building target: BlobLanesLCM
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanesLCM"  ./src/BlobLanesLCM.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanesLCM
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LCMPost ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanesLCM ****
+
+make all 
+Building file: ../src/BlobLanesLCM.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -I/home/blicycle/Desktop/blicycle/LCM_configs -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanesLCM.d" -MT"src/BlobLanesLCM.d" -o "src/BlobLanesLCM.o" "../src/BlobLanesLCM.cpp"
+Finished building: ../src/BlobLanesLCM.cpp
+ 
+Building target: BlobLanesLCM
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanesLCM"  ./src/BlobLanesLCM.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanesLCM
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanesLCM ****
+
+make all 
+Building file: ../src/BlobLanesLCM.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -I/home/blicycle/Desktop/blicycle/LCM_configs -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanesLCM.d" -MT"src/BlobLanesLCM.d" -o "src/BlobLanesLCM.o" "../src/BlobLanesLCM.cpp"
+Finished building: ../src/BlobLanesLCM.cpp
+ 
+Building target: BlobLanesLCM
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanesLCM"  ./src/BlobLanesLCM.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanesLCM
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanesLCM ****
+
+make all 
+Building file: ../src/BlobLanesLCM.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -I/home/blicycle/Desktop/blicycle/LCM_configs -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanesLCM.d" -MT"src/BlobLanesLCM.d" -o "src/BlobLanesLCM.o" "../src/BlobLanesLCM.cpp"
+Finished building: ../src/BlobLanesLCM.cpp
+ 
+Building target: BlobLanesLCM
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanesLCM"  ./src/BlobLanesLCM.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanesLCM
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanesLCM ****
+
+make all 
+Building file: ../src/BlobLanesLCM.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -I/home/blicycle/Desktop/blicycle/LCM_configs -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanesLCM.d" -MT"src/BlobLanesLCM.d" -o "src/BlobLanesLCM.o" "../src/BlobLanesLCM.cpp"
+Finished building: ../src/BlobLanesLCM.cpp
+ 
+Building target: BlobLanesLCM
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanesLCM"  ./src/BlobLanesLCM.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanesLCM
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanesLCM ****
+
+make all 
+Building file: ../src/BlobLanesLCM.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -I/home/blicycle/Desktop/blicycle/LCM_configs -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanesLCM.d" -MT"src/BlobLanesLCM.d" -o "src/BlobLanesLCM.o" "../src/BlobLanesLCM.cpp"
+Finished building: ../src/BlobLanesLCM.cpp
+ 
+Building target: BlobLanesLCM
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanesLCM"  ./src/BlobLanesLCM.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanesLCM
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanesLCM ****
+
+make all 
+Building file: ../src/BlobLanesLCM.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -I/home/blicycle/Desktop/blicycle/LCM_configs -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanesLCM.d" -MT"src/BlobLanesLCM.d" -o "src/BlobLanesLCM.o" "../src/BlobLanesLCM.cpp"
+Finished building: ../src/BlobLanesLCM.cpp
+ 
+Building target: BlobLanesLCM
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanesLCM"  ./src/BlobLanesLCM.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanesLCM
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanesLCM ****
+
+make all 
+Building file: ../src/BlobLanesLCM.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -I/home/blicycle/Desktop/blicycle/LCM_configs -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanesLCM.d" -MT"src/BlobLanesLCM.d" -o "src/BlobLanesLCM.o" "../src/BlobLanesLCM.cpp"
+Finished building: ../src/BlobLanesLCM.cpp
+ 
+Building target: BlobLanesLCM
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanesLCM"  ./src/BlobLanesLCM.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanesLCM
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanesLCM ****
+
+make all 
+Building file: ../src/BlobLanesLCM.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -I/home/blicycle/Desktop/blicycle/LCM_configs -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanesLCM.d" -MT"src/BlobLanesLCM.d" -o "src/BlobLanesLCM.o" "../src/BlobLanesLCM.cpp"
+../src/BlobLanesLCM.cpp: In function ‘void fitLines(std::vector<cv::Vec<float, 3> >, int, std::vector<int>&, std::vector<int>&, std::vector<int>&)’:
+../src/BlobLanesLCM.cpp:464:7: warning: variable ‘goodLanes’ set but not used [-Wunused-but-set-variable]
+Finished building: ../src/BlobLanesLCM.cpp
+ 
+Building target: BlobLanesLCM
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanesLCM"  ./src/BlobLanesLCM.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanesLCM
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanesLCM ****
+
+make all 
+Building file: ../src/BlobLanesLCM.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -I/home/blicycle/Desktop/blicycle/LCM_configs -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanesLCM.d" -MT"src/BlobLanesLCM.d" -o "src/BlobLanesLCM.o" "../src/BlobLanesLCM.cpp"
+../src/BlobLanesLCM.cpp: In function ‘void fitLines(std::vector<cv::Vec<float, 3> >, int, std::vector<int>&, std::vector<int>&, std::vector<int>&)’:
+../src/BlobLanesLCM.cpp:464:7: warning: variable ‘goodLanes’ set but not used [-Wunused-but-set-variable]
+Finished building: ../src/BlobLanesLCM.cpp
+ 
+Building target: BlobLanesLCM
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanesLCM"  ./src/BlobLanesLCM.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanesLCM
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanesLCM ****
+
+make all 
+Building file: ../src/BlobLanesLCM.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -I/home/blicycle/Desktop/blicycle/LCM_configs -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanesLCM.d" -MT"src/BlobLanesLCM.d" -o "src/BlobLanesLCM.o" "../src/BlobLanesLCM.cpp"
+../src/BlobLanesLCM.cpp: In function ‘void fitLines(std::vector<cv::Vec<float, 3> >, int, std::vector<int>&, std::vector<int>&, std::vector<int>&)’:
+../src/BlobLanesLCM.cpp:483:2: error: expected ‘,’ or ‘;’ before ‘if’
+../src/BlobLanesLCM.cpp:486:3: error: ‘else’ without a previous ‘if’
+../src/BlobLanesLCM.cpp:480:6: warning: unused variable ‘nearestLaneLine’ [-Wunused-variable]
+make: *** [src/BlobLanesLCM.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanesLCM ****
+
+make all 
+Building file: ../src/BlobLanesLCM.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -I/home/blicycle/Desktop/blicycle/LCM_configs -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanesLCM.d" -MT"src/BlobLanesLCM.d" -o "src/BlobLanesLCM.o" "../src/BlobLanesLCM.cpp"
+../src/BlobLanesLCM.cpp: In function ‘void fitLines(std::vector<cv::Vec<float, 3> >, int, std::vector<int>&, std::vector<int>&, std::vector<int>&)’:
+../src/BlobLanesLCM.cpp:464:7: warning: variable ‘goodLanes’ set but not used [-Wunused-but-set-variable]
+../src/BlobLanesLCM.cpp:480:6: warning: unused variable ‘nearestLaneLine’ [-Wunused-variable]
+Finished building: ../src/BlobLanesLCM.cpp
+ 
+Building target: BlobLanesLCM
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanesLCM"  ./src/BlobLanesLCM.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanesLCM
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LCMPost ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
