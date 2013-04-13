@@ -11,6 +11,7 @@ public class LCMImport{
 	public LCM lcm;
 	public LCMSubscriber lcmsub;
 	
+	public double pixelToMeter = 100.;
 	public double delta=0;
 	public double phi=Math.PI/2;
 	public byte encodedLanes;
@@ -82,7 +83,7 @@ public class BlikeSubscriber implements LCMSubscriber
         try {
             packet = new blicycle_packet_t(ins);
             
-            delta = packet.delta;
+            delta = packet.delta/pixelToMeter;
             phi = timeSmooth(packet.phi, phi);
             System.out.println(packet.phi+" "+ phi+" "+ packet.timestamp);
             encodedLanes = packet.totalLanes;
