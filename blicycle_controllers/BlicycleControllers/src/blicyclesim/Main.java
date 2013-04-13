@@ -19,25 +19,25 @@ public class Main {
 		System.out.println("Blicycle Simulator v 1.5!");
 		
 		// Select which angular steering data source to use
-		//SineDataSource steering = new SineDataSource(-40.0, Math.PI/24);
+		//SineDataSource steering = new SineDataSource(-1.0, Math.PI/12);
 
 		// Simulate a rider on the bicycle
-		HumanSimulator steering = new HumanSimulator(0.005, 25);
+		//HumanSimulator steering = new HumanSimulator(0.005, 25);
 		
 		//ArduinoDataSource steering = new ArduinoDataSource("/dev/tty.usbmodemfa131", 115200);
-//		ArduinoDataSource steering = new ArduinoDataSource("/dev/ttyACM0", 115200);
-//		try {
-//			steering.start();
-//		} catch (Exception e) {
-//			System.out.println("ERROR! Could not connect to arduino!");
-//			e.printStackTrace();
-//		}
+		ArduinoDataSource steering = new ArduinoDataSource("/dev/ttyACM1", 115200);
+		try {
+			steering.start();
+		} catch (Exception e) {
+			System.out.println("ERROR! Could not connect to arduino!");
+			e.printStackTrace();
+		}
 		
 
 		
 		
 		// Log file information
-		boolean save_this_trial = true;			// True => Will save and write to the following file. Otherwise will not save!
+		boolean save_this_trial = false;	// True => Will save and write to the following file. Otherwise will not save!
 		String log_filename = "recording.csv";	// Filename where to save. PLEASE CHANGE OTHERWISE WILL OVERWRITE!!! Relative
 												// to the BlicycleSimulator/ directory.
 		

@@ -90,14 +90,13 @@ public class ArduinoDataSource implements AngleDataStream {
 						
 						//System.out.println(line);
 						
-						// HACK! Some motors are dead. Map them to other motors.
-						if (send_val == 0) {
-							send_val = 0;
-						} else if (send_val <= 8) {
-							send_val = 15;
-						} else if (send_val >= 16) {
-							send_val = 240;
-						}
+//						if (send_val == 0) {
+//							send_val = 0;
+//						} else if (send_val <= 8) {
+//							send_val = 15;
+//						} else if (send_val >= 16) {
+//							send_val = 240;
+//						}
 //						if (send_val == 1) {
 //							send_val = 2;
 //						} else if (send_val == 16) {

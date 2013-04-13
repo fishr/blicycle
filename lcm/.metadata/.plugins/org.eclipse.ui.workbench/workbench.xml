@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="23" version="2.0">
+<workbench progressCount="22" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="921" x="114" y="46">
 <fastViewData fastViewLocation="1024"/>
@@ -32,7 +32,6 @@
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
-<part id="3"/>
 </presentation>
 </folder>
 </info>
@@ -43,15 +42,7 @@
 </editor>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="BlobLanesLCM.cpp" partName="BlobLanesLCM.cpp" path="/home/blicycle/Desktop/blicycle/lcm/BlobLanesLCM/src/BlobLanesLCM.cpp" title="BlobLanesLCM.cpp" tooltip="BlobLanesLCM/src/BlobLanesLCM.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BlobLanesLCM/src/BlobLanesLCM.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4787" selectionTopPixel="2764"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="lcm.h" partName="lcm.h" title="lcm.h" tooltip="/home/blicycle/Desktop/blicycle/software/build/include/lcm/lcm.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" path="/home/blicycle/Desktop/blicycle/software/build/include/lcm/lcm.h" project="BlobLanesLCM"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="4193"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="blicycle_packet_t.hpp" partName="blicycle_packet_t.hpp" title="blicycle_packet_t.hpp" tooltip="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle/blicycle_packet_t.hpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" path="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle/blicycle_packet_t.hpp" project="BlobLanesLCM"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2683" selectionTopPixel="1782"/>
 </editor>
 </editors>
 <views>
@@ -73,8 +64,8 @@
 </view>
 <view id="org.eclipse.search.ui.views.SearchView" partName="Search">
 <viewState isPinned="false">
-<view IMemento.internal.id="org.eclipse.cdt.ui.pdomSearchViewPage" definitionColumnWidth="150" locationColumnWidth="300" matchColumnWidth="300" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" showEnclosingDefinitions="true"/>
 <view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+<view IMemento.internal.id="org.eclipse.cdt.ui.pdomSearchViewPage" definitionColumnWidth="150" locationColumnWidth="300" matchColumnWidth="300" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" showEnclosingDefinitions="true"/>
 </viewState>
 </view>
 <view id="org.eclipse.debug.ui.DebugView" partName="Debug">
@@ -116,6 +107,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.pathField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
+<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="834" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="657"/>
@@ -133,7 +125,7 @@
 <viewState disassembly.syncActiveContext="true" disassembly.trackExpression="false"/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="org.eclipse.debug.ui.DebugPerspective">
+<perspectives activePart="org.eclipse.debug.ui.DebugView" activePerspective="org.eclipse.debug.ui.DebugPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
@@ -354,6 +346,7 @@
 <view id="org.eclipse.ui.views.TaskList"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.cdt.debug.ui.executablesView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
 <view id="org.eclipse.debug.ui.DebugView"/>
 <view id="org.eclipse.debug.ui.VariableView"/>
 <view id="org.eclipse.debug.ui.BreakpointView"/>
@@ -386,6 +379,7 @@
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.cdt.debug.ui.executablesView" label="Executables"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" label="LabelNotFound"/>
@@ -397,6 +391,7 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
 </presentation>
 </folder>
 </info>
@@ -435,165 +430,144 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BlobLanesLCM/src/BlobLanesLCM.cpp"/>
-<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle_packet_t.h" project="BlobLanesLCM"/>
-<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle_packet_t.hpp" project="BlobLanesLCM"/>
-<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/blicycle/Desktop/blicycle/software/build/include/lcm/lcm_coretypes.h" project="BlobLanesLCM"/>
-<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/blicycle/Desktop/blicycle/software/build/include/lcm/lcm.h" project="BlobLanesLCM"/>
-<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle_packet_t.hpp" project="BlobLanesLCM"/>
-<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle/blicycle_packet_t.hpp" project="BlobLanesLCM"/>
-<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/blicycle/Desktop/blicycle/software/build/include/lcm/lcm-cpp.hpp" project="BlobLanesLCM"/>
-<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/blicycle/Desktop/blicycle/software/build/include/lcmtypes/bot_core.hpp" project="BlobLanesLCM"/>
-<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/home/blicycle/Desktop/blicycle/software/build/include/lcmtypes/bot_core/image_t.hpp" project="BlobLanesLCM"/>
 </editors>
-<item historyLabel="blicycle_packet_t.hpp" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="blicycle_packet_t.h" index="1">
-<position info="not_deleted" x="276" y="0"/>
-</item>
-<item historyLabel="blicycle_packet_t.hpp" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="blicycle_packet_t.h" index="1">
-<position info="not_deleted" x="276" y="0"/>
-</item>
-<item historyLabel="blicycle_packet_t.h" index="1">
-<position info="not_deleted" x="156" y="19"/>
-</item>
-<item historyLabel="lcm_coretypes.h" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="blicycle_packet_t.h" index="1">
-<position info="not_deleted" x="156" y="19"/>
-</item>
-<item historyLabel="blicycle_packet_t.h" index="1">
-<position info="not_deleted" x="187" y="9"/>
-</item>
-<item historyLabel="lcm.h" index="4">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="2482" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="4897" y="0"/>
-</item>
-<item historyLabel="lcm.h" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="blicycle_packet_t.hpp" index="2">
-<position info="not_deleted" x="0" y="0"/>
+<position info="not_deleted" x="13130" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="4897" y="0"/>
+<position info="not_deleted" x="13312" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="4858" y="0"/>
+<position info="not_deleted" x="13310" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="644" y="5"/>
-</item>
-<item historyLabel="blicycle_packet_t.hpp" index="5">
-<position/>
+<position info="not_deleted" x="13223" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="blicycle_packet_t.hpp" index="5">
-<position info="not_deleted" x="0" y="0"/>
+<position info="not_deleted" x="13290" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position/>
+<position info="not_deleted" x="13267" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="971" y="0"/>
+<position info="not_deleted" x="11755" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="533" y="30"/>
-</item>
-<item historyLabel="blicycle_packet_t.hpp" index="6">
-<position info="not_deleted" x="0" y="0"/>
+<position info="not_deleted" x="13249" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="533" y="30"/>
+<position info="not_deleted" x="13066" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="4476" y="0"/>
+<position info="not_deleted" x="12963" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="533" y="30"/>
-</item>
-<item historyLabel="blicycle_packet_t.hpp" index="6">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="blicycle_packet_t.hpp" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="blicycle_packet_t.hpp" index="6">
-<position info="not_deleted" x="0" y="0"/>
+<position info="not_deleted" x="12963" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="440" y="0"/>
-</item>
-<item historyLabel="lcm-cpp.hpp" index="7">
-<position info="not_deleted" x="0" y="0"/>
+<position info="not_deleted" x="12960" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="440" y="0"/>
+<position info="not_deleted" x="13026" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="2729" y="0"/>
+<position info="not_deleted" x="13045" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="2883" y="0"/>
-</item>
-<item historyLabel="bot_core.hpp" index="8">
-<position info="not_deleted" x="120" y="20"/>
-</item>
-<item historyLabel="image_t.hpp" index="9">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="bot_core.hpp" index="8">
-<position info="not_deleted" x="120" y="20"/>
-</item>
-<item historyLabel="image_t.hpp" index="9">
-<position info="not_deleted" x="0" y="0"/>
+<position info="not_deleted" x="12759" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="2848" y="0"/>
-</item>
-<item historyLabel="image_t.hpp" index="9">
-<position info="not_deleted" x="0" y="0"/>
+<position info="not_deleted" x="12834" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="2848" y="0"/>
+<position info="not_deleted" x="12834" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="1691" y="0"/>
+<position info="not_deleted" x="12830" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="1886" y="0"/>
+<position info="not_deleted" x="12835" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="1874" y="0"/>
+<position info="not_deleted" x="9754" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="2590" y="0"/>
+<position info="not_deleted" x="9757" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="1885" y="0"/>
+<position info="not_deleted" x="9770" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="1872" y="0"/>
+<position info="not_deleted" x="9773" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="1873" y="0"/>
+<position info="not_deleted" x="9791" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="4198" y="1"/>
+<position info="not_deleted" x="9794" y="0"/>
 </item>
 <item historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="2705" y="0"/>
+<position info="not_deleted" x="9807" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="10395" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="6629" y="11"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="7460" y="9"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="12638" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="2606" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="10099" y="8"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="2401" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="2526" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="2550" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="2550" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="2550" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="10394" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="3138" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="3138" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="12546" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="12543" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="12542" y="0"/>
+</item>
+<item historyLabel="BlobLanesLCM.cpp" index="0">
+<position info="not_deleted" x="4187" y="0"/>
 </item>
 <item active="true" historyLabel="BlobLanesLCM.cpp" index="0">
-<position info="not_deleted" x="2482" y="0"/>
+<position info="not_deleted" x="4189" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -650,12 +624,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="LineDetection.cpp" tooltip="LineDetection/LineDetection.cpp">
 <persistable path="/LineDetection/LineDetection.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="BlobLanes.cpp" tooltip="BlobLanes/src/BlobLanes.cpp">
-<persistable path="/BlobLanes/src/BlobLanes.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="LineDetection" tooltip="LineDetection/LineDetection">
-<persistable path="/LineDetection/LineDetection"/>
 </file>
 </mruList>
 </workbench>

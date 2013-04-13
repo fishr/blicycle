@@ -23,7 +23,15 @@
 using namespace std;
 using namespace cv;
 
-Mat srcCopy, blurred, src_gray, edges, element, denoised_img, lanes;
+int inY = 600;
+int inX = 800;
+int cropHeight=0;
+int cropLow=0;
+int xsize;
+int ysize;
+
+Mat srcCopy, blurred, edges, element, denoised_img, lanes, accumulated;
+Mat src_gray(Size(inX,inY), CV_32FC1, Scalar(0));
 vector<Vec3i> lanesX;
 
 
@@ -34,6 +42,7 @@ int thresh = 118;
 int minLineLength = 90;
 int maxLineGap = 127;
 int cannyBool =1;
+int accumAlpha = 36;
 
 typedef struct _BearingInformation{
 	int lock;
@@ -65,8 +74,6 @@ int highHeight;
 
 int pointless;
 
-int cropHeight=0;
-
 int expectedLaneWidth = 40;
 
 void blacknwhite(int, void*);
@@ -74,9 +81,11 @@ void denoise(int, void*);
 void updateLines(int, void*);
 void showLines(vector<Vec4i>, Mat);
 void findLanes();
-void findSlope(vector<Vec2f>&);
-void fitLines(vector<Vec2f>, int, vector<int>&, vector<int>&, vector<int>&);
+void findSlope(vector<Vec3f>&);
+void fitLines(vector<Vec3f>, int, vector<int>&, vector<int>&, vector<int>&);
 void reduceVector(vector<int>&);
+vector<int> stripVectorRow(vector<Vec3i>, int);
+int nearestElementIndex(vector<int>, int);
 
 
 class Handler{
@@ -89,15 +98,28 @@ public:
 		src.data = (uchar*)&msg->data[0];
 
 		src.copyTo(srcCopy);
-		srcCopy.adjustROI(-cropHeight, 0, 0, 0 );
+		//srcCopy.adjustROI(-cropHeight, 0, 0, 0 );
+		//xsize=srcCopy.cols;
+		//ysize=srcCopy.rows;
 
 
 		/// Pass the image to gray
-		cvtColor( srcCopy, src_gray, CV_RGB2GRAY );
+		//cvtColor( srcCopy, src_gray, CV_RGB2GRAY );
+		cvtColor(srcCopy,srcCopy,CV_RGB2GRAY);
+
+		resize(srcCopy,srcCopy, Size(inX, inY));
 
 		//downsample the image
-		pyrDown(src_gray, blurred);
+		//pyrDown(src_gray, blurred);
 		//imshow("blurred", blurred);
+
+		//add to running average image to help blur and smooth
+		accumulateWeighted(srcCopy, src_gray, accumAlpha/100.0);
+		src_gray.convertTo(blurred,CV_8UC1);
+
+		blurred.adjustROI(-cropHeight, -cropLow, 0, 0);
+		xsize=blurred.cols;
+		ysize=blurred.rows;
 
 		blacknwhite(0,0);
 
@@ -154,7 +176,8 @@ int main(int argc, char** argv) {
 	sprintf( thresh_label, "Thres: %d + input", min_threshold );
 	createTrackbar( thresh_label, "gray", &p_trackbar, max_trackbar, &blacknwhite);
 
-	createTrackbar("crop", "gray", &cropHeight, 500, &blacknwhite);
+	createTrackbar("crop top", "gray", &cropHeight, 500, &blacknwhite);
+	createTrackbar("crop bottom", "gray", &cropLow, 500, &blacknwhite);
 
 	createTrackbar("lineGap", "lanes", &maxLineGap, 500, &updateLines);
 	createTrackbar("lineLength", "lanes", &minLineLength, 200, &updateLines);
@@ -162,12 +185,12 @@ int main(int argc, char** argv) {
 	createTrackbar("Use Canny?", "lanes", &cannyBool, 1, &updateLines);
 
 	createTrackbar( "Inv?", "gray", &blacktowhite, 1, &blacknwhite);
+	createTrackbar( "Delay", "gray", &accumAlpha, 100, &updateLines);
 	createTrackbar( "xup", "lanes", &xup, smoothfactor, &denoise);
 	createTrackbar( "yup", "lanes", &yup, smoothfactor, &denoise);
 	createTrackbar( "xdown", "lanes", &xdown, smoothfactor, &denoise);
 	createTrackbar( "ydown", "lanes", &ydown, smoothfactor, &denoise);
 	createTrackbar("Update Lines", "lanes", &pointless, 1, &blacknwhite);
-
 
 	while (1) {
 		globalLCM.handle();
@@ -250,7 +273,7 @@ void laneCenters(Mat imgSrc, int y, vector<int> &rowLines){
 			rowDeriv[nDeriv]=i;
 			//printf("got transition!  %i, %i  \n", i, lastPixel);
 
-			if((i!=0)&&(i-rowDeriv[nDeriv-1]>(sqrt(y)+50))){
+			if((i!=0)&&(i-rowDeriv[nDeriv-1]>(sqrt(y)+30))){
 				rowLines.push_back((i+rowDeriv[nDeriv-1])/2);
 				circle(lanes, Point(rowLines.back(), y),5,Scalar(0,255,0));
 			}
@@ -280,7 +303,7 @@ void findLanes(){
 
 	laneCenters(denoised_img, highHeight, highRowLines);
 
-	vector<Vec2f> slopes;
+	vector<Vec3f> slopes;
 	findSlope(slopes);
 
 	reduceVector(lowerRowLines);
@@ -294,7 +317,7 @@ void reduceVector(vector<int> &vec){
 	vec.erase(std::remove(vec.begin(), vec.end(), 0), vec.end());
 }
 
-void findSlope(vector<Vec2f> &laneSlopes){
+void findSlope(vector<Vec3f> &laneSlopes){
 
 	//todo could use this to evaluate slope then rotate image?
 
@@ -341,8 +364,11 @@ void findSlope(vector<Vec2f> &laneSlopes){
 	*/
 	if(p_lines.size()!=0){
 		laneSlopes.resize((int)p_lines.size());
+
 		for(int r=0;r<(int)p_lines.size();r++){
-			laneSlopes[r][0] = (p_lines[r][0]+p_lines[r][2])/2;
+			//laneSlopes[r][0] = (p_lines[r][0]+p_lines[r][2])/2;  //i think its more important to refernce the bottom x and top separately, though this may cause pileups at 0
+			laneSlopes[r][0] = p_lines[r][0];
+			laneSlopes[r][2] = p_lines[r][2];
 			float slope = 0.000001;
 			int numer = (p_lines[r][1]-p_lines[r][3]);
 			if (numer!=0){
@@ -360,10 +386,14 @@ void findSlope(vector<Vec2f> &laneSlopes){
 }
 
 
-void fitLines(vector<Vec2f> slopes, int numcolumns, vector<int> &low, vector<int> &mid, vector<int> &high){
+void fitLines(vector<Vec3f> slopes, int numcolumns, vector<int> &low, vector<int> &mid, vector<int> &high){
 	float slope = 99999999;
 	lanesX.assign(high.size(), 0);
 	//printf("slope is %f, highpoints are %d\n", slope, (int)high.size());
+
+	if(slopes.size()==0){
+		printf("slopes empty!\n");
+		return;}
 
 	if(high.size()==0){
 		printf("numlanes %d\n", (int)lanesX.size()-1);
@@ -377,7 +407,7 @@ void fitLines(vector<Vec2f> slopes, int numcolumns, vector<int> &low, vector<int
 		bool gotx2=false;
 		int index=0;
 		for(int r = 0; r<(int)slopes.size(); r++){
-			if(min(abs(x0-slopes[index][0]),abs(x0-slopes[r][0]))==abs(x0-slopes[r][0])){
+			if(abs(x0-slopes[index][0])>abs(x0-slopes[r][0])){
 				index =r;
 			}
 		}
@@ -405,7 +435,7 @@ void fitLines(vector<Vec2f> slopes, int numcolumns, vector<int> &low, vector<int
 
 		for(unsigned int x2i=0; x2i<(low.size()); x2i++){//same as above
 			if (!gotx2){
-				if(fabs(low.at(x2i)-x2)<spreadError){
+				if(fabs(low.at(x2i)-x2)<spreadError*2){
 					lanesX[laneCounter][0]=x0;
 					lanesX[laneCounter][2]=low.at(x2i);
 					gotx2=true;
@@ -433,12 +463,40 @@ void fitLines(vector<Vec2f> slopes, int numcolumns, vector<int> &low, vector<int
 			line(lanes, Point(lanesX[i][0], highHeight), Point(lanesX[i][1], midHeight), Scalar(0,0,255), 10);
 		}
 		if(lanesX[i][2]!=0){
-			line(lanes, Point(lanesX[i][0], highHeight), Point(lanesX[i][2], lowHeight), Scalar(0,0,255), 10);
+			line(lanes, Point(lanesX[i][1], midHeight), Point(lanesX[i][2], lowHeight), Scalar(0,0,255), 10);
 		}
 	}
-
-	//printf("numlanes %d\n", (int)lanesX.size()-1);
+	double nearestTheta=3.1415/2;
+	int nearestLane = nearestElementIndex(stripVectorRow(lanesX,3), xsize/2);
+	nearestTheta = abs(atan((midHeight-lowHeight)/((float)(lanesX[nearestLane][1]-lanesX[nearestLane][2]))));
+	//printf("numlanes %d, slope %f, current index %d\n", (int)lanesX.size()-1, nearestTheta, nearestLane );
 
 	// Send over the data!
-	publishLCM((int)lanesX.size(), 0, slope);
+	publishLCM((int)lanesX.size(), 0, nearestTheta);
+}
+
+/*void reduceVec3i(vector<Vec3i> bigVector){
+	for(int i=0; i<bigVector; i++){
+		if(bigVector[i][0]!=0)
+	}
+}
+*/
+
+vector<int> stripVectorRow(vector<Vec3i> fullVector, int row){
+	vector<int> output;
+	output.resize(fullVector.size());
+	for(unsigned int i =0; i< fullVector.size(); i++){
+		output[i]=fullVector[row][i];
+	}
+	return output;
+}
+
+int nearestElementIndex(vector<int> searchThis, int findThis){
+	int bestFit = 0;
+	for(unsigned int i =0; i<searchThis.size(); i++){
+		if(abs(searchThis[i]-findThis)<abs(searchThis[bestFit]-findThis)){
+			bestFit = i;
+		}
+	}
+	return bestFit;
 }

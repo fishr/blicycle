@@ -17,7 +17,7 @@ byte NUM_MOTOR_PINS_RIGHT = 4;
 //byte MOTOR_PINS_RIGHT[4] = {9, 8, 7, 6};
 //byte MOTOR_PINS_LEFT[4] = {5, 4, 3, 2};
 byte MOTOR_PINS_RIGHT[4] = {9, 8, 7, 6};
-byte MOTOR_PINS_LEFT[4] = {4, 4, 3, 2};
+byte MOTOR_PINS_LEFT[4] = {5, 4, 3, 2};
 
 // Buffer to store commands
 byte MOTOR_CMD_LEFT[4] = {0, 0, 0, 0};
@@ -25,6 +25,9 @@ byte MOTOR_CMD_RIGHT[4] = {0, 0, 0, 0};
 
 const byte DEBUG_PIN = 13;
 const byte ON_CMD = 255;
+
+unsigned long timeout = 0;
+byte pulseOut=0;
 
 void setup() {
    // Set all of the motor pins to output mode
@@ -123,7 +126,22 @@ void loop() {
   if (Serial.available() > 0) {
      int in = Serial.read();
      processInputByte(in);
+     timeout = millis();
+  }else if(millis()-timeout>3000){
+     if(pulseOut>150){
+        pulseOut=0;
+     }else{
+        pulseOut+=3;
+     }
+     for(int i = 0; i < NUM_MOTOR_PINS_LEFT; i+=2) {
+     MOTOR_CMD_LEFT[i]=pulseOut;
+   }
+   for(int i = 0; i < NUM_MOTOR_PINS_RIGHT; i+=2) {
+     MOTOR_CMD_RIGHT[i]=pulseOut;
+   }
+   dispatchCommands();
   }
+     
 
 //  if (Serial.available() > 0) {
 //     int in = Serial.read();
