@@ -85,7 +85,7 @@ public class BlikeSubscriber implements LCMSubscriber
             
             delta = packet.delta/pixelToMeter;
             phi = timeSmooth(packet.phi, phi);
-            System.out.println(packet.phi+" "+ phi+" "+ packet.timestamp);
+            //System.out.println(packet.phi+" "+ phi+" "+ packet.timestamp);
             encodedLanes = packet.totalLanes;
             currLane = packet.lane;
             lock = packet.lock;

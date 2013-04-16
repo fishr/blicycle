@@ -74,6 +74,7 @@ int main( int argc, char** argv ) {
 	}
 
 	char* lcmChannel1 = argv[3];
+	printf("   Channel: %s\n", lcmChannel1);
 
 	VideoCapture capture;
 	Mat image;

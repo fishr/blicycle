@@ -24,13 +24,13 @@ public class BaitedCarrotWithLCMController extends BaitedCarrotController {
 		if (lcmConnect.lock != 0) {
 		
 			double deltaX = lcmConnect.delta() - desiredDeltaX;
-			double deltaTheta = lcmConnect.phi(); //in radians
+			double deltaTheta = Math.PI-lcmConnect.phi(); //in radians
 						
 				//System.out.println("deltaX = " + deltaX + ", deltaTheta = " + 180.0 / Math.PI * deltaTheta);
 				
 				deltaX_last = deltaX;
 				x = deltaX;
-				deltaTheta_last = deltaTheta + Math.PI / 2;
+				deltaTheta_last = deltaTheta;// + Math.PI / 2;
 				theta = deltaTheta;
 				alpha = 0.1;
 			

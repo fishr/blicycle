@@ -36,7 +36,7 @@ vector<Vec3i> lanesX;
 
 
 int min_threshold = 50;
-int max_trackbar = 200;
+int max_trackbar = 400;
 int blacktowhite = 0;
 int thresh = 118;
 int minLineLength = 90;
@@ -480,12 +480,12 @@ void fitLines(vector<Vec3f> slopes, int numcolumns, vector<int> &low, vector<int
 	int nearestLaneLine = nearestElementIndex(stripVectorRow(slopes,3), xsize/2);
 	//if((abs(lanesX[probableLane][2]-xsize/2)<abs(slopes[nearestLaneLine][2]-xsize/2))&&(lanesX.size()!=0)){
 	float run = ((float)(lanesX[probableLane][1]-lanesX[probableLane][2]));
-	if((probableLane!=0)&&(lanesX.size()!=0)){
+	if((goodLanes==true)&&(lanesX.size()!=0)){
 		nearestTheta = atan2((lowHeight-midHeight),run);
-		printf("lanes");
+		//printf("lanes");
 	}else if(slopes.size()!=0){
-		nearestTheta = atan2((lowHeight-midHeight),run);
-		printf("slopes");
+		nearestTheta = atan2((lowHeight-midHeight),((float)(slopes[nearestLaneLine][2]-slopes[nearestLaneLine][1])));
+		//printf("slopes");
 	}
 	printf("numlanes %d, angle %f, current denom %f, x1 %d x2 %d\n", lowHeight-midHeight, nearestTheta, run,lanesX[probableLane][2],lanesX[probableLane][1]);
 

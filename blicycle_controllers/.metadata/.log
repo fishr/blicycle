@@ -779,3 +779,12 @@ java.lang.OutOfMemoryError: Java heap space
 	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:546)
 	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:388)
 	at java.lang.Thread.run(Thread.java:679)
+!SESSION 2013-04-16 09:11:41.149 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_27
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-04-16 09:11:49.320
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
