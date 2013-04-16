@@ -487,7 +487,7 @@ void fitLines(vector<Vec3f> slopes, int numcolumns, vector<int> &low, vector<int
 		nearestTheta = atan2((lowHeight-midHeight),((float)(slopes[nearestLaneLine][2]-slopes[nearestLaneLine][1])));
 		//printf("slopes");
 	}
-	printf("numlanes %d, angle %f, current denom %f, x1 %d x2 %d\n", lowHeight-midHeight, nearestTheta, run,lanesX[probableLane][2],lanesX[probableLane][1]);
+	//printf("numlanes %d, angle %f, current denom %f, x1 %d x2 %d\n", lowHeight-midHeight, nearestTheta, run,lanesX[probableLane][2],lanesX[probableLane][1]);
 
 	// Send over the data!
 	publishLCM((int)lanesX.size(), 0, nearestTheta);
