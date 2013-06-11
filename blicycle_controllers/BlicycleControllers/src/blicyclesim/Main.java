@@ -22,17 +22,17 @@ public class Main {
 		//SineDataSource steering = new SineDataSource(-1.0, Math.PI/12);
 
 		// Simulate a rider on the bicycle
-		HumanSimulator steering = new HumanSimulator(0.005, 25);
+		//HumanSimulator steering = new HumanSimulator(0.005, 25);
 		
 		//ArduinoDataSource steering = new ArduinoDataSource("/dev/tty.usbmodemfa131", 115200);
-		//ArduinoDataSource steering = new ArduinoDataSource("/dev/ttyACM0", 115200);
-		/*
+		ArduinoDataSource steering = new ArduinoDataSource("/dev/ttyACM2", 115200);
+		
 		try {
 			steering.start();
 		} catch (Exception e) {
 			System.out.println("ERROR! Could not connect to arduino!");
 			e.printStackTrace();
-		}*/
+		}
 		
 
 		

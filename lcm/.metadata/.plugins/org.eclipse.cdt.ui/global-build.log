@@ -784,3 +784,54 @@ Finished building target: LCMPost
  
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanesLCM ****
+
+make all 
+Building file: ../src/BlobLanesLCM.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -I/home/blicycle/Desktop/blicycle/LCM_configs -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanesLCM.d" -MT"src/BlobLanesLCM.d" -o "src/BlobLanesLCM.o" "../src/BlobLanesLCM.cpp"
+Finished building: ../src/BlobLanesLCM.cpp
+ 
+Building target: BlobLanesLCM
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanesLCM"  ./src/BlobLanesLCM.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanesLCM
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project LCMPost ****
+
+make all 
+Building file: ../LCMPost.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LCMPost.d" -MT"LCMPost.d" -o "LCMPost.o" "../LCMPost.cpp"
+../LCMPost.cpp: In function ‘int main(int, char**)’:
+../LCMPost.cpp:160:9: warning: unused variable ‘c’ [-Wunused-variable]
+../LCMPost.cpp:162:9: warning: unused variable ‘c’ [-Wunused-variable]
+Finished building: ../LCMPost.cpp
+ 
+Building target: LCMPost
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "LCMPost"  ./LCMPost.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: LCMPost
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BlobLanesLCM ****
+
+make all 
+Building file: ../src/BlobLanesLCM.cpp
+Invoking: GCC C++ Compiler
+g++ -I/home/blicycle/Desktop/blicycle/software/build/include -I/home/blicycle/Desktop/blicycle/LCM_configs -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/BlobLanesLCM.d" -MT"src/BlobLanesLCM.d" -o "src/BlobLanesLCM.o" "../src/BlobLanesLCM.cpp"
+Finished building: ../src/BlobLanesLCM.cpp
+ 
+Building target: BlobLanesLCM
+Invoking: GCC C++ Linker
+g++ -L/home/blicycle/Desktop/blicycle/software/build/lib -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib -o "BlobLanesLCM"  ./src/BlobLanesLCM.o   -llcm -llcmtypes_bot2-core -lopencv_core -lopencv_imgproc -lopencv_highgui
+Finished building target: BlobLanesLCM
+ 
+
+**** Build Finished ****

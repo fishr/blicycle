@@ -1,0 +1,15 @@
+# java compiled things #
+*.class
+*.jar
+
+# sound files #
+*.wav
+*/Sounds
+*.WAV
+
+# eclipse environment files #
+*/.metadata/*
+*/RemoteSystemsTempFiles/*
+
+
+*.swp

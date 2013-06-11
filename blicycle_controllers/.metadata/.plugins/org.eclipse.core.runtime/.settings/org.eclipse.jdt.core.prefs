@@ -1,10 +1,10 @@
-#Thu Nov 17 22:51:43 EST 2011
-org.eclipse.jdt.core.compiler.compliance=1.6
-org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.6
-org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
-org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
-org.eclipse.jdt.core.builder.resourceCopyExclusionFilter=*.launch
 eclipse.preferences.version=1
+org.eclipse.jdt.core.builder.resourceCopyExclusionFilter=*.launch
+org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
 org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
-org.eclipse.jdt.core.compiler.source=1.6
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.6
+org.eclipse.jdt.core.compiler.compliance=1.6
 org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
+org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
+org.eclipse.jdt.core.compiler.source=1.6
+org.eclipse.jdt.core.userLibrary.JOgg=<?xml version\="1.0" encoding\="UTF-8"?>\n<userlibrary systemlibrary\="false" version\="2">\n\t<archive path\="/usr/lib/jvm/j-ogg/build/lib/j-ogg-all.jar" sourceattachment\="/usr/lib/jvm/j-ogg">\n\t\t<attributes>\n\t\t\t<attribute name\="javadoc_location" value\="file\:/usr/lib/jvm/j-ogg/docs/"/>\n\t\t</attributes>\n\t</archive>\n</userlibrary>\n

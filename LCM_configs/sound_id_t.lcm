@@ -1,0 +1,9 @@
+package blicycle;
+
+struct sound_packet_t
+{
+	int16_t sound_id;  //the sound to play
+	boolean newSound;  //indicates whether the sound is a new request or a repeat
+	boolean solo;  //mutes other sounds
+	int8_t fade; //0 represents equal left/right levels, it's signed, with 127->-128 representing left to right fade levels
+}

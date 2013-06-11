@@ -105,7 +105,7 @@
 <entry path="/usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/endorsed"/>
 </endorsedDirs>
 </libraryInfo>
-<libraryInfo home="/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home" version="1.6.0_29">
+<libraryInfo home="/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home" version="1.6.0_29">
 <bootpath>
 <entry path="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar"/>
 <entry path="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar"/>
@@ -126,7 +126,7 @@
 <entry path="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed"/>
 </endorsedDirs>
 </libraryInfo>
-<libraryInfo home="/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home" version="1.6.0_29">
+<libraryInfo home="/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home" version="1.6.0_29">
 <bootpath>
 <entry path="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar"/>
 <entry path="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar"/>
