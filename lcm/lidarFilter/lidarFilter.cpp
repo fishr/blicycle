@@ -28,6 +28,8 @@ typedef struct _Comp {
 
 Mat lidar;
 
+int imageHeight = 10;
+
 // Print help information
 void print_help() {
     printf("** Invalid syntax!\n"
@@ -39,12 +41,12 @@ void on_frame(const lcm_recv_buf_t *rbuf, const char *channel,
 		const bot_core_planar_lidar_t *msg, void *user_data){
 	Comp *self = (Comp*) user_data;
 
-	lidar.create(3, msg->nranges, CV_32FC1);
+	lidar.create(imageHeight+1, msg->nranges, CV_32FC1);
 	for(int i = 0; i<msg->nranges; i++){
 		float intensity = msg->ranges[i]/8.0;
-		lidar.at<float>(0,i)= intensity;
-		lidar.at<float>(1,i)= intensity;
-		lidar.at<float>(2,i)= intensity;
+		for(int k = 0; k<imageHeight; k++){
+			lidar.at<float>(k,i)= intensity;
+		}
 	}
 
 
