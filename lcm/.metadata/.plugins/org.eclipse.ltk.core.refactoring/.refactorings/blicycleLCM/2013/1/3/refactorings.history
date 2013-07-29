@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;blicycleLCM/blicycle&apos; to &apos;blicycle.cpp&apos;" description="Rename resource &apos;blicycle&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="blicycle" name="blicycle.cpp" stamp="1358040268595" updateReferences="true"/>
-</session>

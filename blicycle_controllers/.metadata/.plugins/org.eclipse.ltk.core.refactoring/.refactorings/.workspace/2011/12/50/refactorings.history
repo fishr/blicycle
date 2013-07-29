@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename Java project &apos;BlicycleSimulator&apos; to &apos;BlicycleControllers&apos;&#x0A;- Original element: &apos;BlicycleSimulator&apos;&#x0A;- Renamed element: &apos;BlicycleSimulator&apos;&#x0A;- Update references to refactored element" description="Rename Java project &apos;BlicycleSimulator&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=BlicycleSimulator" name="BlicycleControllers" references="true" stamp="1323195068531" version="1.0"/>
-</session>

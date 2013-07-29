@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;ImageMerge/ImageMerge&apos; to &apos;ImageMerge.cpp&apos;" description="Rename resource &apos;ImageMerge&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="ImageMerge" name="ImageMerge.cpp" stamp="1358560446863" updateReferences="true"/>
-</session>
