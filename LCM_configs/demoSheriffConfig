@@ -1,0 +1,42 @@
+group "InfoSpawn" {
+    cmd "LCMPost" {
+        auto_respawn = "true";
+        exec = "/home/blicycle/Desktop/blicycle/lcm/LCMPost/Debug/LCMPost videofile /home/blicycle/Downloads/blicycleview1.avi INPUT";
+        host = "localhost";
+    }
+    cmd "IMU" {
+        exec = "/home/blicycle/Desktop/blicycle/software/build/bin/yei_3_space_sensor /dev/yeisensor";
+        host = "localhost";
+    }
+}
+
+group "Controllers" {
+    cmd "Blicycle Controller" {
+        auto_respawn = "true";
+        exec = "/home/blicycle/Desktop/blicycle/blicycle_controllers/BlicycleController.jar";
+        host = "localhost";
+    }
+}
+
+group "Processors" {
+    cmd "Lane Vision" {
+        auto_respawn = "true";
+        exec = "/home/blicycle/Desktop/blicycle/lcm/BlobLanesLCM/Debug/BlobLanesLCM INPUT bikedata";
+        host = "localhost";
+    }
+}
+
+
+script "Demo-Sheriff-KillScript" {
+    stop group "Controllers" wait "stopped";
+    stop group "Processors" wait "stopped";
+    stop group "InfoSpawn" wait "stopped";
+}
+
+script "Demo-Sheriff-Script" {
+    start group "InfoSpawn" wait "running";
+    wait ms 500;
+    start group "Processors" wait "running";
+    wait ms 500;
+    start group "Controllers" wait "running";
+}
