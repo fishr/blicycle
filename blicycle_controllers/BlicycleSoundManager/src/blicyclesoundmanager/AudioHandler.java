@@ -2,13 +2,14 @@ package blicyclesoundmanager;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
+
 import javax.sound.sampled.*;
 
 public class AudioHandler implements Runnable {
 	private int soundId =0;
 	protected int soundRequestId = 0;
 	public int numSounds=0;
-	private int lastSound = -1;
 	protected boolean newSoundRequest = false; 
 	protected boolean soundRequestOverride = false;
 	private boolean newSound = false;
@@ -24,6 +25,8 @@ public class AudioHandler implements Runnable {
 	AudioInputStream fileFormat;
 	
 	File[] sounds = null;
+	
+	private long lastPlayed = 0;
 
 	@Override
 	public void run() {
@@ -58,6 +61,7 @@ public class AudioHandler implements Runnable {
 	private void loadOGGSounds(){
 		File soundDir = new File("/usr/share/sounds/ubuntu/stereo");
 		sounds = soundDir.listFiles(new OggFilter());
+		Arrays.sort(sounds);
 		numSounds = sounds.length;
 			
 		
@@ -67,9 +71,8 @@ public class AudioHandler implements Runnable {
 		File soundDir = new File("Sounds");
 		//File soundDir = new File("/home/blicycle/Music/Windows Classic/Robotz");
 		sounds = soundDir.listFiles(new WavFilter());
-		numSounds = sounds.length;
-			
-		
+		Arrays.sort(sounds);
+		numSounds = sounds.length;		
 	}
 	
 	
@@ -77,15 +80,31 @@ public class AudioHandler implements Runnable {
 		loadUpdates();
 		if(!newSound){
 			//System.out.println("old request");
-			Thread.yield();
+			try {
+				Thread.sleep(20);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			return;
 		}
 		if(soundId==0){
 			System.out.println("soundId is 0");
-			Thread.yield();
+			try {
+				Thread.sleep(20);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			return;
 		}else if((soundId>numSounds)||(soundId<0)){
 			System.out.println("soundId out of bounds");
+			try {
+				Thread.sleep(20);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}else{
 			int i = soundId-1;
 			boolean isActive = false;
@@ -99,7 +118,7 @@ public class AudioHandler implements Runnable {
 				lineIn.close();
 				isActive = false;
 			}
-			if((i!=lastSound)&&!isActive){
+			if(!isActive){
 				try {
 					fileFormat = AudioSystem.getAudioInputStream(sounds[i]);
 					//fileFormat = AudioSystem.getAudioInputStream(new File("/home/blicycle/Music/Windows Classic/Windows Me/CHIMES.WAV"));
@@ -145,11 +164,9 @@ public class AudioHandler implements Runnable {
 				}
 			lineIn.setFramePosition(0);
 			if(lineIn.isControlSupported(FloatControl.Type.PAN)){
-				System.out.println("pan");
 				FloatControl panCtl = (FloatControl) lineIn.getControl(FloatControl.Type.PAN);
 				panCtl.setValue(Utils.map((float)balance, (float) -128, (float) 127, panCtl.getMinimum(), panCtl.getMaximum()));
 			}else if(lineIn.isControlSupported(FloatControl.Type.BALANCE)){
-				System.out.println("bal");
 				FloatControl panCtl = (FloatControl) lineIn.getControl(FloatControl.Type.BALANCE);
 				panCtl.setValue(Utils.map((float)balance, (float) -128, (float) 127, panCtl.getMinimum(), panCtl.getMaximum()));
 			}
@@ -166,14 +183,14 @@ public class AudioHandler implements Runnable {
 		soundRequestId++;
 		newSoundRequest=true;
 		//if(soundRequestId ==6){
-			soundRequestOverride = true;
+		soundRequestOverride = true;
 		/*}else{
 			soundRequestOverride  = false;
 		}
 		if(soundRequestId>8){
 			newSoundRequest = false;
 		}*/
-		balanceRequest = (byte) 0;
+		balanceRequest = (byte) 127;
 	}
 	
 	private synchronized void loadUpdates(){
@@ -182,4 +199,15 @@ public class AudioHandler implements Runnable {
 		soundOverride = soundRequestOverride;
 		balance = balanceRequest;
 	}
+
+	public boolean whyUpdate() {
+		long currTime = System.currentTimeMillis();
+		if((currTime-lastPlayed)>3000){
+			lastPlayed = currTime;
+			return true;
+		}
+		return false;
+	}
+	
+	
 }
