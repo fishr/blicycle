@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JOgg"/>
+	<classpathentry kind="lib" path="/home/blicycle/Desktop/blicycle/software/lcm/lcm/lcm-java/lcm.jar"/>
+	<classpathentry kind="lib" path="/home/blicycle/Desktop/blicycle/LCM_configs/blicycle_types.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

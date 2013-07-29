@@ -11,9 +11,5 @@
 # eclipse environment files #
 **/.metadata/
 **/RemoteSystemsTempFiles/
-.project
-**/.settings/
-.cproject
-
 
 *.swp
