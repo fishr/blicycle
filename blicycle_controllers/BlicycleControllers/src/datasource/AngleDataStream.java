@@ -11,6 +11,6 @@ public interface AngleDataStream {
 	public double getAngle();
 	
 	// Allow setting a value
-	public void setVal(int val);
+	public void setVal(byte val);
 	
 }

@@ -34,7 +34,7 @@ public class DesiredAngleProportionalController implements Controller {
 	}
 
 	@Override
-	public int stepController(double steeringTheta) {
+	public byte stepController(double steeringTheta) {
 		correction = computeError(steeringTheta);
 		discretizedCorrection = MotorCommandTranslator.roundAndLimit(correction);
 		t = (System.nanoTime() - t_start) / 1000000000.0;

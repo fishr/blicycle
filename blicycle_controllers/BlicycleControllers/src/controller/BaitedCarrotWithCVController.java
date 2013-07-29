@@ -35,7 +35,7 @@ public class BaitedCarrotWithCVController extends BaitedCarrotController {
 	protected double desiredDeltaX = 2.0;
 	
 	@Override
-	public int stepController(double steeringTheta) {
+	public byte stepController(double steeringTheta) {
 		
 		// Also update the state!
 		x += alpha * (deltaX_last - x);

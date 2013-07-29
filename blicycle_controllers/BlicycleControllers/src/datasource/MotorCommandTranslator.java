@@ -24,17 +24,17 @@ public class MotorCommandTranslator {
 	/**
 	 * Map a center point to which motors to turn on.
 	 */
-	public static int makeSingleMotorCenterpoint(int centerpoint) {
+	public static byte makeSingleMotorCenterpoint(int centerpoint) {
 		
 		if (centerpoint < -4) {
-			return (1 << 7);
+			return (byte) (1 << 7);
 		} else if (centerpoint > 4) {
 			return (1 << 0);
 		}
 		
 		switch(centerpoint) {
 		case -4:
-			return (1 << 7);
+			return (byte) (1 << 7);
 			
 		case -3:
 			return (1 << 6);

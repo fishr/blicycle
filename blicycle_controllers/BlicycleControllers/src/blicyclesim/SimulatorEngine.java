@@ -81,7 +81,7 @@ public class SimulatorEngine  {
 		}
 		
 		// Step the controller and retrieve its logging information
-		int motorBitmask = controller.stepController(steeringTheta);
+		byte motorBitmask = controller.stepController(steeringTheta);
 		double[] logLine = controller.getLogLine();
 		if (shouldSave) {
 			synchronized(log) {

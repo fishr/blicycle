@@ -11,7 +11,7 @@ import java.awt.Graphics2D;
 public interface Controller {
 
 	// Main controller method - map a steering angle into a motor control bitmask.
-	public int stepController(double steeringTheta);
+	public byte stepController(double steeringTheta);
 	
 	// Retrieve debugging log data be saved to a file
 	public double[] getLogLine();

@@ -103,7 +103,7 @@ public class BaitedCarrotController implements Controller {
 		this.theta = Math.PI/2 + deltaTheta;
 	}
 	
-	public int generateControlOutput() {
+	public byte generateControlOutput() {
 		// Try forward predicting some amount in time and run the controller from this reference point.
 		dt = 0.01;
 		double xFwd = x;
@@ -148,7 +148,7 @@ public class BaitedCarrotController implements Controller {
 	}
 	
 	@Override
-	public int stepController(double steeringTheta) {
+	public byte stepController(double steeringTheta) {
 		
 		synchronized(this) {
 			thetaSteer = steeringTheta;

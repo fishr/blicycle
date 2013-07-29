@@ -69,11 +69,7 @@ public class HandlebarMonitor extends JPanel implements WindowListener {
 	}
 	
 	public void showGUI() {
-		//javax.swing.SwingUtilities.invokeLater(new Runnable() {
-		//	public void run() {
-				createAndShowGUI();
-		//	}
-		//});
+		createAndShowGUI();
 	}
 	
 	/**

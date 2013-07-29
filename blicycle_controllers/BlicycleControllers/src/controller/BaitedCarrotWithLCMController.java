@@ -1,12 +1,13 @@
 package controller;
 
 import cvinterface.LCMImport;
+import cvinterface.VisionSubscriber;
 
 public class BaitedCarrotWithLCMController extends BaitedCarrotController {
 
 
 	// LCM information
-	LCMImport lcmConnect;
+	private VisionSubscriber visionIn;
 	
 	// Useful for mixing in data acquired from the CV engine
 	protected double deltaX_last = 0.0;
@@ -17,14 +18,22 @@ public class BaitedCarrotWithLCMController extends BaitedCarrotController {
 	// compute deltaX.
 	protected double desiredDeltaX = 0.0;
 	
+	
+	public BaitedCarrotWithLCMController(double gain, double velocity,
+			double initX, double initTheta, LCMImport lcm, String visionDataChannel) {
+		super(gain, velocity, initX, initTheta);
+
+		visionIn = lcm.startVisionIn(visionDataChannel);
+		}
+	
 	@Override
-	public int stepController(double steeringTheta) {
+	public byte stepController(double steeringTheta) {
 		
 		// Now, compute a mapping to deltaX, deltaTheta
-		if (lcmConnect.lock != 0) {
+		if (visionIn.getLock() != 0) {
 		
-			double deltaX = lcmConnect.delta() - desiredDeltaX;
-			double deltaTheta = Math.PI-lcmConnect.phi(); //in radians
+			double deltaX = visionIn.getDelta() - desiredDeltaX;
+			double deltaTheta = Math.PI-visionIn.getPhi(); //in radians
 						
 				//System.out.println("deltaX = " + deltaX + ", deltaTheta = " + 180.0 / Math.PI * deltaTheta);
 				
@@ -49,15 +58,7 @@ public class BaitedCarrotWithLCMController extends BaitedCarrotController {
 	}
 	
 	
-	
-	public BaitedCarrotWithLCMController(double gain, double velocity,
-			double initX, double initTheta) {
-		super(gain, velocity, initX, initTheta);
-		
-		System.out.println("Setting up LCM interface\n");
-		lcmConnect = new LCMImport("bikedata");
-						
-		}
+
 	/*
 	
 	public void updateState(double deltaX, double deltaTheta) {

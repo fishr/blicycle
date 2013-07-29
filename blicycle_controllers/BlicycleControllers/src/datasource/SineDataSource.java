@@ -30,8 +30,7 @@ public class SineDataSource implements AngleDataStream {
 	}
 
 	@Override
-	public void setVal(int val) {
-		// TODO Auto-generated method stub
+	public void setVal(byte val) {
 		// Don't care
 	}
 

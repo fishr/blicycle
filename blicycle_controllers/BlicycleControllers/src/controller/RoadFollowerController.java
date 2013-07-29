@@ -57,7 +57,7 @@ public class RoadFollowerController implements Controller {
 	}
 
 	@Override
-	public int stepController(double steeringTheta) {
+	public byte stepController(double steeringTheta) {
 		
 		// Calculate derivatives
 		double dTheta_dt = velocity * Math.tan(steeringTheta) / bicycleWheelbase;

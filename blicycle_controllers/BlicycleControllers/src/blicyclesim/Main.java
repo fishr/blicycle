@@ -1,16 +1,8 @@
 package blicyclesim;
 
-import controller.BaitedCarrotController;
 import controller.BaitedCarrotWithLCMController;
-import controller.BaitedCarrotWithCVController;
-import controller.DesiredAngleProportionalController;
-import controller.RoadFollowerController;
-import controller.StraightProportionalController;
-import datasource.AngleDataStream;
-import datasource.ArduinoDataSource;
-import datasource.HumanSimulator;
-import datasource.SineDataSource;
-import gui.HandlebarMonitor;
+import cvinterface.LCMImport;
+import datasource.LCMArduinoSource;
 
 
 public class Main {
@@ -18,29 +10,31 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Blicycle Simulator v 1.5!");
 		
+		
+		System.out.println("Setting up LCM interface\n");
+		final LCMImport lcmConnect = new LCMImport();
+		
+		
 		// Select which angular steering data source to use
 		//SineDataSource steering = new SineDataSource(-1.0, Math.PI/12);
 
 		// Simulate a rider on the bicycle
 		//HumanSimulator steering = new HumanSimulator(0.005, 25);
 		
+		//use live arduino stream
 		//ArduinoDataSource steering = new ArduinoDataSource("/dev/tty.usbmodemfa131", 115200);
-		ArduinoDataSource steering = new ArduinoDataSource("/dev/ttyACM2", 115200);
+		//ArduinoDataSource steering = new ArduinoDataSource("/dev/ttyACM0", 115200);
 		
-		try {
-			steering.start();
-		} catch (Exception e) {
-			System.out.println("ERROR! Could not connect to arduino!");
-			e.printStackTrace();
-		}
-		
+		//use LCM messages
+		final LCMArduinoSource steering = new LCMArduinoSource(lcmConnect, "from_arduino", "to_arduino");		
 
 		
 		
 		// Log file information
-		boolean save_this_trial = false;	// True => Will save and write to the following file. Otherwise will not save!
-		String log_filename = "recording.csv";	// Filename where to save. PLEASE CHANGE OTHERWISE WILL OVERWRITE!!! Relative
+		final boolean save_this_trial = false;	// True => Will save and write to the following file. Otherwise will not save!
+		final String log_filename = "recording.csv";	// Filename where to save. PLEASE CHANGE OTHERWISE WILL OVERWRITE!!! Relative
 												// to the BlicycleSimulator/ directory.
+
 		
 		
 		// Select a controller! Uncomment exactly one line.
@@ -62,7 +56,7 @@ public class Main {
 		// RoadFollowerController controller = new RoadFollowerController(-1.0, -1.0, 4.0, 0.0, Math.PI/2);		// Angle and position
 		
 		//BaitedCarrotWithCVController controller = new BaitedCarrotWithCVController(3.0, 4.0, 2.0, Math.PI / 4);
-		BaitedCarrotWithLCMController controller = new BaitedCarrotWithLCMController(3.0, 4.0, 2.0, Math.PI/4);
+		final BaitedCarrotWithLCMController controller = new BaitedCarrotWithLCMController(3.0, 4.0, 2.0, Math.PI/4, lcmConnect, "lane_data");
 		
 		/*******************************************************************************************
 		 * *****************************************************************************************
@@ -77,7 +71,7 @@ public class Main {
 		
 		
 		// Set up and start the simulation
-		SimulatorEngine engine = new SimulatorEngine(steering, controller, log_filename, save_this_trial);
+		final SimulatorEngine engine = new SimulatorEngine(steering, controller, log_filename, save_this_trial);
 		engine.startSimulating();
 		
 	}

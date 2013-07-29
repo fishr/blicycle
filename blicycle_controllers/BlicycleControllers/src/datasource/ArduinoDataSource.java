@@ -1,15 +1,13 @@
 package datasource;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-
 import gnu.io.CommPort;
 import gnu.io.CommPortIdentifier;
 import gnu.io.SerialPort;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
 
 // A class that communicates over serial (in our case, USB)
 // to an Arduino running appropriate code.
@@ -23,9 +21,9 @@ public class ArduinoDataSource implements AngleDataStream {
 	protected InputStream inStream;
 	
 	// Scaling information
-	private final int MAX_VALUE = 1023;
-	private final double MAX_ANGLE = 3.0;
-	private final double MIN_ANGLE = -3.0;
+	//private final int MAX_VALUE = 1023;
+	//private final double MAX_ANGLE = 3.0;
+	//private final double MIN_ANGLE = -3.0;
 	
 	/**
 	 * Calibration data:
@@ -42,8 +40,8 @@ public class ArduinoDataSource implements AngleDataStream {
 	// For bicycle potentiometer:
 	//private final double MEASUREMENT_LEFT_90_DEGREES = 832;
 	//private final double MEASUREMENT_RIGHT_90_DEGREES = 145;
-	private final double MEASUREMENT_LEFT_45_DEGREES = 693;
-	private final double MEASUREMENT_RIGHT_45_DEGREES = 358;
+	private final double MEASUREMENT_LEFT_45_DEGREES = 655;
+	private final double MEASUREMENT_RIGHT_45_DEGREES = 320;
 	
 	private final double SCALE_MEASURE;
 	private final double SCALE_OFFSET;
@@ -62,6 +60,12 @@ public class ArduinoDataSource implements AngleDataStream {
 		SCALE_MEASURE = (Math.PI / 2.0) / (MEASUREMENT_LEFT_45_DEGREES - MEASUREMENT_RIGHT_45_DEGREES);
 		SCALE_OFFSET = (MEASUREMENT_LEFT_45_DEGREES + MEASUREMENT_RIGHT_45_DEGREES) / 2;
 		
+		try {
+			this.start();
+		} catch (Exception e) {
+			System.out.println("arduino not available");
+			e.printStackTrace();
+		}		
 	}
 	
 	
@@ -147,19 +151,13 @@ public class ArduinoDataSource implements AngleDataStream {
 		}
 		
 		
-		// If the connection was succesful so far, start reading in values!
+		// If the connection was successful so far, start reading in values!
 		startReadingValues();
 		
 	}
-	
-	// Writes data to the port
-	public void write(byte[] data) throws IOException {
-		outStream.write(data);
-	}
-
 
 	@Override
-	public void setVal(int val) {
+	public void setVal(byte val) {
 		send_val = val;
 	}
 

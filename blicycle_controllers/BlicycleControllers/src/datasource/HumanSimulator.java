@@ -28,7 +28,7 @@ public class HumanSimulator implements AngleDataStream {
 	}
 
 	@Override
-	public void setVal(int val) {
+	public void setVal(byte val) {
 		double desired = -0.2 * MotorCommandTranslator.decodeVibrationMotorMask(setVals[setIndex]);
 		setVals[setIndex] = val;
 		setIndex = (setIndex + 1) % setVals.length;
