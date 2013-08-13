@@ -17,7 +17,7 @@ CPP_DEPS += \
 lidarFilter.o: ../lidarFilter.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
-	g++ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"lidarFilter.d" -o "$@" "$<"
+	g++ -D__GXX_EXPERIMENTAL_CXX0X__ -I/home/blicycle/Desktop/blicycle/software/build/include -O0 -g3 -Wall -c -fmessage-length=0 -std=c++0x -MMD -MP -MF"$(@:%.o=%.d)" -MT"lidarFilter.d" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

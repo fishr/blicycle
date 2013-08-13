@@ -84,7 +84,6 @@ public class loggingUtil {
 					try {
 						Thread.sleep(granularity);
 					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 					logData();

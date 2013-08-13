@@ -1,0 +1,40 @@
+\relax 
+\newlabel{FirstPage}{{}{1}{}{}{}}
+\@writefile{toc}{\contentsline {title}{Blicycle: A Bicycle for the Blind}{1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Contextual Inquiry and Task Analysis}{1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Qualitative and quantitative success metrics.}}{1}{}}
+\newlabel{fig:SuccessMetrics}{{1}{1}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Main components of blicycle. The camera is used to localize the bike with respect to the track edge. Custom vibrating handlebars are controlled by a microcontroller and drive circuitry. The steering angle of the bicycle is also measured by a microcontroller and relayed to an onboard laptop in the rider's backback. This laptop processes all sensor data, generates a target desired steering angle for blicycle, and sends commands to the handlebar motors via the microcontroller.}}{2}{}}
+\newlabel{fig:BlicycleOverview}{{2}{2}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Design Process}{2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {III.1}User Interface}{2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Brian testing the spatial audio interface prototype. A sound was generated from a certain direction, played through headphones, and we asked Brian to point to its apparent source.}}{2}{}}
+\newlabel{fig:SpatialAudio}{{3}{2}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Vibrating glove prototype. Each finger has a vibration motor and is individually controllable with PWM.}}{2}{}}
+\newlabel{fig:VibratorGlove}{{4}{2}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Brian testing the vibrating glove prototype.}}{3}{}}
+\newlabel{fig:BrianTestingGloves}{{5}{3}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Vibrating handlebars. Note the metallic vibration motors attached via sugru to the forward side of the handlebars. Wiring is routed internally for aesthetics and safety.}}{3}{}}
+\newlabel{fig:VibratingHandlebars}{{6}{3}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {III.2}Obstacle Detection}{3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces A curved, hashing pattern produced by normal lanes and merging starter lanes at the Perkins track. These pose a significant challenge for lane-tracking algorithms. Unfortunately, these problematic areas occur at the areas of highest rider danger along the track and hence motivated our decision to use the inner grass / pavement border for computer vision instead of the white lanes.}}{4}{}}
+\newlabel{fig:HashingPattern}{{7}{4}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {III.3}Navigation}{4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The sideways-facing camera monitors the track/pavement border.}}{4}{}}
+\newlabel{fig:CameraAngle}{{8}{4}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces CAD model of custom camera mount.}}{4}{}}
+\newlabel{fig:CameraMountCAD}{{9}{4}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces An example camera frame being processed by the computer vision algorithm. Flows from left to right, top to bottom: 1.) A frame is captured from the camera showing the track/pavement border. 2.) Conversion from RGB to HSV color space (shown here where B channel is H, G channel is S, etc.), 3.) Classifying each pixel as grass / nongrass by looking for pixels within a prespecified range of HSV values, 4.) Edge detection on the resulting binary image to highlight the grass-track border, 5.) Running a Hough transform algorithm on the edge-detected image to locate strong line segments in the edge-detected image. Each returned light segment is assigned a cost based on its position in the screen (lower coordinates favored) and distance from the last best line segment. The least-cost line segment (here shown in black) is chosen and outputted to the controller process, 6.) The controller/simulation process receives the line outputted by the CV module, and projects from camera space to the world frame using a table lookup on interpolated calibration data. The estimated position and orientation of the bicycle from the image is shown.}}{5}{}}
+\newlabel{fig:CVOverview}{{10}{5}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {III.4}Simulator and Control Systems}{5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces A screenshot of the simulator interface. The left window shows the current measured steering angle of the handlebars and current vibration motor output. The right window shows the world state for the bicycle simulation.}}{6}{}}
+\newlabel{fig:Simulator}{{11}{6}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Simulation of the bicycle's trajectory. The bicycle, human operator with delay, and future target controller are all modeled. The blue curve represents the bicycle's trajectory (note that it starts in an offset position but is stabilized), the green dotted line represents the desired trajectory, and the red plot indicates the control signal sent to the handlebars (note that it slightly leads the trajectory due to the forward-predicting controller).}}{6}{}}
+\newlabel{fig:ControllerStabilized}{{12}{6}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Final Results}{6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Qualitative and quantitative success metrics.}}{7}{}}
+\newlabel{fig:SuccessMetricsEval}{{13}{7}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Reflection}{7}{}}
+\bibstyle{apsrev4-1}
+\newlabel{LastPage}{{}{7}}

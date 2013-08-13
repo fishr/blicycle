@@ -3,68 +3,36 @@
 // Author      : Ryan Fish
 // Version     :
 // Copyright   : MIT License
-// Description : Hello World in C++, Ansi-style
+// Description :
 //============================================================================
 
+#include "config.hpp"
+
+#include "contourUtils.hpp"
+#include "gui.hpp"
+#include "handler.hpp"
+#include "lanes.hpp"
+#include "lcmconfig.hpp"
+#include "vectorhelp.hpp"
 
 #include <iostream>
-#include "opencv/cv.h"
-#include "opencv/cvaux.h"
-#include "opencv2/highgui/highgui.hpp"
-#include "opencv2/imgproc/imgproc.hpp"
-
-#include <lcm/lcm-cpp.hpp>
-#include <lcmtypes/bot_core.hpp>
-#include <blicycle/blicycle_packet_t.hpp>
-
-#include <stdio.h>
-
 
 using namespace std;
 using namespace cv;
 
 int inY = 600;
 int inX = 800;
-int cropHeight=0;
+int cropHeight=170;
 int cropLow=0;
 int xsize;
 int ysize;
 
-Mat srcCopy, blurred, edges, element, denoised_img, lanes, accumulated;
+bool calibrated = false;
+
+Mat srcCopy, blurred, edges, element, denoised_img, lanes, accumulated, map1, map2;
 Mat src_gray(Size(inX,inY), CV_32FC1, Scalar(0));
 vector<Vec3i> lanesX;
 
-
-int min_threshold = 50;
-int max_trackbar = 400;
-int blacktowhite = 0;
-int thresh = 118;
-int minLineLength = 90;
-int maxLineGap = 127;
-int cannyBool =1;
-int accumAlpha = 36;
-
-typedef struct _BearingInformation{
-	int lock;
-	float rho;
-	float theta;
-} BearingInformation;
-
-
-blicycle::blicycle_packet_t bikepacket;
-lcm::LCM globalLCM;
-
-const char* probabilistic_name = "Probabilistic Hough Lines Demo";
-char* lcmChannelIn;
-char* lcmChannelOut;
-
-int p_trackbar = 178;
-int smoothfactor=20;
-
-int xup =16;
-int yup =0;
-int xdown =3;
-int ydown =3;
 
 int spreadError = 50;
 
@@ -72,77 +40,32 @@ int lowHeight;
 int midHeight;
 int highHeight;
 
-int pointless;
+int gray_thresh = 140;
 
 int expectedLaneWidth = 40;
+int physicalLaneWidthInch = 48;
 
+void useImage(Mat);
+void calibrateCameraConsts(int, int);
 void blacknwhite(int, void*);
 void denoise(int, void*);
 void updateLines(int, void*);
+void showLinesBW(vector<Vec4i>, Mat);
 void showLines(vector<Vec4i>, Mat);
 void findLanes();
 void findSlope(vector<Vec3f>&);
 void fitLines(vector<Vec3f>, int, vector<int>&, vector<int>&, vector<int>&);
-void reduceVector(vector<int>&);
-vector<int> stripVectorRow(vector<Vec3i>, int);
-int nearestElementIndex(vector<int>, int);
-vector<float> stripVectorRow(vector<Vec3f>, int);
-int nearestElementIndex(vector<float>, float);
 
+LcmEngine lcmEngine;
 
-class Handler{
-public:
-	~Handler() {}
-
-	void handleMessage(const lcm::ReceiveBuffer* rbuf, const std::string& chan, const bot_core::image_t* msg) {
-
-		Mat src(msg->height, msg->width, CV_8UC3);
-		src.data = (uchar*)&msg->data[0];
-
-		src.copyTo(srcCopy);
-		//srcCopy.adjustROI(-cropHeight, 0, 0, 0 );
-		//xsize=srcCopy.cols;
-		//ysize=srcCopy.rows;
-
-
-		/// Pass the image to gray
-		//cvtColor( srcCopy, src_gray, CV_RGB2GRAY );
-		cvtColor(srcCopy,srcCopy,CV_RGB2GRAY);
-
-		resize(srcCopy,srcCopy, Size(inX, inY));
-
-		//downsample the image
-		//pyrDown(src_gray, blurred);
-		//imshow("blurred", blurred);
-
-		//add to running average image to help blur and smooth
-		accumulateWeighted(srcCopy, src_gray, accumAlpha/100.0);
-		src_gray.convertTo(blurred,CV_8UC1);
-
-		blurred.adjustROI(-cropHeight, -cropLow, 0, 0);
-		xsize=blurred.cols;
-		ysize=blurred.rows;
-
-		blacknwhite(0,0);
-
-		lowHeight = denoised_img.rows-10;
-		midHeight = denoised_img.rows/3;
-		highHeight = min(40, denoised_img.rows/4);
-
-		updateLines(0,0);
-		waitKey(1);
-	}
-
-};
-
-
-// Print help information
-void print_help() {
-	printf("** Invalid syntax!\n"
-			"   Usage: blicycle  <source> <output>\n"
-			"       source: the LCM channel to use\n"
-			"		output: the LCM channel to use\n");
+void calibrateCameraConsts(int x, int y){
+	Size imageSize(x, y);
+	initUndistortRectifyMap(cameraMatrix, distMatrix, Mat(),
+	    //getOptimalNewCameraMatrix(cameraMatrix, distMatrix, imageSize, 1),
+		cameraMatrix,
+	    imageSize, CV_16SC2, map1, map2);
 }
+
 
 
 int main(int argc, char** argv) {
@@ -155,47 +78,40 @@ int main(int argc, char** argv) {
 		exit(1);
 	}
 
-	lcmChannelIn = argv[1];
-	lcmChannelOut = argv[2];
+	lcmEngine.init(argv[1], argv[2]);
 
-	if(!globalLCM.good()){
+	if(!lcmEngine.good()){
 		return 1;
 	}
 
-	Handler imagehandler;
-
-	globalLCM.subscribe(lcmChannelIn, &Handler::handleMessage, &imagehandler);
+	lcmEngine.subscribe();
 	//bot_core_image_t_subscription_t sub = bot_core_image_t_subscribe(self->subscribe_lcm, lcmChannel, on_image_frame, self);
 
 	// Create a window to display processed images (useful for debugging)
 	//namedWindow("blurred", CV_WINDOW_AUTOSIZE);
-	namedWindow("gray", CV_WINDOW_AUTOSIZE);
 	//namedWindow("denoise", CV_WINDOW_AUTOSIZE);
 	namedWindow("lanes", CV_WINDOW_AUTOSIZE);
 
-	/// Create Trackbars for Thresholds
-	char thresh_label[50];
-	sprintf( thresh_label, "Thres: %d + input", min_threshold );
-	createTrackbar( thresh_label, "gray", &p_trackbar, max_trackbar, &blacknwhite);
+	namedWindow("test", CV_WINDOW_AUTOSIZE);
+	namedWindow("raw", CV_WINDOW_AUTOSIZE);
 
-	createTrackbar("crop top", "gray", &cropHeight, 500, &blacknwhite);
-	createTrackbar("crop bottom", "gray", &cropLow, 500, &blacknwhite);
+	/// Create Trackbars for Thresholds
+	createTrackbar("crop top", "lanes", &cropHeight, 500, &blacknwhite);
+	createTrackbar("crop bottom", "lanes", &cropLow, 500, &blacknwhite);
 
 	createTrackbar("lineGap", "lanes", &maxLineGap, 500, &updateLines);
 	createTrackbar("lineLength", "lanes", &minLineLength, 200, &updateLines);
 	createTrackbar("Hough Thresh", "lanes", &thresh, 500, &updateLines);
-	createTrackbar("Use Canny?", "lanes", &cannyBool, 1, &updateLines);
 
-	createTrackbar( "Inv?", "gray", &blacktowhite, 1, &blacknwhite);
-	createTrackbar( "Delay", "gray", &accumAlpha, 100, &updateLines);
 	createTrackbar( "xup", "lanes", &xup, smoothfactor, &denoise);
 	createTrackbar( "yup", "lanes", &yup, smoothfactor, &denoise);
 	createTrackbar( "xdown", "lanes", &xdown, smoothfactor, &denoise);
 	createTrackbar( "ydown", "lanes", &ydown, smoothfactor, &denoise);
-	createTrackbar("Update Lines", "lanes", &pointless, 1, &blacknwhite);
 
 	while (1) {
-		globalLCM.handle();
+		lcmEngine.handle();
+		if(lcmEngine.imageHandler.newImage())
+			useImage(lcmEngine.imageHandler.src);
 	}
 
 	//destroyWindow("blurred");
@@ -203,39 +119,89 @@ int main(int argc, char** argv) {
 	//destroyWindow("denoise");
 	destroyWindow("lanes");
 
+	destroyWindow("test");
+	destroyWindow("raw");
 }
 
-/**
- * A helper method to publish data over a socket.
- */
-void publishLCM(int32_t lock, double rho, double theta) {
+void useImage(Mat src){
 
-	bikepacket.timestamp = (int64_t)time(NULL);
-	bikepacket.lock=lock;   //effectively a boolean if current lane is know, may actually return some relevant value as well, but zero if unsure
-	bikepacket.phi = theta;    //rotational error
-	bikepacket.lane = 3;    //current lane
-	bikepacket.totalLanes = 5; //total lanes in view
-	bikepacket.delta = 0;  //lateral error from center of lane
+	if(!calibrated)
+		calibrateCameraConsts(lcmEngine.imageHandler.width, lcmEngine.imageHandler.height);
+	calibrated = true;
 
-	globalLCM.publish(lcmChannelOut, &bikepacket);
+	cv::imshow("raw", src);
 
+	cv::remap(src, srcCopy, map1, map2, cv::INTER_LINEAR);
+
+	/// Pass the image to gray
+	//cvtColor( srcCopy, src_gray, CV_RGB2GRAY );
+	cvtColor(srcCopy,srcCopy,CV_RGB2GRAY);
+
+	cv::resize(srcCopy,src_gray, cv::Size(inX, inY));
+
+	//downsample the image
+	//pyrDown(src_gray, blurred);
+	//imshow("blurred", blurred);
+
+	src_gray.convertTo(blurred,CV_8UC1);
+
+	blurred.adjustROI(-cropHeight, -cropLow, 0, 0);
+	xsize=blurred.cols;
+	ysize=blurred.rows;
+
+	blacknwhite(0,0);
+
+	lowHeight = denoised_img.rows-10;
+	midHeight = denoised_img.rows/3;
+	highHeight = min(40, denoised_img.rows/4);
+
+	updateLines(0,0);
+	cv::waitKey(1);
 }
 
 void blacknwhite(int, void*){
-	if(blacktowhite!=true){
+	cv::equalizeHist(blurred, blurred);
+
 		///try filtering out the white since we have lines anyway
-		threshold(blurred, edges, p_trackbar, 255, THRESH_BINARY );
-		imshow("gray", edges);
-	}else{
-		///try filtering out the black since we have lines anyway
-		threshold(blurred, edges, p_trackbar, 255, THRESH_BINARY_INV );
-		imshow("gray", edges);
-	}
+		threshold(blurred, edges, gray_thresh, 255, THRESH_BINARY );
+
 	denoise(0,0);
 }
 
 void updateLines(int, void*){
-	findLanes();
+	//findLanes();
+
+	//starts here
+
+	RNG rng(12345);
+
+
+	  vector<vector<Point> > contours;
+	  vector<Vec4i> hierarchy;
+		vector<Vec4i> p_lines;
+
+	  /// Find contours
+		Mat lines(denoised_img.size(), CV_8UC1);
+
+		Canny(denoised_img, lines, 100, 200);
+		//HoughLinesP( denoised_img, p_lines, 1, CV_PI/180, thresh, minLineLength, maxLineGap);
+		//smooth by slope and use identified slope as seed for lines in lanes
+		//showLinesBW(p_lines, lines);
+		imshow("test", lines);
+
+	  findContours( lines, contours, hierarchy, CV_RETR_LIST, CV_CHAIN_APPROX_TC89_KCOS, Point(0, 0) );
+	  cvtColor(denoised_img, lanes, CV_GRAY2BGR);
+	  ContourUtils::processContours(contours);
+
+	  /// Draw contours
+	  Mat drawing = Mat::zeros( denoised_img.size(), CV_8UC3 );
+	  for( unsigned i = 0; i< contours.size(); i++ )
+	     {
+	       Scalar color = Scalar( rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255) );
+	       drawContours( lanes, contours, i, color, -2, 4);//, hierarchy);
+	     }
+
+	  //ends here
 
 	imshow("lanes", lanes);
 }
@@ -253,6 +219,14 @@ void showLines(vector<Vec4i> reducedLines, Mat screen){
 	{
 		Vec4i l = reducedLines[i];
 		line( screen, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(255,0,0), 3, CV_AA);
+	}
+}
+
+void showLinesBW(vector<Vec4i> reducedLines, Mat screen){
+	for( size_t i = 0; i < reducedLines.size(); i++)
+	{
+		Vec4i l = reducedLines[i];
+		line( screen, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(255), 3, CV_AA);
 	}
 }
 
@@ -337,8 +311,7 @@ void findSlope(vector<Vec3f> &laneSlopes){
 			thresh+=10;
 		}
 		*/
-	if(cannyBool)
-		Canny(denoised_img, denoised_img, 100, 200);
+	Canny(denoised_img, denoised_img, 100, 200);
 	HoughLinesP( denoised_img, p_lines, 1, CV_PI/180, thresh, minLineLength, maxLineGap);
 	//}
 	//smooth by slope and use identified slope as seed for lines in lanes
@@ -490,50 +463,6 @@ void fitLines(vector<Vec3f> slopes, int numcolumns, vector<int> &low, vector<int
 	//printf("numlanes %d, angle %f, current denom %f, x1 %d x2 %d\n", lowHeight-midHeight, nearestTheta, run,lanesX[probableLane][2],lanesX[probableLane][1]);
 
 	// Send over the data!
-	publishLCM((int)lanesX.size(), 0, nearestTheta);
+	lcmEngine.publishLCM((int)lanesX.size(), 0, nearestTheta);
 }
 
-/*void reduceVec3i(vector<Vec3i> bigVector){
-	for(int i=0; i<bigVector; i++){
-		if(bigVector[i][0]!=0)
-	}
-}
-*/
-
-vector<int> stripVectorRow(vector<Vec3i> fullVector, int row){
-	vector<int> output;
-	output.resize(fullVector.size());
-	for(unsigned int i =0; i< fullVector.size(); i++){
-		output[i]=fullVector[row][i];
-	}
-	return output;
-}
-
-int nearestElementIndex(vector<int> searchThis, int findThis){
-	int bestFit = 0;
-	for(unsigned int i =0; i<searchThis.size(); i++){
-		if(abs(searchThis[i]-findThis)<abs(searchThis[bestFit]-findThis)){
-			bestFit = i;
-		}
-	}
-	return bestFit;
-}
-
-vector<float> stripVectorRow(vector<Vec3f> fullVector, int row){
-	vector<float> output;
-	output.resize(fullVector.size());
-	for(unsigned int i =0; i< fullVector.size(); i++){
-		output[i]=fullVector[row][i];
-	}
-	return output;
-}
-
-int nearestElementIndex(vector<float> searchThis, float findThis){
-	int bestFit = 0;
-	for(unsigned int i =0; i<searchThis.size(); i++){
-		if(abs(searchThis[i]-findThis)<abs(searchThis[bestFit]-findThis)){
-			bestFit = i;
-		}
-	}
-	return bestFit;
-}

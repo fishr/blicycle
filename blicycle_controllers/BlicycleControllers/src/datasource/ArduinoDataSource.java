@@ -71,7 +71,6 @@ public class ArduinoDataSource implements AngleDataStream {
 	
 	@Override
 	public double getAngle() {
-		// TODO Auto-generated method stub
 		return angle;
 	}
 	
@@ -120,7 +119,7 @@ public class ArduinoDataSource implements AngleDataStream {
 						// outStream.write(MotorCommandTranslator.makeSingleMotorCenterpoint(4));
 						
 					} catch (Exception e) {
-						// TODO Auto-generated catch block
+						System.out.println("couldn't parse + print to Arduino");
 						e.printStackTrace();
 					}
 				}

@@ -50,7 +50,7 @@ typedef struct _Comp {
 // Print help information
 void print_help() {
     printf("** Invalid syntax!\n"
-           "   Usage: LCMPost <capture/avi/image> <src> <lcmChannel>\n"
+           "   Usage: LCMPost <CAPTURE/VIDEOFILE/IMAGEFILE> <src> <lcmChannel>\n"
            "       Capture: Use a live video stream. In\n"
            "           this case source is the camera #.\n\n"
            "       avi: Read in an (AVI) file. In this\n"

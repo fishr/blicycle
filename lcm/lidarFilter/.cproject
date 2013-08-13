@@ -25,6 +25,10 @@
 							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1257960924" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug">
 								<option id="gnu.cpp.compiler.exe.debug.option.optimization.level.213926348" name="Optimization Level" superClass="gnu.cpp.compiler.exe.debug.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.exe.debug.option.debugging.level.1375444768" name="Debug Level" superClass="gnu.cpp.compiler.exe.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.other.other.1831168329" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0 -std=c++0x" valueType="string"/>
+								<option id="gnu.cpp.compiler.option.preprocessor.def.1354789529" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="__GXX_EXPERIMENTAL_CXX0X__"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.600783677" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.2094743124" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug">
@@ -44,7 +48,7 @@
 									<listOptionValue builtIn="false" value="opencv_imgproc"/>
 									<listOptionValue builtIn="false" value="opencv_highgui"/>
 								</option>
-								<option id="gnu.cpp.link.option.flags.576859940" superClass="gnu.cpp.link.option.flags" value=" -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib" valueType="string"/>
+								<option id="gnu.cpp.link.option.flags.576859940" name="Linker flags" superClass="gnu.cpp.link.option.flags" value=" -Wl,-rpath=/home/blicycle/Desktop/blicycle/software/build/lib" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1175034917" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -89,6 +93,9 @@
 							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1513994466" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release">
 								<option id="gnu.cpp.compiler.exe.release.option.optimization.level.378541618" name="Optimization Level" superClass="gnu.cpp.compiler.exe.release.option.optimization.level" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.exe.release.option.debugging.level.1039264450" name="Debug Level" superClass="gnu.cpp.compiler.exe.release.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.preprocessor.def.1073517104" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="__GXX_EXPERIMENTAL_CXX0X__"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1325821053" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.release.785734052" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.release">
@@ -116,20 +123,26 @@
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 		<project id="lidarFilter.cdt.managedbuild.target.gnu.exe.412568184" name="Executable" projectType="cdt.managedbuild.target.gnu.exe"/>
 	</storageModule>
+	<storageModule moduleId="refreshScope" versionNumber="1">
+		<resource resourceType="PROJECT" workspacePath="/lidarFilter"/>
+	</storageModule>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.419223344;cdt.managedbuild.config.gnu.exe.release.419223344.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1513994466;cdt.managedbuild.tool.gnu.cpp.compiler.input.1325821053">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP"/>
 		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.419223344;cdt.managedbuild.config.gnu.exe.release.419223344.;cdt.managedbuild.tool.gnu.c.compiler.exe.release.785734052;cdt.managedbuild.tool.gnu.c.compiler.input.1282120045">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC"/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.246430886;cdt.managedbuild.config.gnu.exe.debug.246430886.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1257960924;cdt.managedbuild.tool.gnu.cpp.compiler.input.600783677">
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.246430886;cdt.managedbuild.config.gnu.exe.debug.246430886.605992203;cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1257960924.2012883692;cdt.managedbuild.tool.gnu.cpp.compiler.input.1621148281">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP"/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.246430886;cdt.managedbuild.config.gnu.exe.debug.246430886.;cdt.managedbuild.tool.gnu.c.compiler.exe.debug.2094743124;cdt.managedbuild.tool.gnu.c.compiler.input.54025156">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC"/>
 		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.246430886;cdt.managedbuild.config.gnu.exe.debug.246430886.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1257960924;cdt.managedbuild.tool.gnu.cpp.compiler.input.600783677">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.419223344;cdt.managedbuild.config.gnu.exe.release.419223344.;cdt.managedbuild.tool.gnu.c.compiler.exe.release.785734052;cdt.managedbuild.tool.gnu.c.compiler.input.1282120045">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC"/>
+		</scannerConfigBuildInfo>
 	</storageModule>
-	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 </cproject>

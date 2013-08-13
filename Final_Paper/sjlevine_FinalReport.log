@@ -1,0 +1,394 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.6.4)  15 DEC 2011 10:09
+entering extended mode
+ %&-line parsing enabled.
+**sjlevine_FinalReport.tex
+(./sjlevine_FinalReport.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, loaded.
+(/usr/share/texmf-texlive/tex/latex/revtex/revtex4-1.cls
+Document Class: revtex4-1 2009/10/08:11:23 4.1g (http://publish.aps.org/revtex4
+/ for documentation)
+ Copyright (c) 2009 The American Physical Society.
+ mailto:revtex@aps.org
+ Licensed under the LPPL:
+http://www.ctan.org/tex-archive/macros/latex/base/lppl.txt
+ Arthur Ogawa <arthur_ogawa at sbcglobal dot net>
+ Based on work by David Carlisle <david at dcarlisle.demon.co.uk>.
+ltxutil [2009/07/07 4.1f]: portions licensed from W. E. Baxter (web at superscr
+ipt.com)
+LaTeX Info: Redefining \@centercr on input line 298.
+Class revtex4-1 Info: Repairing broken LaTeX eqnarray on input line 348.
+\eqncolsep=\skip41
+Class revtex4-1 Info: Repairing hyperref-unfriendly LaTeX definition of \mpfoot
+note on input line 423.
+Class revtex4-1 Info: Repairing broken LateX \@sect on input line 754.
+\intertabularlinepenalty=\count79
+\@tbpen=\count80
+\@arstrutbox@hline=\box26
+Class revtex4-1 Info: Repairing broken LaTeX \@xbitor on input line 1785.
+Class revtex4-1 Info: Making \typeout \long on input line 1953.
+ltxfront [2009/10/06/20:20 4.1g]: Arthur Ogawa (after David P. Carlisle)
+\c@affil=\count81
+\c@collab=\count82
+\absbox=\box27
+ltxgrid [2009/07/07 4.1f]: portions licensed from W. E. Baxter (web at superscr
+ipt.com)
+\c@linecount=\count83
+\output@latex=\toks14
+\box@size@1=\box28
+\box@size@2=\box29
+\@protection@box=\box30
+\@topmark@saved=\toks15
+\footins@saved=\box31
+\pagesofar=\box32
+\footsofar=\box33
+\pagegrid@col=\count84
+Class revtex4-1 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and
+ \\  on input line 5346.
+\c@part=\count85
+\c@section=\count86
+\c@subsection=\count87
+\c@subsubsection=\count88
+\c@paragraph=\count89
+\c@subparagraph=\count90
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count91
+\fbox@1=\box34
+\c@table=\count92
+\fbox@2=\box35
+\c@video=\count93
+\fbox@4=\box36
+\@bibdataout=\write3
+\widetext@top=\box37
+\widetext@bot=\box38
+Class revtex4-1 Info: Selecting society aps on input line 7230.
+(/usr/share/texmf-texlive/tex/latex/revtex/aps4-1.rtx
+File: aps4-1 2009/10/08:11:23 4.1g (http://publish.aps.org/revtex4/ for documen
+tation)
+Class revtex4-1 Info: RevTeX society APS selected on input line 31.
+)
+
+Class revtex4-1 Warning: No journal specified, using default pra.
+
+Class revtex4-1 Info: APS journal PRA selected on input line 7233.
+
+Class revtex4-1 Warning: No type size specified, using default 10.
+
+(/usr/share/texmf-texlive/tex/latex/revtex/aps10pt4-1.rtx
+File: aps10pt4-1 2009/10/08:11:23 4.1g (http://publish.aps.org/revtex4/ for doc
+umentation)
+Class revtex4-1 Info: RevTeX pointsize 10pt selected on input line 30.
+)
+(/usr/share/texmf-texlive/tex/latex/textcase/textcase.sty
+Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
+)
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks16
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks17
+\ex@=\dimen102
+)
+LaTeX Info: Redefining \text on input line 53.
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen103
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count94
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count95
+\leftroot@=\count96
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count97
+\DOTSCASE@=\count98
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box39
+\strutbox@=\box40
+\big@size=\dimen104
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count99
+\c@MaxMatrixCols=\count100
+\dotsspace@=\muskip10
+\c@parentequation=\count101
+\dspbrk@lvl=\count102
+\tag@help=\toks18
+\row@=\count103
+\column@=\count104
+\maxfields@=\count105
+\andhelp@=\toks19
+\eqnshift@=\dimen105
+\alignsep@=\dimen106
+\tagshift@=\dimen107
+\tagwidth@=\dimen108
+\totwidth@=\dimen109
+\lineht@=\dimen110
+\@envbody=\toks20
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
+\Urlmuskip=\muskip11
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+(/usr/share/texmf-texlive/tex/latex/natbib/natbib.sty
+Package: natbib 2009/07/16 8.31 (PWD, AO)
+\bibhang=\skip47
+\bibsep=\skip48
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count106
+)
+(/usr/share/texmf-texlive/tex/latex/revtex/revsymb4-1.sty
+Package: revsymb4-1 2009/10/08:11:23 4.1g (http://publish.aps.org/revtex4/ for 
+documentation)
+LaTeX Info: Redefining \frak on input line 95.
+LaTeX Info: Redefining \Bbb on input line 111.
+LaTeX Info: Redefining \REV@mathfrak on input line 119.
+))
+(/usr/share/texmf-texlive/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+\Gread@gobject=\count107
+))
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+\Gin@req@height=\dimen111
+\Gin@req@width=\dimen112
+)
+(/usr/share/texmf-texlive/tex/generic/epsf/epsf.sty
+This is `epsf.tex' v2.7.3 <23 July 2005>
+\epsffilein=\read1
+\epsfframemargin=\dimen113
+\epsfframethickness=\dimen114
+\epsfrsize=\dimen115
+\epsftmp=\dimen116
+\epsftsize=\dimen117
+\epsfxsize=\dimen118
+\epsfysize=\dimen119
+\pspoints=\dimen120
+) (/usr/share/texmf-texlive/tex/latex/tools/bm.sty
+Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 138.
+LaTeX Info: Redefining \bm on input line 204.
+)
+(/usr/share/texmf-texlive/tex/generic/thumbpdf/thumbpdf.sty
+Package: thumbpdf 2008/04/16 v3.10 Inclusion of thumbnails (HO)
+
+
+Package thumbpdf Warning: Thumbnail data file `sjlevine_FinalReport.tpt' not fo
+und.
+
+)
+Class revtex4-1 Info: Patching LaTeX tabular. on input line 12.
+Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 12.
+
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 12.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 12.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 12.
+ (./sjlevine_FinalReport.aux)
+\openout1 = `sjlevine_FinalReport.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count108
+\scratchdimen=\dimen121
+\scratchbox=\box41
+\nofMPsegments=\count109
+\nofMParguments=\count110
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count111
+\MPscratchDim=\dimen122
+\MPnumerator=\count112
+\everyMPtoPDFconversion=\toks24
+)
+\openout3 = `sjlevine_FinalReportNotes.bib'.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 38.
+ (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 38.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<blicycle_overall.jpg, id=10, 1212.53pt x 803.0pt>
+File: blicycle_overall.jpg Graphic file (type jpg)
+ <use blicycle_overall.jpg>
+Underfull \hbox (badness 4279) in paragraph at lines 70--70
+  [][]\OT1/cmr/m/n/8 We used the CIPIC HRTF Database from UC Davis:
+ []
+
+<spatial_audio.jpg, id=11, 803.0pt x 531.9875pt>
+File: spatial_audio.jpg Graphic file (type jpg)
+ <use spatial_audio.jpg>
+<glove_prototype.jpg, id=12, 803.0pt x 531.9875pt>
+File: glove_prototype.jpg Graphic file (type jpg)
+ <use glove_prototype.jpg>
+<brian_testing_gloves.jpg, id=13, 803.0pt x 531.9875pt>
+File: brian_testing_gloves.jpg Graphic file (type jpg)
+
+<use brian_testing_gloves.jpg> [2 <./blicycle_overall.jpg> <./spatial_audio.jpg
+> <./glove_prototype.jpg>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 94.
+
+<vibrating_handlebars.jpg, id=20, 896.34875pt x 803.0pt>
+File: vibrating_handlebars.jpg Graphic file (type jpg)
+
+<use vibrating_handlebars.jpg> [3 <./brian_testing_gloves.jpg> <./vibrating_han
+dlebars.jpg>] <track_curved_hash.jpg, id=24, 1303.87125pt x 803.0pt>
+File: track_curved_hash.jpg Graphic file (type jpg)
+
+<use track_curved_hash.jpg> <camera_angle.jpg, id=25, 768.8725pt x 803.0pt>
+File: camera_angle.jpg Graphic file (type jpg)
+
+<use camera_angle.jpg>
+Underfull \hbox (badness 4913) in paragraph at lines 126--126
+[]\OT1/cmr/m/n/9 FIG. 8. The sideways-facing cam-era mon-i-tors the
+ []
+
+<camera_mount_exploded.png, id=26, 699.36281pt x 465.99094pt>
+File: camera_mount_exploded.png Graphic file (type png)
+
+<use camera_mount_exploded.png> <cv_overview.jpg, id=27, 1284.8pt x 1445.4pt>
+File: cv_overview.jpg Graphic file (type jpg)
+
+<use cv_overview.jpg> [4 <./track_curved_hash.jpg> <./camera_angle.jpg> <./came
+ra_mount_exploded.png (PNG copy)>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 147.
+
+<simulator_screenshot.jpg, id=32, 1286.8075pt x 670.505pt>
+File: simulator_screenshot.jpg Graphic file (type jpg)
+
+<use simulator_screenshot.jpg> [5 <./cv_overview.jpg>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 164.
+
+
+
+pdfTeX warning: pdflatex (file ./stabilized-1-with-correction.pdf): PDF inclusi
+on: found PDF version <1.5>, but at most version <1.4> allowed
+<stabilized-1-with-correction.pdf, id=37, 249.8425pt x 545.14781pt>
+File: stabilized-1-with-correction.pdf Graphic file (type pdf)
+
+<use stabilized-1-with-correction.pdf> [6 <./simulator_screenshot.jpg> <./stabi
+lized-1-with-correction.pdf>]
+Overfull \hbox (1.1282pt too wide) in paragraph at lines 184--197
+ []$[]$ 
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 204.
+
+(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 204.
+ [7]
+Underfull \hbox (badness 2894) in paragraph at lines 235--236
+ []\OT1/cmr/m/n/10 Fabricated po-ten-tiome-ter mount (de-signed by
+ []
+
+
+Underfull \hbox (badness 3229) in paragraph at lines 243--244
+ []\OT1/cmr/m/n/10 Designed, con-structed the phys-i-cal han-dle-bar
+ []
+
+(./sjlevine_FinalReport.bbl) [8] (./sjlevine_FinalReport.aux) ) 
+Here is how much of TeX's memory you used:
+ 4036 strings out of 495061
+ 50846 string characters out of 1182622
+ 127237 words of memory out of 3000000
+ 7148 multiletter control sequences out of 15000+50000
+ 16461 words of font info for 61 fonts, out of 3000000 for 9000
+ 28 hyphenation exceptions out of 8191
+ 34i,8n,26p,1828b,267s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texm
+f-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/f
+onts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-texlive/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
+nts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10
+.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/sh
+are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-tex
+live/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-texlive/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
+mti9.pfb>
+Output written on sjlevine_FinalReport.pdf (8 pages, 2168583 bytes).
+PDF statistics:
+ 98 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+

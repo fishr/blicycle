@@ -24,7 +24,7 @@
 #define CHANNEL "channel"
 const int minBattVolts = 600; //this needs checking
 const int arduinoTimeout = 1000;
-const double speedConversion = 184.0;  //based on hard cold testing
+const double speedConversion = 184.0;  //based on cold hard testing
 
 lcm::LCM lcmPod;
 

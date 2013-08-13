@@ -37,6 +37,7 @@ public class LCMArduinoSource implements AngleDataStream, Observer {
 		//LCM handleBar getters
 		private final HandlePublisher handlesOut;
 		private final HandleSubscriber handlesIn;
+		private byte oldCmd;
 		
 				
 		public LCMArduinoSource(LCMImport lcm, String handleInChannel, String handleOutChannel){
@@ -59,8 +60,13 @@ public class LCMArduinoSource implements AngleDataStream, Observer {
 	public void setVal(byte val) {
 		//incoming data is a bitmask of which motors should be set
 		//means I can take the base2 log and add one to get the motorCmd
-		handlesOut.publish((int)Math.round(Math.log(val)/log2)+1);
-		//TODO make sure that this is what needs to happen.  will need to remember old motor and turn it off with id+8 cmd
+		handlesOut.publish(debitshift(oldCmd)+8); //end old cmd
+		handlesOut.publish(debitshift(val));      //send new value
+		oldCmd = val;
+	}
+	
+	public int debitshift(byte val){
+		return (int)Math.round(Math.log(val)/log2)+1;
 	}
 
 	@Override

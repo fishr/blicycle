@@ -8,6 +8,10 @@
 **/Sounds
 *.WAV
 
+# image files #
+**/calibLog
+**/cameraLogData
+
 # eclipse environment files #
 **/.metadata/
 **/RemoteSystemsTempFiles/
