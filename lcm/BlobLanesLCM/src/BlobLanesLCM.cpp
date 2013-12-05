@@ -189,7 +189,7 @@ void updateLines(int, void*){
 		//showLinesBW(p_lines, lines);
 		imshow("test", lines);
 
-	  findContours( lines, contours, hierarchy, CV_RETR_LIST, CV_CHAIN_APPROX_TC89_KCOS, Point(0, 0) );
+	  findContours( lines, contours, hierarchy, CV_RETR_LIST, CV_CHAIN_APPROX_SIMPLE, Point(0, 0) );
 	  cvtColor(denoised_img, lanes, CV_GRAY2BGR);
 	  ContourUtils::processContours(contours);
 
@@ -198,7 +198,7 @@ void updateLines(int, void*){
 	  for( unsigned i = 0; i< contours.size(); i++ )
 	     {
 	       Scalar color = Scalar( rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255) );
-	       drawContours( lanes, contours, i, color, -2, 4);//, hierarchy);
+	       drawContours( lanes, contours, i, color, 2, 4);//, hierarchy);
 	     }
 
 	  //ends here

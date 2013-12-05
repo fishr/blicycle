@@ -101,34 +101,69 @@ void ContourUtils::reduceContourNodes(std::vector<cv::Point> &in, int length){
 }
 
 void ContourUtils::processContours(std::vector<std::vector<cv::Point> > &in){
-	for(unsigned i = in.size()-1; i!=0; i--){
-		/*std::vector<std::vector<cv::Point> > temp = ContourUtils::splitSharpContours(in.at(i), 3, 1, 3.5);
-		in.at(i) = temp[0];
-		if(temp.size()>1){
-			for(unsigned j = 1; j<temp.size(); j++){
-				in.push_back(temp.at(j));
-			}
-		}*/
+	eliminateSmalls(in, 10);
+	std::vector<std::vector<cv::Point> > temp;
+	for(unsigned i = 0; i<in.size(); i++){
 
 		//reduceContourNodes(in.at(i), 12);
 
+		std::vector<double> tempVec = contourOrientation(in.at(i));
 
+		if(fabs(tempVec[0])>1 && tempVec[1]>-100){
+			temp.push_back(in.at(i));
+			printf("%f, %f\n", tempVec[0], tempVec[1]);
+		}
 	}
+	in.swap(temp);
+}
+
+void ContourUtils::eliminateSmalls(std::vector<std::vector<cv::Point> > &in, float minRadius){
+	std::vector<std::vector<cv::Point> > cleaned;
+	for(unsigned i=0; i<in.size(); i++){
+		float radius;
+		cv::Point2f center;
+		cv::minEnclosingCircle(in.at(i), center, radius);
+		if(radius>minRadius){
+			cleaned.push_back(in.at(i));
+		}
+	}
+	in.swap(cleaned);
 }
 
 std::vector<double> ContourUtils::contourOrientation(std::vector<cv::Point> &in){
 	double angle, ecc;
-	double pu11, pu20, pu02;
-	double a, b;
+	double diff;
 	cv::Moments data = cv::moments(in);
-	pu11 = data.mu11/data.m00;
-	pu20 = data.mu20/data.m00;
-	pu02 = data.mu02/data.m00;
-	angle = .5*(atan((2*pu11)/(pu20-pu02)));
-	a = (pu20+pu02)/2;
-	b = sqrt(4*(pu11^2)+(pu20-pu02)^2)/2;
-	ecc = sqrt(1-(    (a-b)   /   (a+b)   ));
-	std::vector<double> result = {angle, ecc};
+	diff = data.mu20 - data.mu02;
+	if(data.mu11==0){
+		if(diff<0){
+			angle = -3.1415/2;
+		}else{
+			angle = 0;
+		}
+	}else if(diff==0){
+		if(data.mu11>0){
+			angle = 3.1415/4;
+		}else{
+			angle = -3.1415/4;
+		}
+	}else if(diff>0){
+		if(data.mu11>0){
+			angle = .5*(atan((2*data.mu11)/(diff)));
+		}else{
+			angle = -0.5*(atan((2*data.mu11)/(diff)));
+		}
+	}else{
+		if(data.mu11>0){
+			angle = .5*(atan((2*data.mu11)/(diff)))+3.1415/4;
+		}else{
+			angle = -0.5*(atan((2*data.mu11)/(diff)))-3.1415/4;
+		}
+	}
+	ecc = (    ((diff*diff)-(4*data.mu11*data.mu11))   /   ((data.mu20+data.mu02)*(data.mu20+data.mu02))   );
+	std::vector<double> result;
+	result.push_back(angle);
+	result.push_back(ecc);
 	return result;
 }
 

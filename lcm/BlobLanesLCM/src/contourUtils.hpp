@@ -21,6 +21,8 @@ public:
 
 	static void processContours(std::vector<std::vector<cv::Point> >&);
 
+	static void eliminateSmalls(std::vector<std::vector<cv::Point> >&, float);
+
 	static std::vector<double> contourOrientation(std::vector<cv::Point>&);
 
 	static double angleDiff(std::vector<cv::Point>&, std::vector<cv::Point>&);
