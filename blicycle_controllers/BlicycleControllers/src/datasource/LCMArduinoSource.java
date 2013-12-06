@@ -29,7 +29,7 @@ public class LCMArduinoSource implements AngleDataStream, Observer {
 		private final double SCALE_MEASURE;
 		private final double SCALE_OFFSET;
 		
-		private static final double log2 = 0.30102999566;
+		private static double log2;
 		
 		// The last-received angle
 		private double angle;
@@ -48,6 +48,8 @@ public class LCMArduinoSource implements AngleDataStream, Observer {
 			handlesOut = lcm.startHandlebarsOut(handleOutChannel);
 			handlesIn = lcm.startHandlebarsIn(handleInChannel);
 			handlesIn.makeObserver(this);
+			
+			log2=Math.log(2);
 		}
 		
 		
@@ -60,19 +62,28 @@ public class LCMArduinoSource implements AngleDataStream, Observer {
 	public void setVal(byte val) {
 		//incoming data is a bitmask of which motors should be set
 		//means I can take the base2 log and add one to get the motorCmd
-		handlesOut.publish(debitshift(oldCmd)+8); //end old cmd
+		//handlesOut.publish(debitshift(oldCmd)+8); //end old cmd
+		handlesOut.publish(0);
+		
 		handlesOut.publish(debitshift(val));      //send new value
 		oldCmd = val;
+		System.out.printf("cmd:  %d  debits: %d\n", val, debitshift(val));
 	}
 	
 	public int debitshift(byte val){
-		return (int)Math.round(Math.log(val)/log2)+1;
+		if (val<0)
+			return 8;
+		if (val>66)
+			return 8;
+		if (val==0)
+			return 0;
+		return 1+((int)Math.round(Math.log(val)/log2));
 	}
 
 	@Override
 	public void update(Observable arg0, Object arg1) {
 		angle = SCALE_MEASURE * (((HandleSubscriber.HandleData)arg0).getSteering() - SCALE_OFFSET);
-		System.out.print(angle);
+		//System.out.print(angle);
 	}
 
 }

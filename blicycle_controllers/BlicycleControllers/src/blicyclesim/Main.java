@@ -56,7 +56,7 @@ public class Main {
 		// RoadFollowerController controller = new RoadFollowerController(-1.0, -1.0, 4.0, 0.0, Math.PI/2);		// Angle and position
 		
 		//BaitedCarrotWithCVController controller = new BaitedCarrotWithCVController(3.0, 4.0, 2.0, Math.PI / 4);
-		final BaitedCarrotWithLCMController controller = new BaitedCarrotWithLCMController(3.0, 4.0, 2.0, Math.PI/4, lcmConnect, "lane_data");
+		final BaitedCarrotWithLCMController controller = new BaitedCarrotWithLCMController(3.0, 4.0, 2.0, Math.PI/4, lcmConnect, "bikedata");
 		
 		/*******************************************************************************************
 		 * *****************************************************************************************

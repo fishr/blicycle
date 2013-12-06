@@ -21,7 +21,7 @@
 #include <fcntl.h>
 
 #define PORT "/dev/ttyUSB0" //This is needs checking
-#define CHANNEL "channel"
+#define CHANNEL "to_arduino"
 const int minBattVolts = 600; //this needs checking
 const int arduinoTimeout = 1000;
 const double speedConversion = 184.0;  //based on cold hard testing
@@ -270,8 +270,8 @@ int main( int argc, char** argv ) {
 
 	while(1){
 		std::string msgIn = readArduino(arduinoTimeout);
-		printf(msgIn.c_str());
-		printf("\n");
+		//printf(msgIn.c_str());
+		//printf("\n");
 		if(!msgIn.empty()){
 			parseInput(msgIn);
 			sendLCMUpdates();

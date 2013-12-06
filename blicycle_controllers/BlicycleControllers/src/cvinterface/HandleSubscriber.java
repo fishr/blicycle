@@ -26,7 +26,7 @@ public class HandleSubscriber implements LCMSubscriber {
 			if(newMsg.key.equals("s")){
 				steerMsg=newMsg;
 				data.setSteering(Integer.parseInt(steerMsg.value));
-				//System.out.println(data.getSteering());
+				System.out.println(data.getSteering());
 			}
 		}
 		catch(IOException e){

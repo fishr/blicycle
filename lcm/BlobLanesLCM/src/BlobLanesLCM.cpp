@@ -62,7 +62,7 @@ int yup = 0;
 int xdown = 3;
 int ydown = 3;
 
-int spreadError = 50;
+int spreadError = 40;
 
 int lowHeight;
 int midHeight;
