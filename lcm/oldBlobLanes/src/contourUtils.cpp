@@ -115,7 +115,7 @@ void ContourUtils::processContours(std::vector<std::vector<cv::Point> > &in){
 
 	}
 }
-
+/*
 std::vector<double> ContourUtils::contourOrientation(std::vector<cv::Point> &in){
 	double angle, ecc;
 	double pu11, pu20, pu02;
@@ -130,7 +130,7 @@ std::vector<double> ContourUtils::contourOrientation(std::vector<cv::Point> &in)
 	ecc = sqrt(1-(    (a-b)   /   (a+b)   ));
 	std::vector<double> result = {angle, ecc};
 	return result;
-}
+}*/
 
 std::vector<cv::Point> ContourUtils::contourReturnTrim(int start, int end, std::vector<cv::Point> &in){
 	std::vector<cv::Point>::iterator it1 = in.begin();
