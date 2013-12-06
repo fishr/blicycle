@@ -71,7 +71,8 @@ public class LCMArduinoSource implements AngleDataStream, Observer {
 
 	@Override
 	public void update(Observable arg0, Object arg1) {
-		angle = SCALE_MEASURE * (((HandleSubscriber.HandleData)arg1).getSteering() - SCALE_OFFSET);
+		angle = SCALE_MEASURE * (((HandleSubscriber.HandleData)arg0).getSteering() - SCALE_OFFSET);
+		System.out.print(angle);
 	}
 
 }

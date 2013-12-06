@@ -26,7 +26,7 @@ public class Main {
 		//ArduinoDataSource steering = new ArduinoDataSource("/dev/ttyACM0", 115200);
 		
 		//use LCM messages
-		final LCMArduinoSource steering = new LCMArduinoSource(lcmConnect, "from_arduino", "to_arduino");		
+		final LCMArduinoSource steering = new LCMArduinoSource(lcmConnect, "arduinoUpdates", "to_arduino");		
 
 		
 		

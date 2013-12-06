@@ -1,5 +1,6 @@
 package cvinterface;
 
+import java.io.IOException;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -10,7 +11,7 @@ import bot_param.entry_t;
 
 public class HandleSubscriber implements LCMSubscriber {
 
-	private final HandleData data;
+	private HandleData data;
 	
 	public HandleSubscriber(String handleInChannel) {
 		LCMImport.getLCM().subscribe(handleInChannel, this);
@@ -19,14 +20,16 @@ public class HandleSubscriber implements LCMSubscriber {
 
 	@Override
 	public synchronized void messageReceived(LCM arg0, String arg1, LCMDataInputStream arg2) {
-		entry_t steerMsg;
+		bot_param.entry_t steerMsg;
 		try{
-			steerMsg = new entry_t(arg2);
-			data.setSteering(Integer.parseInt(steerMsg.value));
-			data.hasChanged();
-			data.notifyObservers();
+			bot_param.entry_t newMsg = new entry_t(arg2);
+			if(newMsg.key.equals("s")){
+				steerMsg=newMsg;
+				data.setSteering(Integer.parseInt(steerMsg.value));
+				//System.out.println(data.getSteering());
+			}
 		}
-		catch(Exception e){
+		catch(IOException e){
 			System.out.println("bad steering packet");
 		}
 			
@@ -45,6 +48,8 @@ public class HandleSubscriber implements LCMSubscriber {
 		
 		public void setSteering(int newAngle){
 			steering = newAngle;
+			data.setChanged();
+			data.notifyObservers();
 		}
 	}
 

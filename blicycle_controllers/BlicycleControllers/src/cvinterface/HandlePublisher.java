@@ -9,6 +9,7 @@ public class HandlePublisher {
 	
 	public HandlePublisher(String handleName){
 		channelName = handleName;
+		handleCmd = new entry_t();
 		handleCmd.key = "1";
 	}
 

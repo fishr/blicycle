@@ -1,5 +1,7 @@
 package cvinterface;
 
+import java.io.IOException;
+
 import lcm.lcm.LCM;
 
 public class LCMImport{
